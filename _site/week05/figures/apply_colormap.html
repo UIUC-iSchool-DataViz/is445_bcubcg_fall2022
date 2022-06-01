@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" integrity="sha512-5xkNvFVCctXwOszeifE8pzjyDFlHvHDCKIrhwmuSbCtTHqc7IhA6/1tTNYXE8WmYvwP5KFQegCS1QRR4poYgjg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js"></script>
+      <script src="https://unpkg.com/d3-rect"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+      <script language="javascript" src="https://npmcdn.com/regl/dist/regl.js"></script>
+<style>
+  .container {
+      margin: auto;
+      width: 500px;
+  }
+</style>
+  </head>
+  <body>
+      <div class="container">
+          <canvas id="reglvis" width="480" height="360">
+          </canvas>
+          <div id="vis"></div>
+          <input type="range" min="0.0" max="8" value="1.0" step="1.0" id="trunc-value">
+          <select id="cmap_name">
+          </select>
+          <input type="file" accept="image/*" id="image-upload">
+      </div>
+    
+    <script type="text/javascript">
+
+        const Schemes = [ "Blues", "Greens", "Greys", "Oranges", "Purples", "Reds",
+            "BuGn", "BuPu", "GnBu", "OrRd", "PuBuGn", "PuBu", "PuRd", "RdPu",
+            "YlGnBu", "YlGn", "YlOrBr", "YlOrRd",
+            "Cividis", "Viridis", "Inferno", "Magma", "Plasma", "Warm",
+            "Cool", "CubeHelixDefault", "Turbo", "BrBG", "PRGn", "PiYG",
+            "PuOr", "RdBu", "RdGy", "RdYlBu", "RdYlGn", "Spectral",
+            "Rainbow", "Sinebow"];
+
+        var regl = createREGL({
+            canvas: document.getElementById("reglvis")
+        });
+
+        d3.select("select#cmap_name")
+            .selectAll("option")
+            .data(Schemes)
+            .join("option")
+            .attr("value", d => d)
+            .text(d => d);
+
+        const width = 480;
+        const height = 200;
+        const svg = d3.select("#vis").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        const padding = 30;
+        const N = 512;
+        var colormapTexture = regl.texture({width:1, height:1, data: [255, 255, 255, 255]});
+        var xScale = d3.scaleLinear().domain([0.0, 1.0]).range([padding, width - padding]);
+        var yScale = d3.scaleLinear().domain([0, 255.0]).range([height - padding, padding]);
+        var xAxis = d3.axisBottom(xScale);
+        var yAxis = d3.axisLeft(yScale);
+        svg.append("g").attr("transform", "translate(0," + yScale(0.0) + ")").call(xAxis);
+        svg.append("g").attr("transform", "translate(" + xScale(0.0) + ", 0)").call(yAxis);
+        svg.append("g").attr("id", "lines");
+        var x = d3.range(N).map( i => i / (N-1))
+        function drawLines(interpolator) {
+            var myColor = d3.scaleSequential(interpolator).domain([0.0, 1.0]);
+            var channels = ["red", "green", "blue"];
+            svg.select("g#lines").selectAll("path")
+                .data([x, x, x])
+                .join("path")
+                .attr("fill", "none")
+                .attr("stroke", (p, i) => channels[i])
+                .attr("stroke-width", 2.0)
+                .attr("shape-rendering", "geometricPrecision")
+                .attr("d", (p, i) => d3.line()
+                    .x(d => xScale(d))
+                    .y(d => yScale(d3.color(myColor(d))[channels[i].slice(0,1)]))(p)
+                );
+            var colormapArray = [];
+            d3.range(256).forEach( i => {
+                var color = d3.color(myColor(i/255));
+                colormapArray.push(color.r);
+                colormapArray.push(color.g);
+                colormapArray.push(color.b);
+                colormapArray.push(255); // alpha
+            });
+            colormapTexture = regl.texture({width: 256, height: 1, data: colormapArray});
+        }
+
+        d3.select("select#cmap_name").on("input", event => {
+            drawLines(d3["interpolate" + event.target.value]);
+        });
+
+        d3.select("select#cmap_name").node().value = "Viridis"
+        drawLines(d3.interpolateViridis);
+
+        var image = new Image();
+        var imageTexture;
+        image.src = "../images/winter_scene.jpg";
+        image.onload = (event) => {
+            imageTexture = regl.texture(image);
+        }
+
+        document.getElementById("image-upload").addEventListener('change', (event) => {
+            image.src = URL.createObjectURL(event.target.files[0]);
+            imageTexture = regl.texture(image);
+        });
+
+        const drawTriangle = regl({
+            frag: `
+            precision mediump float;
+            uniform sampler2D texture;
+            uniform sampler2D colormap;
+            varying vec2 uv;
+            uniform float truncateValue;
+            void main() {
+              vec4 sample = texture2D(texture, uv);
+              //float intensity = (sample.r + sample.g + sample.b) / 3.0;
+              // Just use blue channel.
+              float nBins = pow(2.0, truncateValue);
+              float intensity = (floor((sample.b * 255.0)/nBins) * nBins)/255.0; 
+              gl_FragColor = texture2D(colormap, vec2(intensity, 0.5));
+            }`,
+
+            vert: `
+            precision mediump float;
+            attribute vec2 position;
+            varying vec2 uv;
+            void main() {
+              uv = position;
+              gl_Position = vec4(1.0 - 2.0 * position, 0, 1);
+            }
+            `,
+
+            attributes: {
+                position: regl.buffer([
+                    [-2, 0],
+                    [0, -2],
+                    [2, 2]
+                ])
+            },
+
+            uniforms: {
+                texture: regl.prop('image'),
+                colormap: regl.prop('colormap'),
+                truncateValue: regl.prop('truncateValue'),
+            },
+
+            count: 3
+        });
+
+        regl.frame(({time}) => {
+            
+            regl.clear({
+                color: [0, 0, 0, 1],
+            })
+            if ((!colormapTexture) || (!imageTexture)) return;
+            drawTriangle({
+                image: imageTexture,
+                colormap: colormapTexture,
+                truncateValue: +document.querySelector("#trunc-value").value,
+            });
+        })
+
+        var _transitions = [{
+            transitionForward: () => setup(),
+        },
+        ];
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>IS445 - Data Viz - ACG/ACU - Scientific Viz &amp; Guest lecture from the Advanced Visualization Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="/is445_spring2022/assets/style.css" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Scientific Viz &amp; Guest lecture from the Advanced Visualization Lab | IS445 - Data Viz - ACG/ACU</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Scientific Viz &amp; Guest lecture from the Advanced Visualization Lab" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the course website for IS445-ACG-ACU in Spring 2022" />
+<meta property="og:description" content="This is the course website for IS445-ACG-ACU in Spring 2022" />
+<link rel="canonical" href="http://localhost:4001/is445_spring2022/week15/" />
+<meta property="og:url" content="http://localhost:4001/is445_spring2022/week15/" />
+<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scientific Viz &amp; Guest lecture from the Advanced Visualization Lab" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-ACG-ACU in Spring 2022","headline":"Scientific Viz &amp; Guest lecture from the Advanced Visualization Lab","url":"http://localhost:4001/is445_spring2022/week15/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+    <body>
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/is445_spring2022/" title="home" class="navbar-item">
+                    <span class="icon is-large">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    IS445
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    
+                    
+                    <a href="/is445_spring2022/syllabus" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Syllabus
+                    </a>
+                    
+                    <a href="https://is445-spring2022.slack.com/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-slack"></i>
+                        </span>
+                        Slack
+                    </a>
+                    
+                    <a href="https://jupyterhub.ischool.illinois.edu/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-python"></i>
+                        </span>
+                        JupyterHub
+                    </a>
+                    
+                    <a href="https://canvas.illinois.edu/courses/16476" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-school"></i>
+                        </span>
+                        Canvas
+                    </a>
+                    
+                </div>
+                <div class="navbar-end">
+                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">-->
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="section">
+                    <div class="content">
+                        
+                        <section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <h1 id="scientific-viz--guest-lecture-from-the-advanced-visualization-lab">Scientific Viz &amp; Guest lecture from the Advanced Visualization Lab</h1>
+
+<p>We talked a little bit about publishing, networks, and scientific viz.</p>
+
+<p>Guest lecture from NCSA’s <a href="https://avl.ncsa.illinois.edu/">Advanced Visualization Lab</a>.</p>
+
+<!--
+# Resources
+
+## Data and Python Libs
+
+ 1. Download and unzip [this set of files here (galaxyFiles.zip, 77M)](galaxyFiles.zip)
+ 2. Make note of where this unzips -- this is where `solverlibs.py` gets unpacked.
+
+ 3. We'll also be using the <a href="http://yt-project.org/data/IsolatedGalaxy.tar.gz" download>Isolated Galaxy dataset (292 Mb)</a> dataset for sci viz today
+ 4. We'll also also be using <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5" download>this brain scan data (72Mb)</a>
+-->
+
+<h2 id="optional-reading-list">Optional reading list</h2>
+
+<ol>
+  <li>VAD Ch. 8.4-8.6: Arrange Spatial Data</li>
+  <li>VAD Ch. 11.6: Manipulate View</li>
+  <li><a href="https://yt-project.org/">yt docs</a></li>
+  <li><a href="https://yt-project.org/doc/visualizing/volume_rendering.html">yt Volume Rendering Tutorial</a></li>
+</ol>
+
+<p>Also, here is a slightly more in-depth explaination of path/ray tracing:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/frLwRLS_ZR0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            </div>
+            <div class="column">
+                
+                <figure class="image">
+                    <img src="/is445_spring2022/assets/undraw/undraw_medical_research_qg4d.svg">
+                </figure>
+                
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="container">
+        <h2 class="subtitle">Lectures</h2>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="/is445_spring2022/week15/lecture14.html">Lecture 14 - Scientific Visualization, notes on final project</a></p><p>More about scientific visualization</p>
+            </div>
+        </article>
+        
+
+        
+        
+
+	
+        
+        <h2 class="subtitle">Examples</h2>
+	
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek15%2FinClass_week15.ipynb">In class notebook</a> - (<a href="/is445_spring2022/week15/inClass_week15.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Placeholder for in class coding
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek15%2Fprep_notebook_week15.ipynb">Prep Notebook, Week 15</a> - (<a href="/is445_spring2022/week15/prep_notebook_week15.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Prep notebook for this week
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek15%2Fspring2019_prep_notebook_week13.ipynb">Examples from Spring 2019</a> - (<a href="/is445_spring2022/week15/spring2019_prep_notebook_week13.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+	
+	<!-- don't include libraries if not there -->
+	
+        
+
+
+        
+	
+        
+
+	<!-- don't include data if not there -->
+	
+        
+
+	
+        <h2 class="subtitle">Data</h2>
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5">Brain Scan (72Mb)</a>
+		  
+                </p>
+                <p>
+                    MRI scan of a brain
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/raw/master/week13/galaxyFiles.zip">Galaxy Particle Simulation files (77Mb)</a>
+		  
+                </p>
+                <p>
+                    Downsampled output files from a particle simulation of a galaxy merger
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="http://yt-project.org/data/IsolatedGalaxy.tar.gz">Isolated Galaxy dataset (292 Mb)</a>
+		  
+                </p>
+                <p>
+                    A single snapshot in time of a grid simulation of an isolated galaxy
+                </p>
+            </div>
+        </article>
+        
+
+	
+	<!-- don't include assignments if not there -->
+	
+        
+
+
+        
+	
+        
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="is-centered columns has-text-centered">
+        <div class="column is-6">
+            <p>
+                This course developed collaboratively by 
+                <a href="https://astronaiman.com/">Jill Naiman</a> and <a href="https://matthewturk.github.io/">Matthew Turk</a>
+		at the University of Illinois Urbana-Champaign
+                <a href="https://ischool.illinois.edu/">School of Information Sciences</a>.
+                The source code is released under a BSD 3-Clause license, allowing for reuse and redistribution.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

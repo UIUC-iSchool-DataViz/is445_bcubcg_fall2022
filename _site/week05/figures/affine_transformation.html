@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" integrity="sha512-5xkNvFVCctXwOszeifE8pzjyDFlHvHDCKIrhwmuSbCtTHqc7IhA6/1tTNYXE8WmYvwP5KFQegCS1QRR4poYgjg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js"></script>
+      <script src="https://unpkg.com/d3-rect"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+<style>
+  .overlapping {
+      fill: #AAAAAA;
+  }
+  .gridCells {
+      z-index: 10000;
+  }
+  .container {
+      margin: auto;
+          width: 500px;
+  }
+</style>
+  </head>
+  <body>
+      <div class="container">
+          <div id="vis"></div>
+      </div>
+    
+    <script type="text/javascript">
+
+        const ursaMajor = [ [ 20, 150 - 38],
+                         [ 54, 150 - 33],
+                         [ 78, 150 - 38],
+                         [112, 150 - 48],
+                         [122, 150 - 77],
+                         [170, 150 - 77],
+                         [180, 150 - 38],
+                        [112, 150 - 48]];
+
+        const box = [[30, 30], [30, 90], [90, 90], [90, 30], [30, 30]];
+
+        const width = 500;
+        const height = 500;
+        const svg = d3.select("#vis").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        const pad = 1;
+        var xScaleConstellation = d3.scaleLinear().domain([0.0, 200.0]).range([pad, width - pad])//.clamp(true);
+        var yScaleConstellation = d3.scaleLinear().domain([0.0, 200.0]).range([height - pad, pad])//.clamp(true);
+
+        {
+            var xAxis0 = d3.axisTop(xScaleConstellation).tickValues([]);
+            var yAxis0 = d3.axisRight(yScaleConstellation).tickValues([]);
+            var xAxis1 = d3.axisBottom(xScaleConstellation).tickValues([]);
+            var yAxis1 = d3.axisLeft(yScaleConstellation).tickValues([]);
+            var axes = svg.append("g").attr("id", "axesBig");
+            axes.append("g").attr("transform", "translate(" + xScaleConstellation(0.0) + ",0)").call(yAxis0);
+            axes.append("g").attr("transform", "translate(" + xScaleConstellation(200.0) + ",0)").call(yAxis1);
+            axes.append("g").attr("transform", "translate(0," + yScaleConstellation(0.0) + ")").call(xAxis0);
+            axes.append("g").attr("transform", "translate(0," + yScaleConstellation(200.0) + ")").call(xAxis1);
+        }
+
+        var constellation = svg.append("g").attr("id", "constellation");
+
+        var p1 = {x: 1.0, y: 0.0, c: "red", n: "p1"};
+        var p2 = {x: 0.0, y: 1.0, c: "red", n: "p2"};
+        var p3 = {x: 0.5, y: 0.5, c: "blue", n: "p3"};
+
+        function rescaleConstellation() {
+            constellation
+                .selectAll("path")
+                .data([ursaMajor, box])
+                .join("path")
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.line()
+                    .x( d => xScaleConstellation(d[0] * p1.x + d[1] * p1.y + (p3.x-0.5)*200))
+                    .y( d => yScaleConstellation(d[0] * p2.x + d[1] * p2.y + (p3.y-0.5)*200))
+                );
+
+            constellation
+                .selectAll("circle")
+                .data(ursaMajor)
+                .join("circle")
+                .attr("cx", d => xScaleConstellation(d[0] * p1.x + d[1] * p1.y + (p3.x-0.5)*200))
+                .attr("cy", d => yScaleConstellation(d[0] * p2.x + d[1] * p2.y + (p3.y-0.5)*200))
+                .attr("r", 10.0)
+                .attr("fill", "black");
+
+
+        };
+
+        rescaleConstellation();
+
+        const smallWidth = 100;
+        const smallHeight = 100;
+        const smallPad = 10
+
+        const fs = d3.format("0.2f");
+        var textbox = svg.append("g").attr("id", "textbox").style("font-family", "monospace");
+        var tp1 = textbox.append("text").attr("id", "p1").attr("x", smallWidth + 2*(smallPad + pad) + 10).attr("y", 30);
+        var tp2 = textbox.append("text").attr("id", "p2").attr("x", smallWidth + 2*(smallPad + pad) + 10).attr("y", 50);
+        var tp3 = textbox.append("text").attr("id", "p3").attr("x", smallWidth + 2*(smallPad + pad) + 10).attr("y", 70);
+
+        [p1, p2, p3].forEach(d => textbox.selectAll("text#" + d.n).text("x: " + fs(d.x) + " y: " + fs(d.y)));
+
+        var xScale = d3.scaleLinear().domain([0.0, 1.0]).range([smallPad + pad, smallWidth + pad + smallPad]).clamp(true);
+        var yScale = d3.scaleLinear().domain([0.0, 1.0]).range([smallHeight + pad + smallPad, pad + smallPad]).clamp(true);
+        var xAxis0 = d3.axisTop(xScale).tickValues([]);
+        var yAxis0 = d3.axisRight(yScale).tickValues([]);
+        var xAxis1 = d3.axisBottom(xScale).tickValues([]);
+        var yAxis1 = d3.axisLeft(yScale).tickValues([]);
+        var axes = svg.append("g").attr("id", "axes");
+        axes.append("g").attr("transform", "translate(" + xScale(0.0) + ",0)").call(yAxis0);
+        axes.append("g").attr("transform", "translate(" + xScale(1.0) + ",0)").call(yAxis1);
+        axes.append("g").attr("transform", "translate(0," + yScale(0.0) + ")").call(xAxis0);
+        axes.append("g").attr("transform", "translate(0," + yScale(1.0) + ")").call(xAxis1);
+
+        function dragstarted() {
+            d3.select(this).attr("stroke", "blue");
+        }
+
+        function dragged(event, d) {
+            d.x = xScale.invert(event.x);
+            d.y = yScale.invert(event.y);
+            d3.select(this).raise().attr("cx", xScale(d.x)).attr("cy", yScale(d.y));
+            textbox.selectAll("text#" + d.n).text("x: " + fs(d.x) + " y: " + fs(d.y));
+            rescaleConstellation();
+        }
+
+        function dragended() {
+            d3.select(this).attr("stroke", "black");
+        }
+
+        var drag = d3.drag()
+            .subject((event, d) => ({x: event.x, y: event.y}))
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+
+        svg
+            .append("g")
+            .attr("id", "points")
+            .selectAll("circle")
+            .data([p1, p2, p3])
+            .join("circle")
+            .attr("cx", d => xScale(d.x))
+            .attr("cy", d => yScale(d.y))
+            .attr("r", 6)
+            .attr("fill", d => d.c)
+            .call(drag)
+            .attr("stroke", "black")
+            .attr("stroke-width", 1.0);
+
+        function setup() {
+        }
+
+        var _transitions = [{
+            transitionForward: () => setup(),
+        },
+        ];
+
+    </script>
+  </body>
+</html>

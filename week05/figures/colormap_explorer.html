@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" integrity="sha512-5xkNvFVCctXwOszeifE8pzjyDFlHvHDCKIrhwmuSbCtTHqc7IhA6/1tTNYXE8WmYvwP5KFQegCS1QRR4poYgjg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js"></script>
+      <script src="https://unpkg.com/d3-rect"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+<style>
+  .container {
+      margin: auto;
+          width: 500px;
+  }
+  .cmap {
+      width: 500px;
+      height: 100px;
+  }
+</style>
+  </head>
+  <body>
+      <div class="container">
+          <div id="vis"></div>
+          <select id="cmap_name">
+          </select>
+      </div>
+    
+    <script type="text/javascript">
+
+        const Schemes = [ "Blues", "Greens", "Greys", "Oranges", "Purples", "Reds",
+            "BuGn", "BuPu", "GnBu", "OrRd", "PuBuGn", "PuBu", "PuRd", "RdPu",
+            "YlGnBu", "YlGn", "YlOrBr", "YlOrRd",
+            "Cividis", "Viridis", "Inferno", "Magma", "Plasma", "Warm",
+            "Cool", "CubeHelixDefault", "Turbo", "BrBG", "PRGn", "PiYG",
+            "PuOr", "RdBu", "RdGy", "RdYlBu", "RdYlGn", "Spectral",
+            "Rainbow", "Sinebow"];
+
+        d3.select("select#cmap_name")
+            .selectAll("option")
+            .data(Schemes)
+            .join("option")
+            .attr("value", d => d)
+            .text(d => d);
+
+        const width = 500;
+        const height = 500;
+        const svg = d3.select("#vis").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        const padding = 30;
+        const N = 512;
+        var xScale = d3.scaleLinear().domain([0.0, 1.0]).range([padding, width - padding]);
+        var yScale = d3.scaleLinear().domain([0, 255.0]).range([height - padding, padding]);
+        var xAxis = d3.axisBottom(xScale);
+        var yAxis = d3.axisLeft(yScale);
+        svg.append("g").attr("transform", "translate(0," + yScale(0.0) + ")").call(xAxis);
+        svg.append("g").attr("transform", "translate(" + xScale(0.0) + ", 0)").call(yAxis);
+        svg.append("g").attr("id", "lines");
+        var x = d3.range(N).map( i => i / (N-1))
+        function drawLines(interpolator) {
+            var myColor = d3.scaleSequential(interpolator).domain([0.0, 1.0]);
+            var channels = ["red", "green", "blue"];
+            svg.select("g#lines").selectAll("path")
+                .data([x, x, x])
+                .join("path")
+                .attr("fill", "none")
+                .attr("stroke", (p, i) => channels[i])
+                .attr("stroke-width", 2.0)
+                .attr("shape-rendering", "geometricPrecision")
+                .attr("d", (p, i) => d3.line()
+                    .x(d => xScale(d))
+                    .y(d => yScale(d3.color(myColor(d))[channels[i].slice(0,1)]))(p)
+                );
+
+        }
+
+        d3.select("select#cmap_name").on("input", event => {
+            console.log("event");
+            drawLines(d3["interpolate" + event.target.value]);
+        });
+
+        d3.select("select#cmap_name").node().value = "Viridis"
+        drawLines(d3.interpolateViridis);
+
+        var _transitions = [{
+            transitionForward: () => setup(),
+        },
+        ];
+
+    </script>
+  </body>
+</html>

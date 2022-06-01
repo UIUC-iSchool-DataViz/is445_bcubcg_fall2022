@@ -1,0 +1,1 @@
+* 8-12 * * 1 /Users/jillnaiman/is445_spring2021/auto_commit.sh >/dev/null 2>&1

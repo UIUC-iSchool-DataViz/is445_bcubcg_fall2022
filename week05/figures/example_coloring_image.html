@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" integrity="sha512-5xkNvFVCctXwOszeifE8pzjyDFlHvHDCKIrhwmuSbCtTHqc7IhA6/1tTNYXE8WmYvwP5KFQegCS1QRR4poYgjg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js"></script>
+      <script src="https://unpkg.com/d3-rect"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+        <script language="javascript" src="https://npmcdn.com/regl/dist/regl.js"></script>
+<style>
+  .container {
+      margin: auto;
+          width: 500px;
+  }
+  .cmap {
+      width: 500px;
+      height: 100px;
+  }
+</style>
+  </head>
+  <body>
+      <div class="container">
+          <canvas width="480" height="360" id="vis">
+      </div>
+      <div class="container">
+          <input type="range" min="0.0" max="1.0" value="1.0" step="0.01" id="scale-input-red">
+
+          <input type="range" min="0.0" max="1.0" value="1.0" step="0.01" id="scale-input-green">
+          <input type="range" min="0.0" max="1.0" value="1.0" step="0.01" id="scale-input-blue">
+          <input type="range" min="0.0" max="1.0" value="1.0" step="0.01" id="scale-input-alpha">
+          <input type="file" accept="image/*" id="image-upload">
+      </div>
+    
+    <script type="text/javascript">
+
+        var image = new Image();
+        var imageTexture;
+        image.src = "../images/winter_scene.jpg";
+        image.onload = (event) => {
+            imageTexture = regl.texture(image);
+        }
+        var regl = createREGL({
+                canvas: document.getElementById("vis")
+        });
+
+        document.getElementById("image-upload").addEventListener('change', (event) => {
+            image.src = URL.createObjectURL(event.target.files[0]);
+            imageTexture = regl.texture(image);
+        });
+
+        const drawTriangle = regl({
+            frag: `
+            precision mediump float;
+            uniform sampler2D texture;
+            varying vec2 uv;
+            uniform float red;
+            uniform float green;
+            uniform float blue;
+            uniform float alpha;
+            void main() {
+              gl_FragColor = texture2D(texture, uv) * vec4(red, green, blue, alpha);
+            }`,
+
+            vert: `
+            precision mediump float;
+            attribute vec2 position;
+            varying vec2 uv;
+            void main() {
+              uv = position;
+              gl_Position = vec4(1.0 - 2.0 * position, 0, 1);
+            }
+            `,
+
+            attributes: {
+                position: regl.buffer([
+                    [-2, 0],
+                    [0, -2],
+                    [2, 2]
+                ])
+            },
+
+            uniforms: {
+                red: regl.prop('red'),
+                green: regl.prop('green'),
+                blue: regl.prop('blue'),
+                alpha: regl.prop('alpha'),
+                texture: regl.prop('image'),
+            },
+
+            count: 3
+        });
+
+        regl.frame(({time}) => {
+            regl.clear({
+                color: [0, 0, 0, 1],
+            })
+            drawTriangle({
+                red: +document.querySelector('#scale-input-red').value,
+                green: +document.querySelector('#scale-input-green').value,
+                blue: +document.querySelector('#scale-input-blue').value,
+                alpha: +document.querySelector('#scale-input-alpha').value,
+                image: imageTexture
+            });
+        })
+
+        var _transitions = [{
+            transitionForward: () => setup(),
+        },
+        ];
+
+    </script>
+  </body>
+</html>

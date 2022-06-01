@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+        <!--<title>nbviewer.js</title>-->
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js' data-manual></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-python.min.js' data-manual></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <script src='https://rawgit.com/kokes/nbviewer.js/master/lib/nbv.js'></script>
+
+
+    <style type='text/css'>
+        body {
+            font: 0.8em Arial, sans-serif;
+            background-color: #eee;
+        }
+        div#instructions {
+            max-width: 960px;
+            font-size: 2em;
+            color: rgb(108, 108, 108);
+            text-align: center;
+            padding-top: 0%;
+            margin: 0 auto;
+        }
+        div#instructions small {
+            font-size: .7em;
+        }
+        div#dropzone {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1000;
+            background-color: #7d7;
+            opacity: 0;
+            transition: visibility 500ms, opacity 500ms;
+        }
+        select#file-selector {
+            display: none;
+            /*display: block;*/
+            font-size: 2em;
+            margin: 0 auto;
+        }
+        button#download-notebook {
+            display: none;
+            margin: 1em auto 0 auto;
+        }
+        input#github-link {
+            font-size: 1em;
+            text-align: center;
+            width: 60%;
+            margin: .3em auto;
+        }
+        input#github-link::placeholder {
+            color: #ccc;
+        }
+        div#serving-info {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-top: 1em;
+            text-align: center;
+        }
+        div#contact {
+            width: 42em;
+            margin: 5em auto 0 auto;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+
+
+<body>
+<!--<a href="https://github.com/kokes/nbviewer.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>-->
+
+<div id='doc'>
+    <select id='file-selector'></select>
+    <!--<button id='download-notebook'>Download this notebook in HTML</button>-->
+    <button id='download-notebook'></button>
+    <div id='instructions'>
+    <!--<div id='instructions'>Drag and drop Jupyter notebooks anywhere here...<br />
+    or paste a link from Github: <br />-->
+    <!--<input id='github-link' placeholder='https://github.com/...'/>-->
+    </div>
+
+    <div id='serving-info'></div>
+
+</div>
+
+<!--<div id='contact'>
+    Hey there! If you have any feedback for this tool - issues, ideas for improvement,
+    or you want to just tell me about your use case for this, I'd love to know. <a href='mailto:ondrej.kokes@gmail.com'>E-mail me</a> or <a href='https://twitter.com/pndrej'>tweet at me</a>.
+</div>-->
+
+<div id="notebook"></div>
+
+
+<script type='text/javascript'>
+    var d = document
+    var doc = d.getElementById('doc')
+    var dn = d.getElementById('download-notebook')
+    if (!window.marked || !window.Prism || !window.katex) {
+        throw new Error('expecting libraries marked.js, Prism.js and KaTeX to be present');
+    }
+    const nbv = nbv_constructor(d, {
+        katex: window.katex,
+        prism: window.Prism,
+        marked: window.marked,
+    })
+
+    dn.addEventListener('click', function() {
+        var nbs = d.querySelectorAll('div.rendered-notebook')
+        for (var j=0; j<nbs.length; j++) {
+            if (nbs[j].style.display == 'none') continue
+
+            var link = d.createElement('a')
+            var content = encodeURIComponent(nbs[j].innerHTML)
+            var filename = nbs[j].getAttribute('rel').replace('.ipynb', '.html')
+            link.setAttribute('href', 'data:text/plain;charset=utf-8,' + content)
+            link.setAttribute('download', filename)
+
+            d.body.appendChild(link)
+            link.click()
+            d.body.removeChild(link)
+            break
+        }
+    })
+
+    var fs = d.getElementById('file-selector')
+    fs.addEventListener('change', function() {
+        var nbs = d.querySelectorAll('div.rendered-notebook')
+        for (var j=0; j<nbs.length; j++) {
+            if (nbs[j].getAttribute('rel') == fs.value) {
+                nbs[j].style.display = 'block'
+                continue
+            }
+
+            nbs[j].style.display = 'none'
+        }
+
+    })
+
+    var dz = d.createElement('div')
+    dz.style.visibility = 'hidden'
+    dz.setAttribute('id', 'dropzone')
+    d.getElementsByTagName('body')[0].appendChild(dz)
+
+    // we need a separate listener for the windows,
+    // to enable the dropzone
+    // otherwise it'd 'hijack' all clicks and everything
+    window.addEventListener('dragenter', function(e) {
+        dz.style.opacity = .3;
+        dz.style.visibility = ''
+    })
+
+    dz.addEventListener('dragenter', dzenter, false);
+    dz.addEventListener('dragover', dzover, false);
+    dz.addEventListener('drop', dzdrop, false);
+
+  // Matt's nbviewer:
+
+  var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
+  if(urlParams['notebook_name'] == null) {
+    urlParams['notebook_name'] = "sorry.ipynb"
+  }
+  var request = new XMLHttpRequest();
+  console.log(urlParams['notebook_name']);
+  request.open('GET', urlParams['notebook_name'], true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      console.log("notebook loaded");
+      var data = JSON.parse(request.responseText);
+      var target = document.getElementById("notebook");
+      nbv.render(data, target);
+    } else {
+      // We reached our target server, but it returned an error
+      console.log("notebook not found error");
+    }
+  };
+  request.onerror = function() {
+    // There was a connection error of some sort
+    console.log("connection error");
+  };
+  request.send();
+
+  // end Matt's nbviewer
+
+    function dzenter(e) {
+        e.stopPropagation()
+        e.preventDefault()
+    }
+    function dzover(e) {
+        e.stopPropagation()
+        e.preventDefault()
+    }
+    function dzdrop(e) {
+      dz.style.opacity = 0
+      dz.style.visibility = 'hidden'
+
+      e.stopPropagation()
+      e.preventDefault()
+
+      var fns = e.dataTransfer.files
+
+      renderFiles(fns)
+    }
+
+
+    function renderFiles(fns) {
+        d.getElementById('instructions').style.display = 'none'
+        fs.style.display = 'block'
+        dn.style.display = 'block'
+
+        for (var j=0; j<fns.length; j++) {
+            var fn = fns[j]
+
+            if (!fn.name.endsWith('.ipynb')) {
+                console.log('File ' + fn.name + ' not a Jupyter notebook, skipping')
+                continue
+            }
+
+            var rd = new FileReader()
+
+            rd.addEventListener('load', (function (j, rd, fn) {
+                return function() {
+                    var dt = JSON.parse(rd.result)
+
+                    // Does a container for this file exist already?
+                    // If not, create it
+                    var tg = doc.querySelector('div[rel="' + fn.name + '"]')
+                    if (tg === null) {
+                        tg = d.createElement('div')
+                        tg.setAttribute('class', 'rendered-notebook')
+                        tg.setAttribute('rel', fn.name)
+                        doc.appendChild(tg)
+                    }
+
+                    // hide rendered notebook iff
+                    //  1) it's the first one loaded, or
+                    //  2) it's the same one as already showed (refresh)
+                    if (!(fs.getElementsByTagName('option').length == 0 ||
+                        fs.value == fn.name))
+                        tg.style.display = 'none'
+
+                    // populate the <select>
+                    if (fs.querySelector('option[value="' + fn.name + '"]') === null) {
+                        var op = d.createElement('option')
+                        op.textContent = fn.name
+                        fs.appendChild(op)
+                    }
+
+                    nbv.render(dt, tg)
+                }
+            })(j, rd, fn))
+
+            rd.readAsText(fn)
+        }
+    }
+
+    // github rendering shenanigans
+    // var ghl = document.getElementById('github-link')
+
+    //ghl.addEventListener('keyup', (x) => {
+    //    // TODO: verify the link via regexp or something
+    //    // and change the input's css accordingly (red border)
+    //    window.location.hash = btoa(ghl.value);
+    //    render_gh_files()
+    //})
+
+    // what if we loaded a site with a hash already
+    //if (window.location.hash.length > 1) {
+    //    ghl.value = atob(window.location.hash.slice(1))
+    //    var event = new CustomEvent('keyup')
+    //    ghl.dispatchEvent(event)
+    //}
+
+    // `atob` won't decode utf8 characters correctly, we need to do more about this
+    // taken from this excellent answer https://stackoverflow.com/a/30106551
+    function b64DecodeUnicode(str) {
+        return decodeURIComponent(atob(str).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+    }
+
+    async function render_gh_files() {
+        console.log('rendering')
+        var hs = window.location.hash.slice(1); // without '#'
+        var hsurl = atob(hs); // base64 -> text
+
+        // extract relevant bits from the URL and create a URL for the Github API
+        var ghparts = new RegExp(/https:\/\/github.com\/(.+?)\/(.+?)\/blob\/(.+?)\/(.+\.ipynb)/)
+        var m = hsurl.match(ghparts)
+        if (!m) {
+            // TODO: render some place
+            console.error('invalid URL ' + hsurl)
+            return
+        }
+
+        var api_url = `https://api.github.com/repos/${m[1]}/${m[2]}/contents/${m[4]}?ref=${m[3]}`
+        var filename = m[4].split('/').pop()
+        console.log(`translated ${hsurl} into ${api_url}, fetching`)
+
+        var dd = await fetch(api_url) // TODO: this could fail on API limits
+        var ddj = await dd.json()
+        var dt = JSON.parse(b64DecodeUnicode(ddj.content)) // decode incoming data
+        gg = dt;
+
+        d.getElementById('instructions').style.display = 'none'
+
+        tg = d.createElement('div')
+        tg.setAttribute('class', 'rendered-notebook')
+        tg.setAttribute('rel', hsurl)
+        doc.appendChild(tg)
+
+        nbv.render(dt, tg)
+
+        document.getElementById('download-notebook').style.display = 'block'
+
+        document.getElementById('serving-info').innerHTML = `Serving <code>${decodeURI(filename)}</code>. <a href='${window.location}'>Permanent link to this render</a> / <a href='${hsurl}'>original Github source</a>, <a href='${api_url}'>API source data</a>`;
+        // return;
+    }
+
+  // with Matt's stuff
+  
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98368126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

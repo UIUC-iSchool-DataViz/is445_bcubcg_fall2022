@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>IS445 - Data Viz - ACG/ACU - Types of Viz and Choosing Colors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="/is445_spring2022/assets/style.css" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Types of Viz and Choosing Colors | IS445 - Data Viz - ACG/ACU</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Types of Viz and Choosing Colors" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the course website for IS445-ACG-ACU in Spring 2022" />
+<meta property="og:description" content="This is the course website for IS445-ACG-ACU in Spring 2022" />
+<link rel="canonical" href="http://localhost:4001/is445_spring2022/week04/" />
+<meta property="og:url" content="http://localhost:4001/is445_spring2022/week04/" />
+<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Types of Viz and Choosing Colors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-ACG-ACU in Spring 2022","headline":"Types of Viz and Choosing Colors","url":"http://localhost:4001/is445_spring2022/week04/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+    <body>
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/is445_spring2022/" title="home" class="navbar-item">
+                    <span class="icon is-large">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    IS445
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    
+                    
+                    <a href="/is445_spring2022/syllabus" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Syllabus
+                    </a>
+                    
+                    <a href="https://is445-spring2022.slack.com/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-slack"></i>
+                        </span>
+                        Slack
+                    </a>
+                    
+                    <a href="https://jupyterhub.ischool.illinois.edu/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-python"></i>
+                        </span>
+                        JupyterHub
+                    </a>
+                    
+                    <a href="https://canvas.illinois.edu/courses/16476" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-school"></i>
+                        </span>
+                        Canvas
+                    </a>
+                    
+                </div>
+                <div class="navbar-end">
+                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">-->
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="section">
+                    <div class="content">
+                        
+                        <section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <h1 id="types-of-viz-and-choosing-colors">Types of Viz and Choosing Colors</h1>
+
+<p>This week, we will cover a bit about colors, and more about data transformations, and how we can
+choose colors and transforms to better suit our data.</p>
+
+<p>We also did some basics of Pandas last week and we’ll continue this week.</p>
+
+<p>Note there are a variety of notebooks from previous iterations of this course listed under the <em>Materials</em> subsection of today’s lecture.  The “furtherExamples” notebooks are just there as reference, we will not be going through them by hand.</p>
+
+<!-- ## Downloads
+
+### Data:
+
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv" download>Building Inventory CSV file - building_inventory.csv</a>
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt" download>Michigan Depth Map (86Mb) - michigan_lld.flt</a>
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5" download>Brain Scan (72Mb) - single_dicom.h5</a>
+ -->
+
+<!-- ### Python external libraries
+
+Make sure you save these in the same directory as your jupyter notebook is running in!
+
+ * <a href="palette_colors.py" download>Palette Colors (palette_colors.py) - save to notebook folder or modify your path if you know how to do that</a>
+ -->
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="http://jonathansoma.com/lede/algorithms-2017/classes/fuzziness-matplotlib/understand-df-plot-in-pandas/">Pandas vs. Matplotlib</a></li>
+  <li><a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452’s Dictionary week</a></li>
+  <li>Colors: <a href="https://www.rapidtables.com/web/color/RGB_Color.html">RGB color triplets</a></li>
+  <li>While we won’t be using <a href="https://wholetale.org/">Whole Tale</a> for this lecture, it was used for the last iteration of this course and you should feel free to go through the code walk-throughs presented there by Matt Turk - just search for “IS590” under the <a href="https://dashboard.wholetale.org/browse">Browse Tales</a> header.</li>
+</ul>
+
+<h2 id="optional-reading-list">Optional Reading List</h2>
+
+<ol>
+  <li>VAD, Ch. 10: Map Color and Other Channels</li>
+  <li><a href="https://serialmentor.com/dataviz/color-basics.html">FDV, Ch. 4: Color scales</a></li>
+  <li>VAD, Ch. 5: Marks and Channels</li>
+  <li><a href="https://www.csc2.ncsu.edu/faculty/healey/PP/">Perception in Visualization (pay extra attention to the parts about color)</a></li>
+  <li><a href="https://jiffyclub.github.io/palettable/#documentation">Palettable Docs</a></li>
+</ol>
+
+            </div>
+            <div class="column">
+                
+                <figure class="image">
+                    <img src="/is445_spring2022/assets/undraw/undraw_cohort_analysis_stny.svg">
+                </figure>
+                
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="container">
+        <h2 class="subtitle">Lectures</h2>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="/is445_spring2022/week04/lecture04.html">Lecture 3 - Colors and Color maps, Types of viz</a></p><p>How do colors work? What are the different ways we can map colors to values? What should we keep in mind when doing this?</p>
+            </div>
+        </article>
+        
+
+        
+        
+
+	
+        
+        <h2 class="subtitle">Examples</h2>
+	
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Fprep_notebook_week04.ipynb">Prep Notebook, Week 4</a> - (<a href="/is445_spring2022/week04/prep_notebook_week04.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Prep notebook for this week
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2FinClass_week04.ipynb">In class notebook, Week 4</a> - (<a href="/is445_spring2022/week04/inClass_week04.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Prep notebook for this week
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Ffall2019_prep_notebook_furtherExamples_01.ipynb">fall2019_prep_notebook_furtherExamples_01.ipynb</a> - (<a href="/is445_spring2022/week04/fall2019_prep_notebook_furtherExamples_01.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Ffall2019_prep_notebook_furtherExamples_02.ipynb">fall2019_prep_notebook_furtherExamples_02.ipynb</a> - (<a href="/is445_spring2022/week04/fall2019_prep_notebook_furtherExamples_02.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Ffall2019_prep_notebook_furtherExamples_03.ipynb">fall2019_prep_notebook_furtherExamples_03.ipynb</a> - (<a href="/is445_spring2022/week04/fall2019_prep_notebook_furtherExamples_03.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Fspring2019_prep_notebook_furtherExamples_week03.ipynb">spring2019_prep_notebook_furtherExamples_week03.ipynb</a> - (<a href="/is445_spring2022/week04/spring2019_prep_notebook_furtherExamples_week03.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Fspring2019_prep_notebook_week03_part1.ipynb">spring2019_prep_notebook_week03_part1.ipynb</a> - (<a href="/is445_spring2022/week04/spring2019_prep_notebook_week03_part1.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek04%2Fspring2019_prep_notebook_week03_part2.ipynb">spring2019_prep_notebook_week03_part2.ipynb</a> - (<a href="/is445_spring2022/week04/spring2019_prep_notebook_week03_part2.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+	
+	<!-- don't include libraries if not there -->
+	
+        
+
+
+        
+        <h2 class="subtitle">Python Libraries</h2>
+	
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+                   <a href="/is445_spring2022/week04/library/palette_colors.py">Palette Colors (palette_colors.py)</a>
+		  
+		  
+                </p>
+                <p>
+                    Python library, save to notebook folder or modify your path if you know how to do that
+                </p>
+            </div>
+        </article>
+        
+
+	<!-- don't include data if not there -->
+	
+        
+
+	
+        <h2 class="subtitle">Data</h2>
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+                   <a href="/is445_spring2022/week03/data/building_inventory.csv">Buildings dataset</a>
+		  
+		  
+                </p>
+                <p>
+                    Illinois buildings dataset
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt">Michigan Depth Map (86Mb)</a>
+		  
+                </p>
+                <p>
+                    Measurments taken from around Lake Michigan (https://www.ngdc.noaa.gov/mgg/greatlakes/michigan.html)
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5">Brain Scan (72Mb)</a>
+		  
+                </p>
+                <p>
+                    MRI scan of a brain
+                </p>
+            </div>
+        </article>
+        
+
+	
+	<!-- don't include assignments if not there -->
+	
+        
+
+
+        
+	
+        
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="is-centered columns has-text-centered">
+        <div class="column is-6">
+            <p>
+                This course developed collaboratively by 
+                <a href="https://astronaiman.com/">Jill Naiman</a> and <a href="https://matthewturk.github.io/">Matthew Turk</a>
+		at the University of Illinois Urbana-Champaign
+                <a href="https://ischool.illinois.edu/">School of Information Sciences</a>.
+                The source code is released under a BSD 3-Clause license, allowing for reuse and redistribution.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

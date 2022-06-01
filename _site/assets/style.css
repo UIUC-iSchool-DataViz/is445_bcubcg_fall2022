@@ -1,0 +1,18 @@
+.h1 {
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Questrial', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+span.tag {
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,33 @@
+instructor: 
+  name: Jill Naiman
+  email: jnaiman@illinois.edu
+  office: Online
+  office_hours: Tuesdays 11am-12pm; Thursdays 2-3pm
+tas:
+  -
+    name: Xinhui Hu
+    email: xhu15@illinois.edu
+    office: Online
+    office_hours: Wednesdays and Fridays 11am-12pm
+
+course:
+  name: Data Visualization
+  number: IS445
+  semester: Spring 2022
+  section: ACG-ACU
+  location: 126 Grad Sch of Lib & Info Science
+  time: Mondays, 3-5:50PM
+  credit_hours: 4
+urls:
+  -
+    name: Slack
+    url: is445-spring2022.slack.com
+  - 
+    name: Canvas
+    url: https://canvas.illinois.edu/courses/16476
+  -
+    name: Course Materials
+    url: https://uiuc-ischool-dataviz.github.io/is445_spring2022/
+  -
+    name: Github
+    url: https://github.com/UIUC-iSchool-DataViz/is445_spring2022

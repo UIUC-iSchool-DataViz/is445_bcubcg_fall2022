@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+<style>
+  .container {
+      margin: auto;
+          width: 500px;
+  }
+</style>
+  </head>
+  <body>
+      <div id="picker" class="container">
+      </div>
+      <div class="container">
+          <p id="rgba" style="font-family: monospace;"></p>
+          <p id="hex" style="font-family: monospace;"></p>
+          <p id="hsv" style="font-family: monospace;"></p>
+      </div>
+    
+    <script type="text/javascript">
+
+        sliders = ["hue", "saturation", "value", "red", "green", "blue",
+                   "alpha", "kelvin temperature"].map( t => 
+                ({ component: iro.ui.Slider,
+                        options: {
+                            sliderType: t,
+                                borderWidth: 3,
+                                borderColor: "#555555"
+                        }
+                })
+        );
+        var colorPicker = new iro.ColorPicker('#picker', {
+            layout: [
+                {
+                    component: iro.ui.Wheel,
+                    options: {
+                        borderWidth: 3,
+                        borderColor: "#555555"
+                    },
+                }
+            ].concat(sliders)
+        });
+        colorPicker.on("color:change", color => {
+            document.querySelector("#rgba").innerHTML = color.rgbaString;
+            document.querySelector("#hex").innerHTML = color.hexString;
+            document.querySelector("#hsv").innerHTML = color.hslString;
+        })
+
+        var _transitions = [{
+            transitionForward: () => setup(),
+        },
+        ];
+
+    </script>
+  </body>
+</html>

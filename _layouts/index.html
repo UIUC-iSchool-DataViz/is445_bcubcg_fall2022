@@ -1,0 +1,200 @@
+---
+layout: default
+---
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <h1>{{site.title}}</h1>
+                {{ content }}
+            </div>
+            <div class="column">
+                <figure class="image">
+                    <img src='{{"/assets/undraw/undraw_visual_data_b1wx.svg" | relative_url}}'>
+                </figure>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1>Lectures and Materials</h1>
+        <hr/>
+{% assign sorted_pages = site.html_pages | sort:"path" %}
+{% assign week_pages = sorted_pages | where: "layout", "week" | where: "visible", true %}
+{% for f in week_pages %}
+{% assign tags = "" | split: ", " %}
+{% assign subpages = sorted_pages | where: "dir", f.dir %}
+{% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
+{% assign assignments = subpages | where: "layout", "assignment" | sorted: "date" %}
+{% for subpage in subpages %}
+{% assign tags = tags | concat: subpage.tags %}
+{% endfor %}
+{% assign tags = tags | uniq %}
+<div class="columns">
+    <div class="column is-one-quarter">
+        <div class="has-text-centered">
+            <h2 class="subtitle">
+		Week {{forloop.index}}
+            </h2>
+            <figure class="image">
+            {% if f.icon %}
+                <a href="{{f.url | relative_url }}">
+                    <img src="{{ '/assets/undraw/' | append: f.icon | relative_url }}">
+                </a>
+            {% endif %}
+            </figure>
+            <h3 class="subtitle">
+                <a href="{{f.url | relative_url }}">{{f.title}}</a>
+            </h3>
+            <p>
+                {% for tag in tags %}
+                <span class="tag" data-tag="{{tag}}">
+                    {{tag}}
+                </span>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+    <div class="column">
+        {% for lecture in lectures %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a></p><p>{{ lecture.description}}</p>
+            </div>
+        </article>
+        {% endfor %}
+        <hr/>
+        <div class="columns">
+        {% for assignment in assignments %}
+        <div class="column has-text-centered">
+            <div>
+                <p>
+                    <span class="icon is-large"><i class="fas fa-2x fa-pencil-ruler"></i></span>
+                </p>
+                <p>
+                    <a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+        {% for example in f.examples %}
+        {% unless example.filename contains "2019" %}
+        {% unless example.filename contains "spring2021" %}
+        {% unless example.type == "iodidePast" %}
+        <div class="column has-text-centered">
+            <div>
+                <p>
+                    <span class="icon is-large"><i class="fas fa-2x fa-chart-line"></i></span>
+                </p>
+                <p>
+		  <!-- for notebooks, we want to make sure we link to the GITHUB version, for auto-updates to propigate -->
+                    {% if example.type == "ipynb" %}
+                     <a href="nbv.html?notebook_name={{f.dir | append: example.filename | relative_url | url_encode }}">{{example.title}}</a>
+		    {% elsif example.type == "ipynbInClass" %}
+		     <!--<a href="https://kokes.github.io/nbviewer.js/viewer.html#https://github.com/{{ site.githuburlbase | append: site.baseurl | append:"/blob/master" | append: f.dir | append: example.filename }}">{{example.title}}</a>-->
+		     <!--<a href="nbv.html?notebook_name=https://github.com/{{ site.githuburlbase | append: site.baseurl | append:"/raw/master" | append: f.dir | append: example.filename }}">{{example.title}}</a>-->
+                     <a href="nbv.html?notebook_name={{f.dir | append: example.filename | relative_url | url_encode }}">{{example.title}}</a>
+		    {% elsif example.type == "iodide" %}
+                     <a href="{{example.link }}">{{example.title}}</a>		     
+                    {% else %}
+                    <a href="{{f.dir | append: example.filename | relative_url }}">{{example.title}}</a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        {% endunless %}
+        {% endunless %}
+	{% endunless %}
+        {% endfor %}
+
+        {% for example in f.library %}
+        <div class="column has-text-centered">
+            <div>
+                <p>
+                    <span class="icon is-large"><i class="fas fa-2x fa-book-open"></i></span>
+                </p>
+                <p>
+		  {% if example.type == "library" %}
+                   <a href="{{f.dir | append: example.path | append: "library/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		  {% if example.type == "libraryOtherWeek" %}
+                   <a href="{{ "/" | append: example.week | append: "/library/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+
+
+	
+        {% for example in f.data %}
+        <div class="column has-text-centered">
+            <div>
+                <p>
+                    <span class="icon is-large"><i class="fas fa-2x fa-database"></i></span>
+                </p>
+                <p>
+		  {% if example.type == "data" %}
+                   <a href="{{f.dir | append: example.path | append: "data/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		  {% if example.type == "dataOtherWeek" %}
+                   <a href="{{ "/" | append: example.week | append: "/data/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		  {% if example.type == "dataLink" %}
+                   <a href="{{example.link }}">{{example.title}}</a>
+		  {% endif %}
+		   
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for example in f.otherslides %}
+        <div class="column has-text-centered">
+            <div>
+                <p>
+                    <span class="icon is-large"><i class="fas fa-2x fa-archive"></i></span>
+                </p>
+                <p>
+		  {% if example.type == "pdfslides" %}
+                   <a href="{{f.dir | append: example.path | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		   
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+	
+     </div>
+        
+    </div>
+</div>
+<hr/>
+{% endfor %}
+    </div>
+</section>
+<script>
+window.addEventListener('load', (event) => {
+    for (var tag of document.querySelectorAll("span.tag")) {
+        tag.addEventListener("click", (event) => {
+            // First turn off all the previous elements
+            var tagName = event.target.dataset['tag'];
+            var justToggle = event.target.classList.contains("is-success");
+            for (var t of document.querySelectorAll("span.tag")) {
+                t.classList.remove("is-success");
+            }
+            if (justToggle) return;
+            for (var t of document.querySelectorAll(`[data-tag="${tagName}"]`)) {
+                t.classList.add("is-success");
+            }
+        })
+    }
+});
+</script>

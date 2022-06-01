@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>IS445 - Data Viz - ACG/ACU - Maps, maps and more maps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="/is445_spring2022/assets/style.css" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Maps, maps and more maps | IS445 - Data Viz - ACG/ACU</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Maps, maps and more maps" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the course website for IS445-ACG-ACU in Spring 2022" />
+<meta property="og:description" content="This is the course website for IS445-ACG-ACU in Spring 2022" />
+<link rel="canonical" href="http://localhost:4001/is445_spring2022/week08/" />
+<meta property="og:url" content="http://localhost:4001/is445_spring2022/week08/" />
+<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Maps, maps and more maps" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-ACG-ACU in Spring 2022","headline":"Maps, maps and more maps","url":"http://localhost:4001/is445_spring2022/week08/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+    <body>
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/is445_spring2022/" title="home" class="navbar-item">
+                    <span class="icon is-large">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    IS445
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    
+                    
+                    <a href="/is445_spring2022/syllabus" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Syllabus
+                    </a>
+                    
+                    <a href="https://is445-spring2022.slack.com/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-slack"></i>
+                        </span>
+                        Slack
+                    </a>
+                    
+                    <a href="https://jupyterhub.ischool.illinois.edu/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-python"></i>
+                        </span>
+                        JupyterHub
+                    </a>
+                    
+                    <a href="https://canvas.illinois.edu/courses/16476" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-school"></i>
+                        </span>
+                        Canvas
+                    </a>
+                    
+                </div>
+                <div class="navbar-end">
+                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">-->
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="section">
+                    <div class="content">
+                        
+                        <section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <h1 id="maps-maps-and-more-maps">Maps, maps and more maps</h1>
+
+<p>We will start thinking about maps &amp; map projection, both in <code class="language-plaintext highlighter-rouge">bqplot</code> and <code class="language-plaintext highlighter-rouge">matplotlib</code> and with <code class="language-plaintext highlighter-rouge">geopandas</code>+<code class="language-plaintext highlighter-rouge">contextily</code>.  We’ll continue this week with building dashboards of mappable data.</p>
+
+<p>&lt;!– ## Downloads</p>
+
+<h3 id="data">Data:</h3>
+
+<ul>
+  <li><a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/ufo-scrubbed-geocoded-time-standardized-00.csv" download="">The UFO Sitings Dataset (13Mb) - ufo-scrubbed-geocoded-time-standardized-00.csv</a></li>
+  <li><a href="total_export.csv" download="">State export data (8Kb) - total_export.csv</a></li>
+  <li><a href="market_map_data.csv" download="">Backup: Surgery Charges Dataset (37Mb) - market_map_data.csv</a></li>
+  <li><a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/data_tohoku_norm_transpose.csv" download="">Earthquake sensor data (59Mb) - data_tohoku_norm_transpose.csv</a></li>
+  <li><a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/location.txt" download="">Earthquake locations data (12Kb) - location.txt</a></li>
+</ul>
+
+
+            </div>
+            <div class="column">
+                
+                <figure class="image">
+                    <img src="/is445_spring2022/assets/undraw/undraw_Around_the_world_re_n353.svg">
+                </figure>
+                
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <div class="container">
+        <h2 class="subtitle">Lectures</h2>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="/is445_spring2022/week08/lecture07.html">Lecture 7 - Maps!</a></p><p>More about maps and their projections</p>
+            </div>
+        </article>
+        
+
+        
+        
+
+	
+        
+        <h2 class="subtitle">Examples</h2>
+	
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek08%2FinClass_week08.ipynb">In class notebook</a> - (<a href="/is445_spring2022/week08/inClass_week08.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Placeholder for in class coding
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek08%2Fprep_notebook_week08_part1.ipynb">Prep Notebook, Week 8, Part 1</a> - (<a href="/is445_spring2022/week08/prep_notebook_week08_part1.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Prep notebook for this week, Part 1
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek08%2Fprep_notebook_week08_part2.ipynb">Prep Notebook, Week 8, Part 2</a> - (<a href="/is445_spring2022/week08/prep_notebook_week08_part2.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Prep notebook for this week, Part 2
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek08%2Fspring2019_prep_notebook_week07_part1.ipynb">spring2019_prep_notebook_week07_part1.ipynb</a> - (<a href="/is445_spring2022/week08/spring2019_prep_notebook_week07_part1.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek08%2Fspring2019_prep_notebook_week07_part2.ipynb">spring2019_prep_notebook_week07_part2.ipynb</a> - (<a href="/is445_spring2022/week08/spring2019_prep_notebook_week07_part2.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_spring2022%2Fweek08%2Fspring2019_prep_notebook_week07_part3.ipynb">spring2019_prep_notebook_week07_part3.ipynb</a> - (<a href="/is445_spring2022/week08/spring2019_prep_notebook_week07_part3.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+	
+	<!-- don't include libraries if not there -->
+	
+        
+
+
+        
+        <h2 class="subtitle">Python Libraries</h2>
+	
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+                   <a href="/is445_spring2022/week08/library/states_utils.py">State export utilities (states_utils.py)</a>
+		  
+		  
+                </p>
+                <p>
+                    Python library, save to notebook folder or modify your path if you know how to do that
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+                   <a href="/is445_spring2022/week08/library/us_state_abbrev.py">US State abbreviations (us_state_abbrev.py)</a>
+		  
+		  
+                </p>
+                <p>
+                    Python library, save to notebook folder or modify your path if you know how to do that
+                </p>
+            </div>
+        </article>
+        
+
+	<!-- don't include data if not there -->
+	
+        
+
+	
+        <h2 class="subtitle">Data</h2>
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/ufo-scrubbed-geocoded-time-standardized-00.csv">The UFO Sitings Dataset (13Mb)</a>
+		  
+                </p>
+                <p>
+                    Data about world wide reports of UFO sitings
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/is445_spring2021/week06/data/total_export.csv">State export data (8Kb)</a>
+		  
+                </p>
+                <p>
+                    Data about exports from each state
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/is445_spring2022/week07/data/market_map_data.csv">Surgery Charges Dataset (37Mb)</a>
+		  
+                </p>
+                <p>
+                    Surgery charges in different states
+                </p>
+            </div>
+        </article>
+        
+
+	
+	<!-- don't include assignments if not there -->
+	
+        
+
+
+        
+	
+        
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="is-centered columns has-text-centered">
+        <div class="column is-6">
+            <p>
+                This course developed collaboratively by 
+                <a href="https://astronaiman.com/">Jill Naiman</a> and <a href="https://matthewturk.github.io/">Matthew Turk</a>
+		at the University of Illinois Urbana-Champaign
+                <a href="https://ischool.illinois.edu/">School of Information Sciences</a>.
+                The source code is released under a BSD 3-Clause license, allowing for reuse and redistribution.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

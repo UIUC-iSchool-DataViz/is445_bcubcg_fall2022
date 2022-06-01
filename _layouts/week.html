@@ -1,0 +1,176 @@
+---
+layout: default
+---
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                {{ content }}
+            </div>
+            <div class="column">
+                {% if page.icon %}
+                <figure class="image">
+                    <img src="{{ '/assets/undraw/' | append: page.icon | relative_url}}">
+                </figure>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+{% assign subpages = site.html_pages | where: "dir", page.dir %}
+{% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
+{% assign assignments = subpages | where: "layout", "assignment" %}
+<section class="section">
+    <div class="container">
+        <h2 class="subtitle">Lectures</h2>
+        {% for lecture in lectures %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a></p><p>{{ lecture.description}}</p>
+            </div>
+        </article>
+        {% endfor %}
+
+        {% assign hasEx = "NO" %}
+        {% for libs in page.examples %}
+	 {% assign hasEx = "YES" %}
+	{% endfor %}
+
+	
+        {% if hasEx == "YES" %}
+        <h2 class="subtitle">Examples</h2>
+	{% endif %}
+        {% for example in page.examples %}
+        <article class="media">
+	  {% unless example.filename contains "2019" %}
+	  {% unless example.filename contains "spring2021" %}
+          {% unless example.type == "iodidePast" %}
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  {% if example.type == "ipynb" %}
+                     <a href="../nbv.html?notebook_name={{page.dir | append: example.filename | relative_url | url_encode }}">{{example.title}}</a> - (<a href="{{page.dir | append: example.filename | relative_url }}">download</a>)
+		  {% elsif example.type == "iodide" %}
+                    <a href="{{example.link }}">{{example.title}}</a>		    
+                   {% else %}
+                    <a href="{{page.dir | append: example.filename | relative_url }}">{{example.title}}</a>
+                   {% endif %}
+                </p>
+                <p>
+                    {{example.description}}
+                </p>
+            </div>
+	    {% endunless %}
+	    {% endunless %}
+	    {% endunless %}
+          {% if example.filename contains "2019" or example.filename contains "spring2021" %}
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name={{page.dir | append: example.filename | relative_url | url_encode }}">{{example.title}}</a> - (<a href="{{page.dir | append: example.filename | relative_url }}">download</a>)
+	    </p>
+            {% endif %}
+	    {% if example.type == "iodidePast" %}
+	    <p>
+              <b>Past Notebook:</b> <a href="{{example.link }}">{{example.description}}</a>
+	    </p>
+	    {% endif %}
+
+	    
+         </article>
+        {% endfor %}
+	
+	<!-- don't include libraries if not there -->
+	{% assign hasLib = "NO" %}
+        {% for libs in page.library %}
+	 {% assign hasLib = "YES" %}
+	{% endfor %}
+
+
+        {% if hasLib == "YES" %}
+        <h2 class="subtitle">Python Libraries</h2>
+	{% endif %}
+	
+        {% for example in page.library %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  {% if example.type == "library" %}
+                   <a href="{{page.dir | append: example.path | append: "library/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		  {% if example.type == "libraryOtherWeek" %}
+                    <a href="{{ "/" | append: example.week | append: "/library/" | append: example.filename | relative_url }}">{{example.title}}</a> 
+		  {% endif %}
+                </p>
+                <p>
+                    {{example.description}}
+                </p>
+            </div>
+        </article>
+        {% endfor %}
+
+	<!-- don't include data if not there -->
+	{% assign hasData = "NO" %}
+        {% for libs in page.data %}
+	 {% assign hasData = "YES" %}
+	{% endfor %}
+
+	{% if hasData == "YES" %}
+        <h2 class="subtitle">Data</h2>
+	{% endif %}
+        {% for example in page.data %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  {% if example.type == "data" %}
+                   <a href="{{page.dir | append: example.path | append: "data/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		  {% if example.type == "dataOtherWeek" %}
+                   <a href="{{ "/" | append: example.week | append: "/data/" | append: example.filename | relative_url }}">{{example.title}}</a>
+		  {% endif %}
+		  {% if example.type == "dataLink" %}
+                   <a href="{{example.link }}">{{example.title}}</a>
+		  {% endif %}
+                </p>
+                <p>
+                    {{example.description}}
+                </p>
+            </div>
+        </article>
+        {% endfor %}
+
+	
+	<!-- don't include assignments if not there -->
+	{% assign hasAssignments = "NO" %}
+        {% for assignment in assignments %}
+	 {% assign hasAssignments = "YES" %}
+	{% endfor %}
+
+
+        {% if hasAssignments == "YES" %}
+        <h2 class="subtitle">Assignments</h2>
+	{% endif %}
+	
+        {% for assignment in assignments %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-pencil-ruler"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a></p><p>{{ assignment.description}}</p>
+            </div>
+        </article>
+        {% endfor %}
