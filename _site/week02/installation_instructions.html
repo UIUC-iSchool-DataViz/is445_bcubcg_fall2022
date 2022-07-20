@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="/is445_spring2022/assets/style.css" />
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Installation Instructions | IS445 - Data Viz - ACG/ACU</title>
 <meta name="generator" content="Jekyll v3.9.0" />
@@ -15,14 +15,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Install necessary packages for this class" />
 <meta property="og:description" content="Install necessary packages for this class" />
-<link rel="canonical" href="http://localhost:4001/is445_spring2022/week02/installation_instructions.html" />
-<meta property="og:url" content="http://localhost:4001/is445_spring2022/week02/installation_instructions.html" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week02/installation_instructions.html" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week02/installation_instructions.html" />
 <meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Installation Instructions" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Install necessary packages for this class","headline":"Installation Instructions","url":"http://localhost:4001/is445_spring2022/week02/installation_instructions.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Install necessary packages for this class","headline":"Installation Instructions","url":"http://localhost:4001/is445_bcubcg_fall2022/week02/installation_instructions.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -33,7 +33,7 @@
     <nav class="navbar" role="navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/is445_spring2022/" title="home" class="navbar-item">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
                     <span class="icon is-large">
                         <i class="fas fa-home"></i>
                     </span>
@@ -49,7 +49,7 @@
                 <div class="navbar-start">
                     
                     
-                    <a href="/is445_spring2022/syllabus" class="navbar-item">
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
                         <span class="icon is-large">
                             <i class="fas fa-book"></i>
                         </span>
@@ -79,7 +79,7 @@
                     
                 </div>
                 <div class="navbar-end">
-                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">-->
+                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_bcubcg_fall2022" class="navbar-item">-->
                     <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">
                         <span class="icon is-large">
                             <i class="fab fa-github"></i>
@@ -156,9 +156,9 @@
 <h3 id="21-conda-environment">2.1 Conda environment</h3>
 <ol>
   <li>On a Mac search for the “Terminal” prompt/on Windows search for the “Anaconda Prompt” (NOT the navigator)</li>
-  <li>In the terminal window type: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.7 matplotlib=3.2.2 numpy jupyter pillow pandas scipy ipywidgets palettable bqplot=0.12.30 h5py requests traitlets geopandas contextily ipyvolume ffmpeg descartes basemap cartopy webcolors ipyleaflet wordcloud nltk xlrd libpng openpyxl pip yt -c conda-forge</code>
+  <li>In the terminal window type: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.7 matplotlib=3.2.2 numpy jupyter pillow pandas scipy ipywidgets palettable bqplot=0.12.30 h5py requests traitlets geopandas contextily ipyvolume ffmpeg descartes basemap webcolors wordcloud nltk xlrd libpng openpyxl pdvega pip yt -c conda-forge</code>
     <ul>
-      <li><strong>NOTE #1:</strong> if this fails or there are package conflicts you can try with Python 3.8 – In the terminal window type: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.8 matplotlib=3.2.2 numpy jupyter pillow pandas scipy ipywidgets palettable bqplot=0.12.30 h5py requests traitlets geopandas contextily ipyvolume ffmpeg descartes basemap cartopy webcolors ipyleaflet wordcloud nltk xlrd libpng openpyxl pip yt -c conda-forge</code></li>
+      <li><strong>NOTE #1:</strong> if this fails or there are package conflicts you can try with Python 3.8 – In the terminal window type: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.8 matplotlib=3.2.2 numpy jupyter pillow pandas scipy ipywidgets palettable bqplot=0.12.30 h5py requests traitlets geopandas contextily ipyvolume ffmpeg descartes basemap webcolors wordcloud nltk xlrd libpng openpyxl pdvega pip yt -c conda-forge</code></li>
       <li><strong>NOTE #2:</strong> you might see the following message <code class="language-plaintext highlighter-rouge">Solving environment: failed with initial frozen solve. Retrying with flexible solve.</code> or <code class="language-plaintext highlighter-rouge">Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.</code>  This does <em>not</em> mean your installation has failed – as long as its still running let it be! (This can take a while – average is ~30 minutes, but sometimes it can take over night.)</li>
     </ul>
   </li>
