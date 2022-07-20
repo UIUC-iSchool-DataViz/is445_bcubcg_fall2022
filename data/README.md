@@ -4,7 +4,9 @@ This is the general tracking location of the datasets used in this course.  Will
 
 ## Illinois Licensing Data
 
-Data source: first 100k lines of https://data.illinois.gov/dataset/professional-licensing/resource/beef79ab-b679-4b0a-960a-05c218a619ba
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/licenses_fall2022.csv
+
+Data source: first 100k lines of https://data.illinois.gov/dataset/professional-licensing/resource/beef79ab-b679-4b0a-960a-05c218a619ba pulled with [license_query.ipynb](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/data/license_query.ipynb)
 
 Randomized 10k from this 100k, first and last names randomized
 
