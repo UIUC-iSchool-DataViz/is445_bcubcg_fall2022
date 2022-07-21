@@ -16,6 +16,7 @@ Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall20
 
 Data source: https://data.world/timothyrenner/bfro-sightings-data
 
+Classification system described here: https://www.bfro.net/gdb/classify.asp 
 
 
 ## Illinois Employee Compensation (NOT USED)
