@@ -10,6 +10,13 @@ Data source: first 100k lines of https://data.illinois.gov/dataset/professional-
 
 Randomized 10k from this 100k, first and last names randomized
 
+## Bigfoot Sightings Dataset
+
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/bfro_reports_fall2022.csv
+
+Data source: https://data.world/timothyrenner/bfro-sightings-data
+
+
 
 ## Illinois Employee Compensation (NOT USED)
 
