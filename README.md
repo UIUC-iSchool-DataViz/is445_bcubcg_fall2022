@@ -14,7 +14,7 @@ be able to have "real time" access to the in class notebooks.  This was accompli
 auto-commit script going on in the background 
 
 ```
-cd YOUR_PATH_GOES_HERE/is445_spring2022; while :; do clear; source auto_commit.sh; sleep 30; done
+cd YOUR_PATH_GOES_HERE/is445_bcubcg_fall2022; while :; do clear; source auto_commit.sh; sleep 30; done
 ```
 
 I couldn't get crontab to work (I think it has to do with the user-key/ssh permissions something something), but that is probably a much more elegant solution.
