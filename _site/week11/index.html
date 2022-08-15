@@ -3,26 +3,26 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>IS445 - Data Viz - ACG/ACU - Viz Audience; More Starboard, Javascript &amp; Vega-lite (and maybe Idyll)</title>
+    <title>IS445 - Data Viz - BCU/BCG - More with Idyll, Publishing Viz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="/is445_bcubcg_oauoag_fall2022/assets/style.css" />
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Viz Audience; More Starboard, Javascript &amp; Vega-lite (and maybe Idyll) | IS445 - Data Viz - ACG/ACU</title>
+<title>More with Idyll, Publishing Viz | IS445 - Data Viz - BCU/BCG</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Viz Audience; More Starboard, Javascript &amp; Vega-lite (and maybe Idyll)" />
+<meta property="og:title" content="More with Idyll, Publishing Viz" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
 <meta property="og:description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
-<link rel="canonical" href="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week11/" />
-<meta property="og:url" content="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week11/" />
-<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week11/" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week11/" />
+<meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Viz Audience; More Starboard, Javascript &amp; Vega-lite (and maybe Idyll)" />
+<meta property="twitter:title" content="More with Idyll, Publishing Viz" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"Viz Audience; More Starboard, Javascript &amp; Vega-lite (and maybe Idyll)","url":"http://localhost:4001/is445_bcubcg_oauoag_fall2022/week11/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"More with Idyll, Publishing Viz","url":"http://localhost:4001/is445_bcubcg_fall2022/week11/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -33,7 +33,7 @@
     <nav class="navbar" role="navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/is445_bcubcg_oauoag_fall2022/" title="home" class="navbar-item">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
                     <span class="icon is-large">
                         <i class="fas fa-home"></i>
                     </span>
@@ -49,7 +49,7 @@
                 <div class="navbar-start">
                     
                     
-                    <a href="/is445_bcubcg_oauoag_fall2022/syllabus" class="navbar-item">
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
                         <span class="icon is-large">
                             <i class="fas fa-book"></i>
                         </span>
@@ -128,22 +128,54 @@
     <div class="container">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 id="viz-audience-more-starboard-javascript--vega-lite-and-maybe-idyll">Viz Audience; More Starboard, Javascript &amp; Vega-lite (and maybe Idyll)</h1>
+                <h1 id="more-with-idyll-publishing-viz">More with Idyll, Publishing Viz</h1>
 
-<h2 id="installation-instructions-idyll">Installation instructions: Idyll</h2>
+<p>We talk a little bit about publishing and carry on with Idyll.</p>
 
-<p>We’ll be using Idyll to do some web-dev and we need to install another package manager, npm, to install Idyll and other Idyll-related packages.</p>
+<h2 id="extra-files">Extra files</h2>
 
-<h4 id="please-follow-these-installation-instructions-to-install-the-necessary-packages"><a href="installation_instructions_week10">Please follow these installation instructions to install the necessary packages</a>.</h4>
+<p>Further example of Idyll pages: website from <a href="https://jnaiman.github.io/items_dataviz_spring2020/">Spring 2020</a> which focuses on using <a href="https://d3js.org/">d3.js</a> to do many plots since vega-lite was not working well at that time.  The index.idyll file, along with example d3 components and a styles.css file for the final map are in <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/tree/master/week15/corg">this subdirectory from that course page here</a>.</p>
+
+<p>Full corgi dataset available <a href="/is445_bcubcg_fall2022/week11/corg/corgiData_countries_full_2020.json">here</a>.</p>
+
+<!--
+## Downloads & Links
+
+### Idyll Files & Example pages
+
+ 1. We'll be building toward a webpage like [this](https://jnaiman.github.io/) today using [Idyll](https://idyll-lang.org/)'s built-in components.
+ 1. Last week, we got to [this index.idyll file right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week11/corg/prepIdyll/index.idyll) and we'll start from there this week.
+ 1. Full Markdown code for this week [available right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/index.idyll).
+ 1. We'll also build a few histogram components like:
+    * starting with [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-custom-d3-component.js)
+    * then [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-button-custom-d3-component.js)
+    * and finally [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-button-slider-custom-d3-component.js)
+-->
+
+<!-- Where we got to in class this week: -->
+<!--   * [This index.idyll](index.idyll) file -->
+<!--   * [This histogram component](histogram-custom-d3-component.js) -->
+
+<!--
+Further examples include:
+ * Website from [Spring 2020](https://jnaiman.github.io/items_dataviz_spring2020/) which focuses on using [d3.js](https://d3js.org/) to do many plots since vega-lite was not working well at that time.  The index.idyll file, along with example d3 components and a styles.css file for the final map are in [this subdirectory from that course page here](https://github.com/UIUC-iSchool-DataViz/spring2020/tree/master/week15/corg).
+ -->
+
+<!--
+### Data
+
+ 1. <a href="corg/corgs_per_country_over_time_columns_2020.csv" download>Corgis per country over time (corgs_per_country_over_time_columns_2020.csv)</a>
+ 1. <a href="corg/corgiData_countries_subset_2020.json" download>Subset of full Corgi database (corgiData_countries_subset_2020.json)</a>
+     * Full dataset available [here](/is445_bcubcg_fall2022/week11/corg/corgiData_countries_full_2020.json)
+	 
+This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped using Beautiful Soup in Python](https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py) and [further processed in Python](https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb) into this form.
+-->
 
 <h2 id="optional-reading-list">Optional reading list</h2>
 
 <ol>
-  <li><a href="https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936">Same Data, Multiple Perspectives</a></li>
-  <li><a href="https://serialmentor.com/dataviz/telling-a-story.html">FDV, Ch. 29: Telling a story and making a point</a></li>
-  <li><a href="https://alpha.iodide.io/">Iodide Docs</a></li>
-  <li><a href="https://vega.github.io/vega-lite/docs/">vega-lite docs</a> - in particular: <a href="https://vega.github.io/vega-lite/docs/transform.html">Vega-lite transformations</a> &amp; <a href="https://vega.github.io/vega-lite/docs/selection.html">Vega-lite selections</a></li>
   <li><a href="https://idyll-lang.org/docs"> Idyll Docs</a></li>
+  <li><a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=jUw7DwAAQBAJ&amp;oi=fnd&amp;pg=PA91&amp;dq=scientific+visualization+misinformation&amp;ots=Cv0QmoCdM2&amp;sig=7xycURu8Um_C9VtHqf-aWg4qaEo#v=onepage&amp;q=scientific%20visualization%20misinformation&amp;f=false">Chapter 5: Dimensions of Visual Misinformation in the Emerging Media Landscape in the book “Misinformation and Mass Audiences”</a></li>
 </ol>
 
 
@@ -151,7 +183,7 @@
             <div class="column">
                 
                 <figure class="image">
-                    <img src="/is445_bcubcg_oauoag_fall2022/assets/undraw/undraw_programmer_imem.svg">
+                    <img src="/is445_bcubcg_fall2022/assets/undraw/undraw_good_doggy_4wfq.svg">
                 </figure>
                 
             </div>
@@ -173,7 +205,7 @@
                 <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
             </figure>
             <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week11/lecture10_part1.html">Lecture 10 - Viz audience, Final Project Info</a></p><p>Considerations of audience, review about final projects, more with vega lite & Starboard, Idyll</p>
+                <p><a href="/is445_bcubcg_fall2022/week11/lecture12.html">Lecture 12 - Publishing & Validation</a></p><p>More about publishing and validation, and more of d3.js in Idyll</p>
             </div>
         </article>
         
@@ -196,11 +228,11 @@
             <div class="media-content">
                 <p>
                   
-                    <a href="https://starboard.gg/nb/n7KC9iO">In Class Notebook, Week 11</a>		    
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/tree/master/week13/inClass">In class Idyll materials, Week 13</a>		    
                    
                 </p>
                 <p>
-                    In Class Starboard Notebook
+                    Updating storage of Idyll files in class
                 </p>
             </div>
 	    
@@ -222,11 +254,11 @@
             <div class="media-content">
                 <p>
                   
-                    <a href="https://starboard.gg/nb/nG3SEUx">Prep Starboard Notebook, Week 11</a>		    
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/blob/master/week13/corg/prepIdyll">Prep Idyll materials, Week 13</a>		    
                    
                 </p>
                 <p>
-                    Prep Starboard Notebook
+                    We'll be building toward a webpage like <a href="https://jnaiman.github.io/misc/">this</a> today using <a href="https://idyll-lang.org/">Idyll's</a> built-in components.
                 </p>
             </div>
 	    
@@ -242,13 +274,23 @@
 	  
 	  
           
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                    <a href="https://bl.ocks.org/vikkya/75bda04cd0c00e49cbda6cfee8d97aba">Starting d3.js histogram example</a>		    
+                   
+                </p>
+                <p>
+                    We'll start building from this histogram example found by googling.
+                </p>
+            </div>
+	    
 	    
 	    
           
-	    
-	    <p>
-              <b>Past Notebook:</b> <a href="https://alpha.iodide.io/notebooks/4399/">Prep Iodide Notebook, Spring 2020</a>
-	    </p>
 	    
 
 	    
@@ -258,13 +300,23 @@
 	  
 	  
           
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_AOUAOG_fall2021/blob/master/week12/corg/prepIdyll/index.idyll">More vega-lite idyll examples</a>		    
+                   
+                </p>
+                <p>
+                    We'll be building toward a webpage like <a href="https://jnaiman.github.io/misc/">this</a> today using <a href="https://idyll-lang.org/">Idyll's</a> built-in components.
+                </p>
+            </div>
+	    
 	    
 	    
           
-	    
-	    <p>
-              <b>Past Notebook:</b> <a href="https://starboard.gg/nb/nXvyanN">Prep Starboard Notebook, Fall 2021</a>
-	    </p>
 	    
 
 	    
@@ -297,11 +349,11 @@
 		  
 		  
 		  
-                   <a href="https://uiuc-ischool-dataviz.github.io/is445AOG_fall2020/week01/data/GDP.csv">The GDP dataset (online)</a>
+                   <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445AOG_fall2020/master/week11/corg/corgs_per_country_over_time_columns_2020.csv">Corgis per country over time</a>
 		  
                 </p>
                 <p>
-                    GDP dataset from FRED (stored online for easy linking in Starboard)
+                    This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
                 </p>
             </div>
         </article>
@@ -315,11 +367,11 @@
 		  
 		  
 		  
-                   <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_spring2022/master/week10/data/mobility.csv">The Mobility dataset (online)</a>
+                   <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445AOG_fall2020/master/week11/corg/corgiData_countries_subset_2020.json">Subset of full Corgi database</a>
 		  
                 </p>
                 <p>
-                    A dataset of USA "mobility" which (I <b>think</b> comes from a <a href="https://www.census.gov/library/working-papers/2018/adrm/CES-WP-18-40R.html">a large census study from 1989-2015</a>) and is collected in several places <a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/mobility.csv">including right here</a>.  Here "mobility" is refering to how easy it is for a person to move up in economic status (<a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/hw-01.pdf">more info can be found here</a>) based on factors like parental income, location, race, etc.
+                    This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
                 </p>
             </div>
         </article>
@@ -332,18 +384,7 @@
 
 
         
-        <h2 class="subtitle">Assignments</h2>
 	
-	
-        
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-pencil-ruler"></i></span>
-            </figure>
-            <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week11/installation_instructions_week11.html">Idyll Installation Instructions</a></p><p>Install Idyll</p>
-            </div>
-        </article>
         
 
                     </div>

@@ -1,57 +1,92 @@
 ---
 layout: week
 visible: true
-icon: undraw_programmer_imem.svg
+icon: undraw_good_doggy_4wfq.svg
 notitle: true
 examples:
-  - filename: inClass_week11_spring2022
+  - filename: In Class Idyll Files
     type: iodide
-    title: In Class Notebook, Week 11
-    description: In Class Starboard Notebook
-    link: https://starboard.gg/nb/n7KC9iO
-  - filename: prep_notebook_week10_fall2021
+    title: In class Idyll materials, Week 13
+    description: Updating storage of Idyll files in class
+    link: https://github.com/UIUC-iSchool-DataViz/is445_spring2022/tree/master/week13/inClass
+  - filename: Prep Idyll Files
     type: iodide
-    title: Prep Starboard Notebook, Week 11
-    description: Prep Starboard Notebook
-    link: https://starboard.gg/nb/nG3SEUx
-  - filename: prep_notebook_week11
-    type: iodidePast
-    title: Previous class notebook
-    description: Prep Iodide Notebook, Spring 2020
-    link: https://alpha.iodide.io/notebooks/4399/
-  - filename: prep_notebook_week10_fall2021
-    type: iodidePast
-    title: Previous class notebook
-    description: Prep Starboard Notebook, Fall 2021
-    link: https://starboard.gg/nb/nXvyanN
+    title: Prep Idyll materials, Week 13
+    description: We'll be building toward a webpage like <a href="https://jnaiman.github.io/misc/">this</a> today using <a href="https://idyll-lang.org/">Idyll's</a> built-in components. 
+    link: https://github.com/UIUC-iSchool-DataViz/is445_spring2022/blob/master/week13/corg/prepIdyll
+  - filename: Starting d3.js histogram link
+    type: iodide
+    title: Starting d3.js histogram example
+    description: We'll start building from this histogram example found by googling. 
+    link: https://bl.ocks.org/vikkya/75bda04cd0c00e49cbda6cfee8d97aba
+  - filename: More vega-lite files
+    type: iodide
+    title: More vega-lite idyll examples
+    description: We'll be building toward a webpage like <a href="https://jnaiman.github.io/misc/">this</a> today using <a href="https://idyll-lang.org/">Idyll's</a> built-in components. 
+    link: https://github.com/UIUC-iSchool-DataViz/is445_AOUAOG_fall2021/blob/master/week12/corg/prepIdyll/index.idyll
 data:
-  - filename: GDP.csv
+  - filename: corgs_per_country_over_time_columns_2020.csv
     type: dataLink
-    title: The GDP dataset (online)
-    description: GDP dataset from FRED (stored online for easy linking in Starboard)
-    link: https://uiuc-ischool-dataviz.github.io/is445AOG_fall2020/week01/data/GDP.csv
-  - filename: mobility.csv
+    title: Corgis per country over time 
+    description: This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445AOG_fall2020/master/week11/corg/corgs_per_country_over_time_columns_2020.csv
+  - filename: corgiData_countries_subset_2020.json
     type: dataLink
-    title: The Mobility dataset (online)
-    description: A dataset of USA "mobility" which (I <b>think</b> comes from a <a href="https://www.census.gov/library/working-papers/2018/adrm/CES-WP-18-40R.html">a large census study from 1989-2015</a>) and is collected in several places <a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/mobility.csv">including right here</a>.  Here "mobility" is refering to how easy it is for a person to move up in economic status (<a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/hw-01.pdf">more info can be found here</a>) based on factors like parental income, location, race, etc.
-    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_spring2022/master/week10/data/mobility.csv
+    title: Subset of full Corgi database 
+    description: This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445AOG_fall2020/master/week11/corg/corgiData_countries_subset_2020.json
 ---
 
-# Viz Audience; More Starboard, Javascript & Vega-lite (and maybe Idyll)
+# More with Idyll, Publishing Viz
+
+We talk a little bit about publishing and carry on with Idyll.
+
+## Extra files
+
+Further example of Idyll pages: website from [Spring 2020](https://jnaiman.github.io/items_dataviz_spring2020/) which focuses on using [d3.js](https://d3js.org/) to do many plots since vega-lite was not working well at that time.  The index.idyll file, along with example d3 components and a styles.css file for the final map are in [this subdirectory from that course page here](https://github.com/UIUC-iSchool-DataViz/spring2020/tree/master/week15/corg).
+
+Full corgi dataset available [here](corg/corgiData_countries_full_2020.json).
+
+<!--
+## Downloads & Links
+
+### Idyll Files & Example pages
+
+ 1. We'll be building toward a webpage like [this](https://jnaiman.github.io/) today using [Idyll](https://idyll-lang.org/)'s built-in components.
+ 1. Last week, we got to [this index.idyll file right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week11/corg/prepIdyll/index.idyll) and we'll start from there this week.
+ 1. Full Markdown code for this week [available right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/index.idyll).
+ 1. We'll also build a few histogram components like:
+    * starting with [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-custom-d3-component.js)
+    * then [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-button-custom-d3-component.js)
+    * and finally [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-button-slider-custom-d3-component.js)
+-->
+	
+<!-- Where we got to in class this week: -->
+<!--   * [This index.idyll](index.idyll) file -->
+<!--   * [This histogram component](histogram-custom-d3-component.js) -->
+	
 
 
-## Installation instructions: Idyll
 
-We'll be using Idyll to do some web-dev and we need to install another package manager, npm, to install Idyll and other Idyll-related packages. 
+<!--
+Further examples include:
+ * Website from [Spring 2020](https://jnaiman.github.io/items_dataviz_spring2020/) which focuses on using [d3.js](https://d3js.org/) to do many plots since vega-lite was not working well at that time.  The index.idyll file, along with example d3 components and a styles.css file for the final map are in [this subdirectory from that course page here](https://github.com/UIUC-iSchool-DataViz/spring2020/tree/master/week15/corg).
+ -->
 
-#### [Please follow these installation instructions to install the necessary packages](installation_instructions_week10).
+<!--
+### Data
+
+ 1. <a href="corg/corgs_per_country_over_time_columns_2020.csv" download>Corgis per country over time (corgs_per_country_over_time_columns_2020.csv)</a>
+ 1. <a href="corg/corgiData_countries_subset_2020.json" download>Subset of full Corgi database (corgiData_countries_subset_2020.json)</a>
+     * Full dataset available [here](corg/corgiData_countries_full_2020.json)
+	 
+This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped using Beautiful Soup in Python](https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py) and [further processed in Python](https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb) into this form.
+-->
 
 
 ## Optional reading list
 
- 1. <a href="https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936">Same Data, Multiple Perspectives</a> 
- 2. <a href="https://serialmentor.com/dataviz/telling-a-story.html">FDV, Ch. 29: Telling a story and making a point</a> 
- 3. <a href="https://alpha.iodide.io/">Iodide Docs</a> 
- 4. <a href="https://vega.github.io/vega-lite/docs/">vega-lite docs</a> - in particular: <a href="https://vega.github.io/vega-lite/docs/transform.html">Vega-lite transformations</a> & <a href="https://vega.github.io/vega-lite/docs/selection.html">Vega-lite selections</a> 
- 5. <a href="https://idyll-lang.org/docs"> Idyll Docs</a>
+ 1. <a href="https://idyll-lang.org/docs"> Idyll Docs</a>
+ 1. <a href="https://books.google.com/books?hl=en&lr=&id=jUw7DwAAQBAJ&oi=fnd&pg=PA91&dq=scientific+visualization+misinformation&ots=Cv0QmoCdM2&sig=7xycURu8Um_C9VtHqf-aWg4qaEo#v=onepage&q=scientific%20visualization%20misinformation&f=false">Chapter 5: Dimensions of Visual Misinformation in the Emerging Media Landscape in the book "Misinformation and Mass Audiences"</a>
 
+ 

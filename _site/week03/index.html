@@ -3,26 +3,26 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>IS445 - Data Viz - ACG/ACU - Data Storage and Operations</title>
+    <title>IS445 - Data Viz - BCU/BCG - Types of Viz and Choosing Colors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="/is445_bcubcg_oauoag_fall2022/assets/style.css" />
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Data Storage and Operations | IS445 - Data Viz - ACG/ACU</title>
+<title>Types of Viz and Choosing Colors | IS445 - Data Viz - BCU/BCG</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Data Storage and Operations" />
+<meta property="og:title" content="Types of Viz and Choosing Colors" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
 <meta property="og:description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
-<link rel="canonical" href="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week03/" />
-<meta property="og:url" content="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week03/" />
-<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week03/" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week03/" />
+<meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Data Storage and Operations" />
+<meta property="twitter:title" content="Types of Viz and Choosing Colors" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"Data Storage and Operations","url":"http://localhost:4001/is445_bcubcg_oauoag_fall2022/week03/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"Types of Viz and Choosing Colors","url":"http://localhost:4001/is445_bcubcg_fall2022/week03/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -33,7 +33,7 @@
     <nav class="navbar" role="navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/is445_bcubcg_oauoag_fall2022/" title="home" class="navbar-item">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
                     <span class="icon is-large">
                         <i class="fas fa-home"></i>
                     </span>
@@ -49,7 +49,7 @@
                 <div class="navbar-start">
                     
                     
-                    <a href="/is445_bcubcg_oauoag_fall2022/syllabus" class="navbar-item">
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
                         <span class="icon is-large">
                             <i class="fas fa-book"></i>
                         </span>
@@ -128,50 +128,55 @@
     <div class="container">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 id="data-storage-and-operations">Data Storage and Operations</h1>
+                <h1 id="types-of-viz-and-choosing-colors">Types of Viz and Choosing Colors</h1>
 
-<p>This week we discussed how data is stored on disk and in memory, how that
-interacts with our visualization process, and we introduced the notion of a
-palette of operations you can apply to data to visualize it.</p>
+<p>This week, we will cover a bit about colors, and more about data transformations, and how we can
+choose colors and transforms to better suit our data.</p>
 
-<!-- ## Downloads: Data
+<p>We also did some basics of Pandas last week and we’ll continue this week.</p>
 
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv" download>Building Inventory CSV file (building_inventory.csv)</a>
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_reworked.png" download>Stitch Image (stitch_reworked.png)</a>
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/littleCorgiInHat.png" download>Another practice image (littleCorgiInHat.png)</a>
+<p>Note there are a variety of notebooks from previous iterations of this course listed under the <em>Materials</em> subsection of today’s lecture.  The “furtherExamples” notebooks are just there as reference, we will not be going through them by hand.</p>
+
+<!-- ## Downloads
+
+### Data:
+
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv" download>Building Inventory CSV file - building_inventory.csv</a>
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt" download>Michigan Depth Map (86Mb) - michigan_lld.flt</a>
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5" download>Brain Scan (72Mb) - single_dicom.h5</a>
+ -->
+
+<!-- ### Python external libraries
+
+Make sure you save these in the same directory as your jupyter notebook is running in!
+
+ * <a href="palette_colors.py" download>Palette Colors (palette_colors.py) - save to notebook folder or modify your path if you know how to do that</a>
  -->
 
 <h2 id="references">References</h2>
 
 <ul>
-  <li>Python:
-    <ul>
-      <li><a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-10-JSONandCSV.ipynb">IS452’s Intro to Reading &amp; Writing CSV files (scroll down on page)</a></li>
-      <li><a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452’s Dictionary week</a></li>
-    </ul>
-  </li>
-  <li>Colors: <a href="https://www.rapidtables.com/web/color/RGB_Color.html">RGB color triplets (we will also cover this extensively next week)</a></li>
+  <li><a href="http://jonathansoma.com/lede/algorithms-2017/classes/fuzziness-matplotlib/understand-df-plot-in-pandas/">Pandas vs. Matplotlib</a></li>
+  <li><a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452’s Dictionary week</a></li>
+  <li>Colors: <a href="https://www.rapidtables.com/web/color/RGB_Color.html">RGB color triplets</a></li>
+  <li>While we won’t be using <a href="https://wholetale.org/">Whole Tale</a> for this lecture, it was used for the last iteration of this course and you should feel free to go through the code walk-throughs presented there by Matt Turk - just search for “IS590” under the <a href="https://dashboard.wholetale.org/browse">Browse Tales</a> header.</li>
 </ul>
 
-<p>Also, more about numpy.reshape (and what the -1 means): https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape</p>
-
-<h2 id="optional-reading-list-see-syllabus-for-acronyms">Optional Reading List (See syllabus for acronyms)</h2>
+<h2 id="optional-reading-list">Optional Reading List</h2>
 
 <ol>
-  <li>VAD, Ch. 2: What: Data Abstraction</li>
-  <li><a href="https://serialmentor.com/dataviz/aesthetic-mapping.html">FDV, Ch. 2: Visualizing data: Mapping data onto aesthetics</a></li>
-  <li>VAD, Ch. 13: Reduce Items and Attributes</li>
-  <li><a href="https://serialmentor.com/dataviz/image-file-formats.html">FDV, Ch. 27: Understanding the most commonly used image file formats</a></li>
-  <li><a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-10-JSONandCSV.ipynb">IS452’s intro to CSV files (bottom of page)</a></li>
-  <li><a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452’s Intro to Dictionaries</a></li>
-  <li><a href="https://pandas.pydata.org/pandas-docs/stable/">Pandas Docs</a> &amp; <a href="https://docs.scipy.org/doc/numpy/reference/">NumPy Docs</a></li>
+  <li>VAD, Ch. 10: Map Color and Other Channels</li>
+  <li><a href="https://serialmentor.com/dataviz/color-basics.html">FDV, Ch. 4: Color scales</a></li>
+  <li>VAD, Ch. 5: Marks and Channels</li>
+  <li><a href="https://www.csc2.ncsu.edu/faculty/healey/PP/">Perception in Visualization (pay extra attention to the parts about color)</a></li>
+  <li><a href="https://jiffyclub.github.io/palettable/#documentation">Palettable Docs</a></li>
 </ol>
 
             </div>
             <div class="column">
                 
                 <figure class="image">
-                    <img src="/is445_bcubcg_oauoag_fall2022/assets/undraw/undraw_version_control_9bpv.svg">
+                    <img src="/is445_bcubcg_fall2022/assets/undraw/undraw_cohort_analysis_stny.svg">
                 </figure>
                 
             </div>
@@ -193,25 +198,7 @@ palette of operations you can apply to data to visualize it.</p>
                 <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
             </figure>
             <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week03/lecture02.html">Lecture 2 - Data storage & Operations, Image data</a></p><p>When we draw something on a screen, how do we represent that internally, and how is that translated into pixels? How are values transformed from 0's and 1's into values we can manipulate and understand?</p>
-            </div>
-        </article>
-        
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
-            </figure>
-            <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week03/lecture02_assignment_submission_help.html">Assignment help - TurnItIn</a></p><p>How to submit homework with the TurnItIn framework</p>
-            </div>
-        </article>
-        
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
-            </figure>
-            <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week03/lecture02_extras.html">Extras, Lecture 2</a></p><p>More examples of drawing images in 2D; binary representations </p>
+                <p><a href="/is445_bcubcg_fall2022/week03/lecture04.html">Lecture 3 - Colors and Color maps, Types of viz</a></p><p>How do colors work? What are the different ways we can map colors to values? What should we keep in mind when doing this?</p>
             </div>
         </article>
         
@@ -234,7 +221,7 @@ palette of operations you can apply to data to visualize it.</p>
             <div class="media-content">
                 <p>
                   
-                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek03%2Fprep_notebook_week03.ipynb">Prep Notebook, Week 3</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week03/prep_notebook_week03.ipynb">download</a>)
+                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Fprep_notebook_week04.ipynb">Prep Notebook, Week 4</a> - (<a href="/is445_bcubcg_fall2022/week03/prep_notebook_week04.ipynb">download</a>)
 		  
                 </p>
                 <p>
@@ -260,11 +247,11 @@ palette of operations you can apply to data to visualize it.</p>
             <div class="media-content">
                 <p>
                   
-                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek03%2FinClass_week03.ipynb">In class, Week 3</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week03/inClass_week03.ipynb">download</a>)
+                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2FinClass_week04.ipynb">In class notebook, Week 4</a> - (<a href="/is445_bcubcg_fall2022/week03/inClass_week04.ipynb">download</a>)
 		  
                 </p>
                 <p>
-                    in class notebook for this week
+                    Prep notebook for this week
                 </p>
             </div>
 	    
@@ -278,11 +265,9 @@ palette of operations you can apply to data to visualize it.</p>
         
         <article class="media">
 	  
-	  
-	    
           
 	    <p>
-              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek03%2Fspring2021_prep_notebook_week02.ipynb">Notebook from past class</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week03/spring2021_prep_notebook_week02.ipynb">download</a>)
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Ffall2019_prep_notebook_furtherExamples_01.ipynb">fall2019_prep_notebook_furtherExamples_01.ipynb</a> - (<a href="/is445_bcubcg_fall2022/week03/fall2019_prep_notebook_furtherExamples_01.ipynb">download</a>)
 	    </p>
             
 	    
@@ -294,7 +279,55 @@ palette of operations you can apply to data to visualize it.</p>
 	  
           
 	    <p>
-              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek03%2Fspring2019_prep_notebook_week02.ipynb">Notebook from past class (2019)</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week03/spring2019_prep_notebook_week02.ipynb">download</a>)
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Ffall2019_prep_notebook_furtherExamples_02.ipynb">fall2019_prep_notebook_furtherExamples_02.ipynb</a> - (<a href="/is445_bcubcg_fall2022/week03/fall2019_prep_notebook_furtherExamples_02.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Ffall2019_prep_notebook_furtherExamples_03.ipynb">fall2019_prep_notebook_furtherExamples_03.ipynb</a> - (<a href="/is445_bcubcg_fall2022/week03/fall2019_prep_notebook_furtherExamples_03.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Fspring2019_prep_notebook_furtherExamples_week03.ipynb">spring2019_prep_notebook_furtherExamples_week03.ipynb</a> - (<a href="/is445_bcubcg_fall2022/week03/spring2019_prep_notebook_furtherExamples_week03.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Fspring2019_prep_notebook_week03_part1.ipynb">spring2019_prep_notebook_week03_part1.ipynb</a> - (<a href="/is445_bcubcg_fall2022/week03/spring2019_prep_notebook_week03_part1.ipynb">download</a>)
+	    </p>
+            
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+          
+	    <p>
+              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek03%2Fspring2019_prep_notebook_week03_part2.ipynb">spring2019_prep_notebook_week03_part2.ipynb</a> - (<a href="/is445_bcubcg_fall2022/week03/spring2019_prep_notebook_week03_part2.ipynb">download</a>)
 	    </p>
             
 	    
@@ -309,7 +342,26 @@ palette of operations you can apply to data to visualize it.</p>
 
 
         
+        <h2 class="subtitle">Python Libraries</h2>
 	
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+                   <a href="/is445_bcubcg_fall2022/week03/library/palette_colors.py">Palette Colors (palette_colors.py)</a>
+		  
+		  
+                </p>
+                <p>
+                    Python library, save to notebook folder or modify your path if you know how to do that
+                </p>
+            </div>
+        </article>
         
 
 	<!-- don't include data if not there -->
@@ -327,8 +379,8 @@ palette of operations you can apply to data to visualize it.</p>
             <div class="media-content">
                 <p>
 		  
-                   <a href="/is445_bcubcg_oauoag_fall2022/week03/data/building_inventory.csv">Buildings dataset</a>
 		  
+                   <a href="/is445_bcubcg_fall2022/week03/data/building_inventory.csv">Buildings dataset</a>
 		  
 		  
                 </p>
@@ -345,13 +397,13 @@ palette of operations you can apply to data to visualize it.</p>
             <div class="media-content">
                 <p>
 		  
-                   <a href="/is445_bcubcg_oauoag_fall2022/week03/data/littleCorgiInHat.png">Corgi in Hat</a>
 		  
 		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt">Michigan Depth Map (86Mb)</a>
 		  
                 </p>
                 <p>
-                    Image of a corgi in a hat
+                    Measurments taken from around Lake Michigan (https://www.ngdc.noaa.gov/mgg/greatlakes/michigan.html)
                 </p>
             </div>
         </article>
@@ -364,12 +416,12 @@ palette of operations you can apply to data to visualize it.</p>
                 <p>
 		  
 		  
-                   <a href="/is445_bcubcg_oauoag_fall2022/week02/data/stitch_reworked.png">Stitch Image</a>
 		  
+                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5">Brain Scan (72Mb)</a>
 		  
                 </p>
                 <p>
-                    Three-color image of stitch
+                    MRI scan of a brain
                 </p>
             </div>
         </article>

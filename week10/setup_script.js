@@ -1,7 +1,7 @@
 Reveal.addEventListener('ready', function() {
 
   var vis2spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "A scatterplot",
     "data": {"name": "table",
              "values": [ {"x": 1.0, "y": 2.0},

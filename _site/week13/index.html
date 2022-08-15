@@ -3,26 +3,26 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>IS445 - Data Viz - ACG/ACU - More with Idyll, Publishing Viz</title>
+    <title>IS445 - Data Viz - BCU/BCG - A few more Idyll+d3 things, Starting SciViz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="/is445_bcubcg_oauoag_fall2022/assets/style.css" />
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>More with Idyll, Publishing Viz | IS445 - Data Viz - ACG/ACU</title>
+<title>A few more Idyll+d3 things, Starting SciViz | IS445 - Data Viz - BCU/BCG</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="More with Idyll, Publishing Viz" />
+<meta property="og:title" content="A few more Idyll+d3 things, Starting SciViz" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
 <meta property="og:description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
-<link rel="canonical" href="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week13/" />
-<meta property="og:url" content="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week13/" />
-<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week13/" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week13/" />
+<meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="More with Idyll, Publishing Viz" />
+<meta property="twitter:title" content="A few more Idyll+d3 things, Starting SciViz" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"More with Idyll, Publishing Viz","url":"http://localhost:4001/is445_bcubcg_oauoag_fall2022/week13/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"A few more Idyll+d3 things, Starting SciViz","url":"http://localhost:4001/is445_bcubcg_fall2022/week13/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -33,7 +33,7 @@
     <nav class="navbar" role="navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/is445_bcubcg_oauoag_fall2022/" title="home" class="navbar-item">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
                     <span class="icon is-large">
                         <i class="fas fa-home"></i>
                     </span>
@@ -49,7 +49,7 @@
                 <div class="navbar-start">
                     
                     
-                    <a href="/is445_bcubcg_oauoag_fall2022/syllabus" class="navbar-item">
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
                         <span class="icon is-large">
                             <i class="fas fa-book"></i>
                         </span>
@@ -128,15 +128,9 @@
     <div class="container">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 id="more-with-idyll-publishing-viz">More with Idyll, Publishing Viz</h1>
+                <h1 id="a-few-more-idylld3-things-starting-sciviz">A few more Idyll+d3 things, Starting SciViz</h1>
 
-<p>We talk a little bit about publishing and carry on with Idyll.</p>
-
-<h2 id="extra-files">Extra files</h2>
-
-<p>Further example of Idyll pages: website from <a href="https://jnaiman.github.io/items_dataviz_spring2020/">Spring 2020</a> which focuses on using <a href="https://d3js.org/">d3.js</a> to do many plots since vega-lite was not working well at that time.  The index.idyll file, along with example d3 components and a styles.css file for the final map are in <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/tree/master/week15/corg">this subdirectory from that course page here</a>.</p>
-
-<p>Full corgi dataset available <a href="corg/corgiData_countries_full_2020.json">here</a>.</p>
+<p>A few more things in Idyll and d3.js.</p>
 
 <!--
 ## Downloads & Links
@@ -144,46 +138,61 @@
 ### Idyll Files & Example pages
 
  1. We'll be building toward a webpage like [this](https://jnaiman.github.io/) today using [Idyll](https://idyll-lang.org/)'s built-in components.
- 1. Last week, we got to [this index.idyll file right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week11/corg/prepIdyll/index.idyll) and we'll start from there this week.
- 1. Full Markdown code for this week [available right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/index.idyll).
+ 1. Last week, we got to [this index.idyll file right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/inClass/index.idyll) and [this custom histogram component](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/inClass/histogram-custom-d3-component.js) and we'll start from there this week.
+ 1. Full Markdown code for this week [available right here](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week13/corg/prepIdyll/index.idyll).
  1. We'll also build a few histogram components like:
-    * starting with [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-custom-d3-component.js)
-    * then [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-button-custom-d3-component.js)
-    * and finally [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week12/corg/prepIdyll/histogram-button-slider-custom-d3-component.js)
--->
+    * starting with [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week13/corg/prepIdyll/histogram-custom-d3-component.js)
+    * then [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week13/corg/prepIdyll/histogram-button-custom-d3-component.js)
+    * and finally [this one](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/blob/master/week13/corg/prepIdyll/histogram-button-slider-custom-d3-component.js)
+	
 
-<!-- Where we got to in class this week: -->
-<!--   * [This index.idyll](index.idyll) file -->
-<!--   * [This histogram component](histogram-custom-d3-component.js) -->
-
-<!--
 Further examples include:
  * Website from [Spring 2020](https://jnaiman.github.io/items_dataviz_spring2020/) which focuses on using [d3.js](https://d3js.org/) to do many plots since vega-lite was not working well at that time.  The index.idyll file, along with example d3 components and a styles.css file for the final map are in [this subdirectory from that course page here](https://github.com/UIUC-iSchool-DataViz/spring2020/tree/master/week15/corg).
- -->
 
-<!--
+
+
 ### Data
 
+#### Corgis
  1. <a href="corg/corgs_per_country_over_time_columns_2020.csv" download>Corgis per country over time (corgs_per_country_over_time_columns_2020.csv)</a>
  1. <a href="corg/corgiData_countries_subset_2020.json" download>Subset of full Corgi database (corgiData_countries_subset_2020.json)</a>
      * Full dataset available [here](corg/corgiData_countries_full_2020.json)
 	 
 This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped using Beautiful Soup in Python](https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py) and [further processed in Python](https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb) into this form.
+
+-->
+
+<!-- #### Galaxy data (if time)
+
+ 1. Download and unzip [this set of files here (galaxyFiles.zip, 77M)](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/raw/master/week13/galaxyFiles.zip)
+ 1. Make note of where this unzips -- this is where `solverlibs.py` gets unpacked.
+ 
+We'll be using the <a href="http://yt-project.org/data/IsolatedGalaxy.tar.gz" download>Isolated Galaxy dataset (292 Mb)</a> dataset for sci viz next week.
 -->
 
 <h2 id="optional-reading-list">Optional reading list</h2>
 
 <ol>
-  <li><a href="https://idyll-lang.org/docs"> Idyll Docs</a></li>
-  <li><a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=jUw7DwAAQBAJ&amp;oi=fnd&amp;pg=PA91&amp;dq=scientific+visualization+misinformation&amp;ots=Cv0QmoCdM2&amp;sig=7xycURu8Um_C9VtHqf-aWg4qaEo#v=onepage&amp;q=scientific%20visualization%20misinformation&amp;f=false">Chapter 5: Dimensions of Visual Misinformation in the Emerging Media Landscape in the book “Misinformation and Mass Audiences”</a></li>
+  <li><a href="https://github.com/d3/d3/wiki">d3.js docs</a></li>
 </ol>
 
+<p><strong>d3.js examples (v4)</strong></p>
+<ol>
+  <li><a href="https://bl.ocks.org/vikkya/75bda04cd0c00e49cbda6cfee8d97aba">Simple time-bar chart</a> (we used this one to start with)</li>
+  <li><a href="https://observablehq.com/@d3/grouped-bar-chart">Grouped bar chart</a></li>
+  <li><a href="https://observablehq.com/@d3/bar-chart-race">Animated side-bar chart</a></li>
+  <li><a href="https://www.d3-graph-gallery.com/graph/histogram_basic.html">Histogram, binning of data</a></li>
+</ol>
+
+<p>Also, here is a slightly more in-depth explanation of path/ray tracing which we’ll talk about more in Week 14:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/frLwRLS_ZR0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
             </div>
             <div class="column">
                 
                 <figure class="image">
-                    <img src="/is445_bcubcg_oauoag_fall2022/assets/undraw/undraw_good_doggy_4wfq.svg">
+                    <img src="/is445_bcubcg_fall2022/assets/undraw/undraw_monitor_iqpq.svg">
                 </figure>
                 
             </div>
@@ -205,7 +214,7 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
                 <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
             </figure>
             <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week13/lecture12.html">Lecture 12 - Publishing & Validation</a></p><p>More about publishing and validation, and more of d3.js in Idyll</p>
+                <p><a href="/is445_bcubcg_fall2022/week13/lecture13.html">Lecture 13 - 3D graphics, Intro to SciViz</a></p><p>How your computer and the internet process 3D graphics.  What is scientific visualization? </p>
             </div>
         </article>
         
@@ -228,7 +237,7 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
             <div class="media-content">
                 <p>
                   
-                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/tree/master/week13/inClass">In class Idyll materials, Week 13</a>		    
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/tree/master/week14/inClass">In class Idyll resources, Week 14</a>		    
                    
                 </p>
                 <p>
@@ -254,11 +263,11 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
             <div class="media-content">
                 <p>
                   
-                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/blob/master/week13/corg/prepIdyll">Prep Idyll materials, Week 13</a>		    
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/tree/master/week14/corg/prepIdyll">Prep resources, Week 14</a>		    
                    
                 </p>
                 <p>
-                    We'll be building toward a webpage like <a href="https://jnaiman.github.io/misc/">this</a> today using <a href="https://idyll-lang.org/">Idyll's</a> built-in components.
+                    Prep Idyll file and components
                 </p>
             </div>
 	    
@@ -280,11 +289,11 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
             <div class="media-content">
                 <p>
                   
-                    <a href="https://bl.ocks.org/vikkya/75bda04cd0c00e49cbda6cfee8d97aba">Starting d3.js histogram example</a>		    
-                   
+                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek13%2FinClass_week14.ipynb">In class jupyter notebook</a> - (<a href="/is445_bcubcg_fall2022/week13/inClass_week14.ipynb">download</a>)
+		  
                 </p>
                 <p>
-                    We'll start building from this histogram example found by googling.
+                    Placeholder for in class coding
                 </p>
             </div>
 	    
@@ -306,11 +315,37 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
             <div class="media-content">
                 <p>
                   
-                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_AOUAOG_fall2021/blob/master/week12/corg/prepIdyll/index.idyll">More vega-lite idyll examples</a>		    
-                   
+                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek13%2Fprep_notebook_week14_part1.ipynb">Prep Notebook, Week 14, Part 1</a> - (<a href="/is445_bcubcg_fall2022/week13/prep_notebook_week14_part1.ipynb">download</a>)
+		  
                 </p>
                 <p>
-                    We'll be building toward a webpage like <a href="https://jnaiman.github.io/misc/">this</a> today using <a href="https://idyll-lang.org/">Idyll's</a> built-in components.
+                    Prep notebook for this week
+                </p>
+            </div>
+	    
+	    
+	    
+          
+	    
+
+	    
+         </article>
+        
+        <article class="media">
+	  
+	  
+          
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                  
+                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_fall2022%2Fweek13%2Fprep_notebook_week14_part2.ipynb">Prep Notebook, Week 14, Part 2</a> - (<a href="/is445_bcubcg_fall2022/week13/prep_notebook_week14_part2.ipynb">download</a>)
+		  
+                </p>
+                <p>
+                    Prep notebook for this week
                 </p>
             </div>
 	    
@@ -329,7 +364,26 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
 
 
         
+        <h2 class="subtitle">Python Libraries</h2>
 	
+	
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+                   <a href="/is445_bcubcg_fall2022/week13/library/solverlibs.py">Solver library (solverlibs.py)</a>
+		  
+		  
+                </p>
+                <p>
+                    Python library, save to notebook folder or modify your path if you know how to do that
+                </p>
+            </div>
+        </article>
         
 
 	<!-- don't include data if not there -->
@@ -372,6 +426,42 @@ This dataset is from the [Cardigan Archives](http://cardiped.net/) and [scraped 
                 </p>
                 <p>
                     This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/raw/master/week13/galaxyFiles.zip">Galaxy Particle Simulation files (77Mb)</a>
+		  
+                </p>
+                <p>
+                    Downsampled output files from a particle simulation of a galaxy merger
+                </p>
+            </div>
+        </article>
+        
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+		  
+		  
+		  
+                   <a href="http://yt-project.org/data/IsolatedGalaxy.tar.gz">Isolated Galaxy dataset (292 Mb)</a>
+		  
+                </p>
+                <p>
+                    A single snapshot in time of a grid simulation of an isolated galaxy
                 </p>
             </div>
         </article>

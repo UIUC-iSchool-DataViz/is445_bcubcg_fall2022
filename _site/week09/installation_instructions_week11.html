@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>IS445 - Data Viz - BCU/BCG - Idyll Installation Instructions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Idyll Installation Instructions | IS445 - Data Viz - BCU/BCG</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Idyll Installation Instructions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Install Idyll" />
+<meta property="og:description" content="Install Idyll" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html" />
+<meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Idyll Installation Instructions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Install Idyll","headline":"Idyll Installation Instructions","url":"http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+    <body>
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
+                    <span class="icon is-large">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    IS445
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    
+                    
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Syllabus
+                    </a>
+                    
+                    <a href="https://is445-spring2022.slack.com/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-slack"></i>
+                        </span>
+                        Slack
+                    </a>
+                    
+                    <a href="https://jupyterhub.ischool.illinois.edu/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-python"></i>
+                        </span>
+                        JupyterHub
+                    </a>
+                    
+                    <a href="https://canvas.illinois.edu/courses/16476" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-school"></i>
+                        </span>
+                        Canvas
+                    </a>
+                    
+                </div>
+                <div class="navbar-end">
+                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_bcubcg_fall2022" class="navbar-item">-->
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="section">
+                    <div class="content">
+                        <h1>Idyll Installation Instructions</h1>
+                        <h1 id="installation-instructions-npm--idyll--vega-lite-for-idyll">Installation instructions: npm &amp; Idyll &amp; vega-lite for Idyll</h1>
+
+<h2 id="1-install-npm">1. Install npm</h2>
+
+<p>There are a few ways to do this.  Probably the easiest is to download the correct version <a href="https://nodejs.org/en/download/">from the Node.js page</a>.</p>
+
+<p>If you go this route, make sure you follow the final install instructions and have the <code class="language-plaintext highlighter-rouge">npm</code> executable in your <code class="language-plaintext highlighter-rouge">PATH</code>.  On my Mac the prompt looks like:</p>
+
+<p><img src="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445AOG_fall2020/master/week10/images/nodejspat.png" /></p>
+
+<p>If you try any of the <code class="language-plaintext highlighter-rouge">npm</code> commands and it gives you an error about not knowing what <code class="language-plaintext highlighter-rouge">npm</code> is it is likely because it doesn’t know where it is (given the example posted in the image above you could expliclity call <code class="language-plaintext highlighter-rouge">npm</code> with: <code class="language-plaintext highlighter-rouge">/usr/local/bin/npm</code>).</p>
+
+<p><strong>Notes for Windows install:</strong></p>
+<ul>
+  <li>You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.</li>
+</ul>
+
+<h4 id="another-way-with-conda-not-recommended">Another way: with conda (NOT recommended)</h4>
+
+<p>If the “default” way doesn’t work for any reason you can try with conda in your terminal/Anaconda prompt:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">conda activate DataViz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">conda install nodejs</code></li>
+</ol>
+
+<p>If you go this route, make sure you activate your DataViz environment before using any <code class="language-plaintext highlighter-rouge">npm</code> calls.</p>
+
+<h4 id="11-update-npm-to-latest-version-if-you-already-have-it-installed">1.1 Update npm to latest version if you already have it installed</h4>
+
+<p>Do this with:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g npm@latest
+</code></pre></div></div>
+<p>or for a specific version:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g npm@8.0.0
+</code></pre></div></div>
+
+<p><strong>NOTE:</strong> to install things globally (-g) you might have to use <code class="language-plaintext highlighter-rouge">sudo</code> in front of the <code class="language-plaintext highlighter-rouge">npm</code> commands.</p>
+
+<p>You can check your version with</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm -v
+</code></pre></div></div>
+<p>(mine is 8.0.0)</p>
+
+<h2 id="2-use-npm-to-install-idyll--other-packages">2. Use npm to install Idyll &amp; other packages</h2>
+
+<p>You’ll run these commands in a terminal (Mac) or anaconda prompt (Windows) so make sure you open them up.</p>
+
+<p><strong>NOTE:</strong> to install things globally (-g) you might have to use <code class="language-plaintext highlighter-rouge">sudo</code> in front of the <code class="language-plaintext highlighter-rouge">npm</code> commands.</p>
+
+<ol>
+  <li>Use <code class="language-plaintext highlighter-rouge">npm</code> to install Idyll (you might need root privileges to do so)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g idyll
+</code></pre></div>    </div>
+  </li>
+  <li>Create new post with idyll (you can use the defaults)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>idyll create
+</code></pre></div>    </div>
+  </li>
+  <li>cd into post directory (with defaults this is <code class="language-plaintext highlighter-rouge">my-idyll-post</code>)</li>
+  <li>Install dependencies to install vegalite
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save vega-lite react react-dom vega
+</code></pre></div>    </div>
+  </li>
+  <li>Install vegalite for Idyll
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save idyll-vega-lite
+</code></pre></div>    </div>
+  </li>
+  <li>Test by:
+    <ul>
+      <li>downloading <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_spring2021/master/week10/index.idyll">this index.idyll file</a> and replacing the default index.idyll file in your <code class="language-plaintext highlighter-rouge">my-idyll-post</code> directory</li>
+      <li>downloading <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_spring2021/master/week10/data/LakeHuron.csv">the LakeHuron.csv file</a> and putting this in the <code class="language-plaintext highlighter-rouge">data/</code> sub-folder in the <code class="language-plaintext highlighter-rouge">my-idyll-post</code> directory</li>
+      <li>do <code class="language-plaintext highlighter-rouge">idyll</code> in your <code class="language-plaintext highlighter-rouge">my-idyll-post</code> directory and make sure it looks like whats in the test video below</li>
+    </ul>
+    <ul>
+      <li><strong>NOTE:</strong> if you get an error and it won’t build try <code class="language-plaintext highlighter-rouge">idyll --compileLibs=true</code> instead of just <code class="language-plaintext highlighter-rouge">idyll</code>.  You might get a “BABEL” warning that you can ignore for now.</li>
+    </ul>
+  </li>
+</ol>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J_w9kowGkIs?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="is-centered columns has-text-centered">
+        <div class="column is-6">
+            <p>
+                This course developed collaboratively by 
+                <a href="https://astronaiman.com/">Jill Naiman</a> and <a href="https://matthewturk.github.io/">Matthew Turk</a>
+		at the University of Illinois Urbana-Champaign
+                <a href="https://ischool.illinois.edu/">School of Information Sciences</a>.
+                The source code is released under a BSD 3-Clause license, allowing for reuse and redistribution.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

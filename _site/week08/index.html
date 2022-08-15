@@ -3,26 +3,26 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>IS445 - Data Viz - ACG/ACU - Maps, maps and more maps</title>
+    <title>IS445 - Data Viz - BCU/BCG - Starboard and Intro to Javascript</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="/is445_bcubcg_oauoag_fall2022/assets/style.css" />
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Maps, maps and more maps | IS445 - Data Viz - ACG/ACU</title>
+<title>Starboard and Intro to Javascript | IS445 - Data Viz - BCU/BCG</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Maps, maps and more maps" />
+<meta property="og:title" content="Starboard and Intro to Javascript" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
 <meta property="og:description" content="This is the course website for IS445-BCG-BCU in Fall 2022" />
-<link rel="canonical" href="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week08/" />
-<meta property="og:url" content="http://localhost:4001/is445_bcubcg_oauoag_fall2022/week08/" />
-<meta property="og:site_name" content="IS445 - Data Viz - ACG/ACU" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week08/" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week08/" />
+<meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Maps, maps and more maps" />
+<meta property="twitter:title" content="Starboard and Intro to Javascript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"Maps, maps and more maps","url":"http://localhost:4001/is445_bcubcg_oauoag_fall2022/week08/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is the course website for IS445-BCG-BCU in Fall 2022","headline":"Starboard and Intro to Javascript","url":"http://localhost:4001/is445_bcubcg_fall2022/week08/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -33,7 +33,7 @@
     <nav class="navbar" role="navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/is445_bcubcg_oauoag_fall2022/" title="home" class="navbar-item">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
                     <span class="icon is-large">
                         <i class="fas fa-home"></i>
                     </span>
@@ -49,7 +49,7 @@
                 <div class="navbar-start">
                     
                     
-                    <a href="/is445_bcubcg_oauoag_fall2022/syllabus" class="navbar-item">
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
                         <span class="icon is-large">
                             <i class="fas fa-book"></i>
                         </span>
@@ -128,20 +128,38 @@
     <div class="container">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 id="maps-maps-and-more-maps">Maps, maps and more maps</h1>
+                <h1 id="starboard-and-intro-to-javascript">Starboard and Intro to Javascript</h1>
 
-<p>We will start thinking about maps &amp; map projection, both in <code class="language-plaintext highlighter-rouge">bqplot</code> and <code class="language-plaintext highlighter-rouge">matplotlib</code> and with <code class="language-plaintext highlighter-rouge">geopandas</code>+<code class="language-plaintext highlighter-rouge">contextily</code>.  We’ll continue this week with building dashboards of mappable data.</p>
+<p>Using Starboard to publish in Python and an introduction to Javascript.</p>
 
-<p>&lt;!– ## Downloads</p>
+<!--
+## Downloads & Links
 
-<h3 id="data">Data:</h3>
+### Iodide Notebooks:
 
+ * <a href="https://alpha.iodide.io/notebooks/4351/">Prep Iodide Notebook</a>
+ * <a href="https://alpha.iodide.io/notebooks/6120/">In Class Iodide Notebook</a> 
+
+Feel free to check out [Spring 2020's notebook that uses police shooting data for visualization](https://alpha.iodide.io/notebooks/4351/) if you are interestedin other mappable datasets.  
+-->
+
+<p><strong>NOTE</strong>: For Python, only a subset of libraries are supported. See ongoing list <a href="https://github.com/iodide-project/pyodide/tree/master/packages">here</a>.</p>
+
+<h2 id="optional-reading-list">Optional reading list</h2>
+
+<!-- 1. <a href="https://alpha.iodide.io/">Iodide Docs</a> - in particular: <a href="https://iodide-project.github.io/docs/key_concepts/">key concepts</a> & <a href="https://iodide-project.github.io/docs/iomd/">IOMD format</a> -->
+<ol>
+  <li><a href="https://starboard.gg/">Starboard Docs</a> - in particular: <a href="https://starboard.gg/#python">Pandas &amp; Python</a> &amp; <a href="https://www.markdownguide.org/basic-syntax/">general Markdown format</a></li>
+  <li><a href="https://www.codecademy.com/learn/introduction-to-javascript">Intro to Javascript</a></li>
+  <li><a href="https://serialmentor.com/dataviz/directory-of-visualizations.html">FDV, Ch. 5: Directory of visualizations</a></li>
+</ol>
+
+<h2 id="extra-resources">Extra Resources</h2>
 <ul>
-  <li><a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/ufo-scrubbed-geocoded-time-standardized-00.csv" download="">The UFO Sitings Dataset (13Mb) - ufo-scrubbed-geocoded-time-standardized-00.csv</a></li>
-  <li><a href="total_export.csv" download="">State export data (8Kb) - total_export.csv</a></li>
-  <li><a href="market_map_data.csv" download="">Backup: Surgery Charges Dataset (37Mb) - market_map_data.csv</a></li>
-  <li><a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/data_tohoku_norm_transpose.csv" download="">Earthquake sensor data (59Mb) - data_tohoku_norm_transpose.csv</a></li>
-  <li><a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/location.txt" download="">Earthquake locations data (12Kb) - location.txt</a></li>
+  <li><a href="https://fivethirtyeight.com/">FiveThirtyEight</a></li>
+  <li><a href="https://github.com/fivethirtyeight/data">FiveThirtyEight datasets</a></li>
+  <li><a href="https://www.jsdelivr.com/">jsdelivr</a></li>
+  <li><a href="https://github.com/vega/vega-datasets/tree/master/data">vega-datasets</a></li>
 </ul>
 
 
@@ -149,7 +167,7 @@
             <div class="column">
                 
                 <figure class="image">
-                    <img src="/is445_bcubcg_oauoag_fall2022/assets/undraw/undraw_Around_the_world_re_n353.svg">
+                    <img src="/is445_bcubcg_fall2022/assets/undraw/undraw_forming_ideas_0pav.svg">
                 </figure>
                 
             </div>
@@ -171,7 +189,7 @@
                 <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
             </figure>
             <div class="media-content">
-                <p><a href="/is445_bcubcg_oauoag_fall2022/week08/lecture07.html">Lecture 7 - Maps!</a></p><p>More about maps and their projections</p>
+                <p><a href="/is445_bcubcg_fall2022/week08/lecture08.html">Lecture 8 - Choosing viz & Online viz platforms</a></p><p>Choosing what viz type to use, and an introduction to Vega/Vega-lite and Starboard </p>
             </div>
         </article>
         
@@ -194,11 +212,11 @@
             <div class="media-content">
                 <p>
                   
-                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek08%2FinClass_week08.ipynb">In class notebook</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week08/inClass_week08.ipynb">download</a>)
-		  
+                    <a href="https://starboard.gg/nb/np0qPIf">In Class Notebook, Week 10</a>		    
+                   
                 </p>
                 <p>
-                    Placeholder for in class coding
+                    In Class Starboard Notebook
                 </p>
             </div>
 	    
@@ -220,11 +238,11 @@
             <div class="media-content">
                 <p>
                   
-                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek08%2Fprep_notebook_week08_part1.ipynb">Prep Notebook, Week 8, Part 1</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week08/prep_notebook_week08_part1.ipynb">download</a>)
-		  
+                    <a href="https://starboard.gg/nb/nin15Rn">Prep Starboard Notebook, Week 10</a>		    
+                   
                 </p>
                 <p>
-                    Prep notebook for this week, Part 1
+                    Prep Starboard Notebook, Fall 2021
                 </p>
             </div>
 	    
@@ -240,23 +258,13 @@
 	  
 	  
           
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
-            </figure>
-            <div class="media-content">
-                <p>
-                  
-                     <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek08%2Fprep_notebook_week08_part2.ipynb">Prep Notebook, Week 8, Part 2</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week08/prep_notebook_week08_part2.ipynb">download</a>)
-		  
-                </p>
-                <p>
-                    Prep notebook for this week, Part 2
-                </p>
-            </div>
-	    
 	    
 	    
           
+	    
+	    <p>
+              <b>Past Notebook:</b> <a href="https://starboard.gg/nb/nKkNIOS">Prep Starboard Notebook, Fall 2021</a>
+	    </p>
 	    
 
 	    
@@ -264,35 +272,15 @@
         
         <article class="media">
 	  
-          
-	    <p>
-              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek08%2Fspring2019_prep_notebook_week07_part1.ipynb">spring2019_prep_notebook_week07_part1.ipynb</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week08/spring2019_prep_notebook_week07_part1.ipynb">download</a>)
-	    </p>
-            
-	    
-
-	    
-         </article>
-        
-        <article class="media">
 	  
           
-	    <p>
-              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek08%2Fspring2019_prep_notebook_week07_part2.ipynb">spring2019_prep_notebook_week07_part2.ipynb</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week08/spring2019_prep_notebook_week07_part2.ipynb">download</a>)
-	    </p>
-            
 	    
-
 	    
-         </article>
-        
-        <article class="media">
-	  
           
+	    
 	    <p>
-              <b>Past Notebook:</b> <a href="../nbv.html?notebook_name=%2Fis445_bcubcg_oauoag_fall2022%2Fweek08%2Fspring2019_prep_notebook_week07_part3.ipynb">spring2019_prep_notebook_week07_part3.ipynb</a> - (<a href="/is445_bcubcg_oauoag_fall2022/week08/spring2019_prep_notebook_week07_part3.ipynb">download</a>)
+              <b>Past Notebook:</b> <a href="https://alpha.iodide.io/notebooks/7112/">Prep Iodide Notebook, Spring 2021</a>
 	    </p>
-            
 	    
 
 	    
@@ -305,43 +293,7 @@
 
 
         
-        <h2 class="subtitle">Python Libraries</h2>
 	
-	
-        
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
-            </figure>
-            <div class="media-content">
-                <p>
-		  
-                   <a href="/is445_bcubcg_oauoag_fall2022/week08/library/states_utils.py">State export utilities (states_utils.py)</a>
-		  
-		  
-                </p>
-                <p>
-                    Python library, save to notebook folder or modify your path if you know how to do that
-                </p>
-            </div>
-        </article>
-        
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-book-open"></i></span>
-            </figure>
-            <div class="media-content">
-                <p>
-		  
-                   <a href="/is445_bcubcg_oauoag_fall2022/week08/library/us_state_abbrev.py">US State abbreviations (us_state_abbrev.py)</a>
-		  
-		  
-                </p>
-                <p>
-                    Python library, save to notebook folder or modify your path if you know how to do that
-                </p>
-            </div>
-        </article>
         
 
 	<!-- don't include data if not there -->
@@ -361,29 +313,11 @@
 		  
 		  
 		  
-                   <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/ufo-scrubbed-geocoded-time-standardized-00.csv">The UFO Sitings Dataset (13Mb)</a>
+                   <a href="https://uiuc-ischool-dataviz.github.io/is445AOG_fall2020/week01/data/GDP.csv">The GDP dataset (online)</a>
 		  
                 </p>
                 <p>
-                    Data about world wide reports of UFO sitings
-                </p>
-            </div>
-        </article>
-        
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon is-large"><i class="fas fa-3x fa-database"></i></span>
-            </figure>
-            <div class="media-content">
-                <p>
-		  
-		  
-		  
-                   <a href="https://uiuc-ischool-dataviz.github.io/is445_spring2021/week06/data/total_export.csv">State export data (8Kb)</a>
-		  
-                </p>
-                <p>
-                    Data about exports from each state
+                    GDP dataset from FRED (stored online for easy linking in Iodide)
                 </p>
             </div>
         </article>
@@ -397,11 +331,11 @@
 		  
 		  
 		  
-                   <a href="https://uiuc-ischool-dataviz.github.io/is445_spring2022/week07/data/market_map_data.csv">Surgery Charges Dataset (37Mb)</a>
+                   <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022/raw/master/week10/data/mobility.csv">The Mobility dataset (online)</a>
 		  
                 </p>
                 <p>
-                    Surgery charges in different states
+                    A dataset of USA "mobility" which (I <b>think</b> comes from a <a href="https://www.census.gov/library/working-papers/2018/adrm/CES-WP-18-40R.html">a large census study from 1989-2015</a>) and is collected in several places <a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/mobility.csv">including right here</a>.  Here "mobility" is refering to how easy it is for a person to move up in economic status (<a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/hw-01.pdf">more info can be found here</a>) based on factors like parental income, location, race, etc.
                 </p>
             </div>
         </article>

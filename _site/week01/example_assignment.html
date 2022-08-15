@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>IS445 - Data Viz - BCU/BCG - Example HW 1 Submission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Example HW 1 Submission | IS445 - Data Viz - BCU/BCG</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Example HW 1 Submission" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Find and analyze viz in pop culture" />
+<meta property="og:description" content="Find and analyze viz in pop culture" />
+<link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week01/example_assignment.html" />
+<meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week01/example_assignment.html" />
+<meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Example HW 1 Submission" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Find and analyze viz in pop culture","headline":"Example HW 1 Submission","url":"http://localhost:4001/is445_bcubcg_fall2022/week01/example_assignment.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+    <body>
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/is445_bcubcg_fall2022/" title="home" class="navbar-item">
+                    <span class="icon is-large">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    IS445
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    
+                    
+                    <a href="/is445_bcubcg_fall2022/syllabus" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Syllabus
+                    </a>
+                    
+                    <a href="https://is445-spring2022.slack.com/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-slack"></i>
+                        </span>
+                        Slack
+                    </a>
+                    
+                    <a href="https://jupyterhub.ischool.illinois.edu/" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-python"></i>
+                        </span>
+                        JupyterHub
+                    </a>
+                    
+                    <a href="https://canvas.illinois.edu/courses/16476" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fas fa-school"></i>
+                        </span>
+                        Canvas
+                    </a>
+                    
+                </div>
+                <div class="navbar-end">
+                    <!--<a href="https://github.com/pages/UIUC-iSchool-DataViz/is445_bcubcg_fall2022" class="navbar-item">-->
+                    <a href="https://github.com/UIUC-iSchool-DataViz/is445_spring2022" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="section">
+                    <div class="content">
+                        <h1>Example HW 1 Submission</h1>
+                        <h1 id="example-submission">Example Submission</h1>
+
+<p>This visualization is from the movie Alien (1979), directed by Ridley Scott.</p>
+
+<p><img src="images/alien_terrain.jpg" alt="terrain viz from Alien" title="Alien Terrain" /></p>
+
+<p>This visualization appears on screen as the ship carrying our protagonists
+approaches a planetoid; the terrain is unknown, and the computer displays it as
+it senses during approach.</p>
+
+<p>The terrain is displayed in a stratified manner; the lines are connected
+horizontally (giving the potentially misleading impression that the horizontal
+resolution is greater than vertical) and each “layer” appears to be opaque to
+the segments behind it.  Most standard visualization tools could generate an
+image very similar to this by simply overplotting lines (and staggering them
+according to the perspective of the viewpoint), but blocking out the terrain
+behind a given line is more complex and difficult.</p>
+
+<p>The data here has likely been generated by taking scan points and connecting
+them; while it’s possible that these are irregular in x and y, it looks as
+though they are regular in both.</p>
+
+<p><img src="images/terrain_by_hand.jpg" alt="terrain viz by hand" title="My drawing" /></p>
+
+<p>I recreated this visualization by hand, and in doing so I changed the data
+somewhat.  I discovered that it’s considerably harder to generate this by hand
+than I expected!  I tried to draw out the lines, but the implied perspective
+made them appear strange and distorted.</p>
+
+<p>While doing this, I discovered that according to <a href="https://is.muni.cz/th/359691/fi_b/Thesis.pdf">Tisovˇcík
+2012</a> this terrain was generated
+on the fly, rather than being stored ahead of time.  It was also the first
+terrain used in a movie, although it is contemporaneous with the famous
+“Unknown Pleasures” album cover that features a similar visualization of a
+pulsar.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="is-centered columns has-text-centered">
+        <div class="column is-6">
+            <p>
+                This course developed collaboratively by 
+                <a href="https://astronaiman.com/">Jill Naiman</a> and <a href="https://matthewturk.github.io/">Matthew Turk</a>
+		at the University of Illinois Urbana-Champaign
+                <a href="https://ischool.illinois.edu/">School of Information Sciences</a>.
+                The source code is released under a BSD 3-Clause license, allowing for reuse and redistribution.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

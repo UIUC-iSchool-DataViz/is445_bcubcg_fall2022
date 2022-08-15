@@ -1,58 +1,69 @@
 ---
 layout: week
 visible: true
-icon: undraw_data_trends_b0wg.svg
+icon: undraw_version_control_9bpv.svg
 notitle: true
 examples:
-  - filename: prep_notes_week02.ipynb
+  - filename: prep_notebook_week03.ipynb
     type: ipynb
-    title: Prep Notebook, Week 2
+    title: Prep Notebook, Week 3
     description: Prep notebook for this week
-  - filename: test_imports_week01.ipynb
+  - filename: inClass_week03.ipynb
     type: ipynb
-    title: Import notebook for HW 1
-    description: Notebook for HW 1
-  - filename: inClass_week02.ipynb
+    title: In class, Week 3
+    description: in class notebook for this week
+  - filename: spring2021_prep_notebook_week02.ipynb
     type: ipynb
-    title: In class week 2 notebook
-    description: Intro to python, plotting
+    title: Notebook from past class 
+    description: Extra notebook from 2021 class
+  - filename: spring2019_prep_notebook_week02.ipynb
+    type: ipynb
+    title: Notebook from past class (2019)
+    description: Extra notebook from 2019 class
 data:
-  - filename: GDP.csv
+  - filename: building_inventory.csv
     type: data
-    title: GDP dataset
-    description: GDP dataset from FRED
+    title: Buildings dataset
+    description: Illinois buildings dataset
+  - filename: littleCorgiInHat.png
+    type: data
+    title: Corgi in Hat
+    description: Image of a corgi in a hat
   - filename: stitch_reworked.png
-    type: data
+    type: dataOtherWeek
     title: Stitch Image
     description: Three-color image of stitch
+    week: week02
 ---
 
-# Introduction
+# Data Storage and Operations
 
-This week, we went over the structure of the course, as well as some basics of
-why we visualize, who we visualize for, and how to think about our relationship
-with our data.
+This week we discussed how data is stored on disk and in memory, how that
+interacts with our visualization process, and we introduced the notion of a
+palette of operations you can apply to data to visualize it.
 
- * [Mark Newman's Election Maps](http://www-personal.umich.edu/~mejn/election/2008/)
- * [Lilo & Stitch](https://www.netflix.com/title/60022989)
- * [Peg + Cat: The Three Friends Problem](http://www.pbs.org/parents/peg/episode-119-the-big-dog-problem-the-three-friends-problem/)
- * [FRED](https://fred.stlouisfed.org)
- * [Example Vega-Lite plot](https://vega.github.io/editor/#/gist/vega-lite/matthewturk/e3808b4172b7f80141788b45236831ca/dc65ec026c5cedc267a2da47d6fa4268d2b18bcb/movies-hconcat.json)
+<!-- ## Downloads: Data
 
-<!-- ## Downloads
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv" download>Building Inventory CSV file (building_inventory.csv)</a>
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_reworked.png" download>Stitch Image (stitch_reworked.png)</a>
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/littleCorgiInHat.png" download>Another practice image (littleCorgiInHat.png)</a>
+ -->
 
- * <a href="data/GDP.csv" download>FRED GDP.csv file</a>
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_reworked.png" download>Reworked Stitch Image</a> -->
- 
-## Installation instructions
+## References
 
-We will be using several Python packages that you need to install.  
+ * Python:
+    * <a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-10-JSONandCSV.ipynb">IS452's Intro to Reading & Writing CSV files (scroll down on page)</a>
+    * <a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452's Dictionary week</a>
+ * Colors: <a href="https://www.rapidtables.com/web/color/RGB_Color.html">RGB color triplets (we will also cover this extensively next week)</a>
 
-#### [Please follow these installation instructions to install the necessary packages](installation_instructions).
+Also, more about numpy.reshape (and what the -1 means): https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape
 
 ## Optional Reading List (See syllabus for acronyms)
 
- 1. VAD, Ch. 1: What's Viz, and Why Do It? 
- 2. <a href="https://serialmentor.com/dataviz/introduction.html">FDV, Ch. 1: Introduction</a> & <a href="https://serialmentor.com/dataviz/proportional-ink.html">FDV, Ch. 17: The principle of proportional ink</a> 
- 3. <a href="https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936">Same Data, Multiple Perspectives</a> 
- 4. [Intro to Jupyter Notebook Video](https://www.youtube.com/watch?v=3C9E2yPBw7s)
+ 1. VAD, Ch. 2: What: Data Abstraction 
+ 2. <a href="https://serialmentor.com/dataviz/aesthetic-mapping.html">FDV, Ch. 2: Visualizing data: Mapping data onto aesthetics</a> 
+ 3. VAD, Ch. 13: Reduce Items and Attributes 
+ 4. <a href="https://serialmentor.com/dataviz/image-file-formats.html">FDV, Ch. 27: Understanding the most commonly used image file formats</a> 
+ 5. <a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-10-JSONandCSV.ipynb">IS452's intro to CSV files (bottom of page)</a> 
+ 6. <a href="https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452's Intro to Dictionaries</a> 
+ 7. <a href="https://pandas.pydata.org/pandas-docs/stable/">Pandas Docs</a> & <a href="https://docs.scipy.org/doc/numpy/reference/">NumPy Docs</a> 
