@@ -23,6 +23,13 @@ Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall20
 
 Data source: https://data.illinois.gov/dataset/87building_inventory
 
+## Michigan Depth Map
+
+Link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/michigan_lld.flt
+
+Data source: Measurments taken from around Lake Michigan (https://www.ngdc.noaa.gov/mgg/greatlakes/michigan.html)
+
+
 ## Illinois Employee Compensation (NOT USED)
 
 https://data.illinois.gov/dataset/432015_salary_reporting/resource/4173bb1c-006f-4fd5-8ec5-302ed7c52560
