@@ -35,9 +35,9 @@ Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall20
 
 Data source: ?
 
-## UFO Dataset
+## Brainscan Dataset
 
-Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv
+Link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/single_dicom.h5
 
 Data source: Brain scan of a colleague
 
