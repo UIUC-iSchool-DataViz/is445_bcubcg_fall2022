@@ -19,7 +19,9 @@ Classification system described here: https://www.bfro.net/gdb/classify.asp
 
 ## Illinois Buildings Dataset
 
-Link: 
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv
+
+Data source: https://data.illinois.gov/dataset/87building_inventory
 
 ## Illinois Employee Compensation (NOT USED)
 
