@@ -26,7 +26,7 @@ course:
 urls:
   -
     name: Slack
-    url: is445-spring2022.slack.com
+    url: is445fall2022.slack.com
   - 
     name: Canvas
     url: https://canvas.illinois.edu/courses/21951
