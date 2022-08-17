@@ -27,12 +27,12 @@ data:
     type: dataLink
     title: The UFO Sitings Dataset (13Mb)
     description: Data about world wide reports of UFO sitings
-    link: https://github.com/UIUC-iSchool-DataViz/is445_AOUAOG_fall2021/raw/master/week05/data/ufo-scrubbed-geocoded-time-standardized-00.csv
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv
   - filename: michigan_lld.flt
     type: dataLink
     title: Michigan Depth Map (86Mb)
     description: Measurments taken from around Lake Michigan (https://www.ngdc.noaa.gov/mgg/greatlakes/michigan.html)
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/michigan_lld.flt
 ---
 
 # Beginning interactivity

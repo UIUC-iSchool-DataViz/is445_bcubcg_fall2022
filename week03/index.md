@@ -35,20 +35,20 @@ examples:
     title: spring2019_prep_notebook_week03_part2.ipynb
 data:
   - filename: building_inventory.csv
-    type: dataOtherWeek
+    type: dataLink
     title: Buildings dataset
     description: Illinois buildings dataset
-    week: week03
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv
   - filename: michigan_lld.flt
     type: dataLink
     title: Michigan Depth Map (86Mb)
     description: Measurments taken from around Lake Michigan (https://www.ngdc.noaa.gov/mgg/greatlakes/michigan.html)
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/michigan_lld.flt
   - filename: single_dicom.h5
     type: dataLink
     title: Brain Scan (72Mb)
     description: MRI scan of a brain
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/single_dicom.h5
 library:
   - filename: palette_colors.py
     type: library
