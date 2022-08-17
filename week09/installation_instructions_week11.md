@@ -1,12 +1,60 @@
 ---
-title: Idyll Installation Instructions
+title: Jekyll & Page Installation Instructions
 layout: assignment
-description: Install Idyll
+description: Install Jekyll & required pages for creating your own interactive website
 ---
  
-# Installation instructions: npm & Idyll & vega-lite for Idyll
+# Installation instructions: Ruby, Ruby Gems & Jekyll
 
-## 1. Install npm
+Follow the links for your system below.  **NOTE:** You will likely want to do this *outside* of your DataViz conda environment.
+
+## [Instructions for Macs](https://jekyllrb.com/docs/installation/macos/)
+
+
+## [Instructions for Windows](https://jekyllrb.com/docs/installation/windows/)
+
+## [Instructions for Ubuntu Linux](https://jekyllrb.com/docs/installation/ubuntu/)
+
+## [Instructions for Non-Ubuntu Linux](https://jekyllrb.com/docs/installation/other-linux/)
+
+If you already have Ruby installed (i.e. the "system" Ruby) -- *make sure you check the installation instructions for your relevant system anyway* -- it's possible you will want to install a non-system Ruby version.
+
+If you already have Jekyll installed -- make sure it's the most recent version.
+
+Pay attention if there are "next steps" listed after any of the commands, and make sure you do them.  For example, on a Mac after brew installs you'll see:
+
+```
+==> Next steps:
+- Run these two commands in your terminal to add Homebrew to your PATH:
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jnaiman/.bash_profile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+You need to run these two lines (echo and eval lines) in order to have the "brew" command in your path.
+
+```
+echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.bash_profile
+echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.bash_profile
+echo "chruby ruby-3.1.2" >> ~/.bash_profile # run 'chruby' to see actual version
+```
+
+
+DON'T NEED I THINK -- this has the ECHO stuff
+```
+==> chruby
+Add the following to the ~/.bash_profile or ~/.zshrc file:
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+To enable auto-switching of Rubies specified by .ruby-version files,
+add the following to ~/.bash_profile or ~/.zshrc:
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+```
+
+get the webpage stuff
+
+then do bundle install, remove Gemlock file before though
+
+----------
 
 There are a few ways to do this.  Probably the easiest is to download the correct version [from the Node.js page](https://nodejs.org/en/download/).
 

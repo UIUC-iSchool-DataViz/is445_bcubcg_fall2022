@@ -3,26 +3,26 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>IS445 - Data Viz - BCU/BCG - Idyll Installation Instructions</title>
+    <title>IS445 - Data Viz - BCU/BCG - Jekyll & Page Installation Instructions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="/is445_bcubcg_fall2022/assets/style.css" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Idyll Installation Instructions | IS445 - Data Viz - BCU/BCG</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Idyll Installation Instructions" />
+<title>Jekyll &amp; Page Installation Instructions | IS445 - Data Viz - BCU/BCG</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Jekyll &amp; Page Installation Instructions" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Install Idyll" />
-<meta property="og:description" content="Install Idyll" />
+<meta name="description" content="Install Jekyll &amp; required pages for creating your own interactive website" />
+<meta property="og:description" content="Install Jekyll &amp; required pages for creating your own interactive website" />
 <link rel="canonical" href="http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html" />
 <meta property="og:url" content="http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html" />
 <meta property="og:site_name" content="IS445 - Data Viz - BCU/BCG" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Idyll Installation Instructions" />
+<meta property="twitter:title" content="Jekyll &amp; Page Installation Instructions" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Install Idyll","headline":"Idyll Installation Instructions","url":"http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Install Jekyll &amp; required pages for creating your own interactive website","headline":"Jekyll &amp; Page Installation Instructions","url":"http://localhost:4001/is445_bcubcg_fall2022/week09/installation_instructions_week11.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -116,10 +116,47 @@
             <div class="container">
                 <div class="section">
                     <div class="content">
-                        <h1>Idyll Installation Instructions</h1>
-                        <h1 id="installation-instructions-npm--idyll--vega-lite-for-idyll">Installation instructions: npm &amp; Idyll &amp; vega-lite for Idyll</h1>
+                        <h1>Jekyll & Page Installation Instructions</h1>
+                        <h1 id="installation-instructions-ruby-ruby-gems--jekyll">Installation instructions: Ruby, Ruby Gems &amp; Jekyll</h1>
 
-<h2 id="1-install-npm">1. Install npm</h2>
+<p>Follow the links for your system below.  <strong>NOTE:</strong> You will likely want to do this <em>outside</em> of your DataViz conda environment.</p>
+
+<h2 id="instructions-for-macs"><a href="https://jekyllrb.com/docs/installation/macos/">Instructions for Macs</a></h2>
+
+<h2 id="instructions-for-windows"><a href="https://jekyllrb.com/docs/installation/windows/">Instructions for Windows</a></h2>
+
+<h2 id="instructions-for-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/ubuntu/">Instructions for Ubuntu Linux</a></h2>
+
+<h2 id="instructions-for-non-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/other-linux/">Instructions for Non-Ubuntu Linux</a></h2>
+
+<p>If you already have Ruby installed (i.e. the “system” Ruby) – <em>make sure you check the installation instructions for your relevant system anyway</em> – it’s possible you will want to install a non-system Ruby version.</p>
+
+<p>If you already have Jekyll installed – make sure it’s the most recent version.</p>
+
+<p>Pay attention if there are “next steps” listed after any of the commands, and make sure you do them.  For example, on a Mac after brew installs you’ll see:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==&gt; Next steps:
+- Run these two commands in your terminal to add Homebrew to your PATH:
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' &gt;&gt; /Users/jnaiman/.bash_profile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+</code></pre></div></div>
+
+<p>You need to run these two lines (echo and eval lines) in order to have the “brew” command in your path.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" &gt;&gt; ~/.bash_profile
+echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" &gt;&gt; ~/.bash_profile
+echo "chruby ruby-3.1.2" &gt;&gt; ~/.bash_profile # run 'chruby' to see actual version
+</code></pre></div></div>
+
+<p>DON’T NEED I THINK – this has the ECHO stuff</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==&gt; chruby
+Add the following to the ~/.bash_profile or ~/.zshrc file:
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+To enable auto-switching of Rubies specified by .ruby-version files,
+add the following to ~/.bash_profile or ~/.zshrc:
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+</code></pre></div></div>
 
 <p>There are a few ways to do this.  Probably the easiest is to download the correct version <a href="https://nodejs.org/en/download/">from the Node.js page</a>.</p>
 
