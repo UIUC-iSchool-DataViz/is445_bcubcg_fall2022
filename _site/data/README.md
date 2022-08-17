@@ -123,6 +123,8 @@ Data Source: https://www.gutenberg.org/files/1531/1531-h/1531-h.htm
 ## Facebook data
 
 Links:
+ * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/facebook_combined_sm000030_000000.txt (One major node facebook data)
+ * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/facebook_combined_sm000090_000010.txt (Several small nodes facebook data)
 
 Data Source: SNAP facebook dataset - 
 

@@ -29,12 +29,12 @@ data:
     type: dataLink
     title: Broad facebook data
     description: Several small nodes facebook data
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week09/data/facebook_combined_sm000090_000010.txt
+    link:  https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/facebook_combined_sm000090_000010.txt
   - filename: facebook_combined_sm000030_000000.txt
     type: dataLink
     title: Major node data
     description: One major node facebook data
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week09/data/facebook_combined_sm000030_000000.txt
+    link:  https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/facebook_combined_sm000030_000000.txt
 ---
 
 # Network Visualization & Word clouds
