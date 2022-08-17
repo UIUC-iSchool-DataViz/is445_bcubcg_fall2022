@@ -22,9 +22,10 @@ examples:
     description: Extra notebook from 2019 class
 data:
   - filename: building_inventory.csv
-    type: data
+    type: dataLink
     title: Buildings dataset
     description: Illinois buildings dataset
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv
   - filename: littleCorgiInHat.png
     type: data
     title: Corgi in Hat

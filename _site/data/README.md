@@ -49,6 +49,10 @@ Data source: ? (I think a screenshot by Matt?)
 
 The processing of this image into 3-colors is in the prep notebook for the first week as an "aside".
 
+## Corgi in Hat image
+
+Link: 
+
 
 ## Brainscan Dataset
 
