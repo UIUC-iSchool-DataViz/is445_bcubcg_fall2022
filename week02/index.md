@@ -4,9 +4,9 @@ visible: true
 icon: undraw_version_control_9bpv.svg
 notitle: true
 examples:
-  - filename: prep_notebook_week03.ipynb
+  - filename: prep_notebook_week02.ipynb
     type: ipynb
-    title: Prep Notebook, Week 3
+    title: Prep Notebook, Week 2
     description: Prep notebook for this week
   - filename: inClass_week03.ipynb
     type: ipynb

@@ -4,9 +4,9 @@ visible: true
 icon: undraw_cohort_analysis_stny.svg
 notitle: true
 examples:
-  - filename: prep_notebook_week04.ipynb
+  - filename: prep_notebook_week03.ipynb
     type: ipynb
-    title: Prep Notebook, Week 4
+    title: Prep Notebook, Week 3
     description: Prep notebook for this week
   - filename: inClass_week04.ipynb
     type: ipynb
