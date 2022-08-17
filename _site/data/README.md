@@ -51,7 +51,9 @@ The processing of this image into 3-colors is in the prep notebook for the first
 
 ## Corgi in Hat image
 
-Link: 
+Link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/littleCorgiInHat.png
+
+Data source: ? google?
 
 
 ## Brainscan Dataset

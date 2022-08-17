@@ -27,14 +27,15 @@ data:
     description: Illinois buildings dataset
     link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv
   - filename: littleCorgiInHat.png
-    type: data
+    type: dataLink
     title: Corgi in Hat
     description: Image of a corgi in a hat
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/littleCorgiInHat.png
   - filename: stitch_reworked.png
-    type: dataOtherWeek
+    type: dataLink
     title: Stitch Image
     description: Three-color image of stitch
-    week: week02
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/stitch_reworked.png
 ---
 
 # Data Storage and Operations
