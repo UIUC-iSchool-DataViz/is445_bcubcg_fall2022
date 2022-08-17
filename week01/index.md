@@ -26,7 +26,7 @@ data:
     type: dataLink
     title: Stitch Image
     description: Three-color image of stitch
-	link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/stitch_reworked.png
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/stitch_reworked.png
 ---
 
 # Introduction
