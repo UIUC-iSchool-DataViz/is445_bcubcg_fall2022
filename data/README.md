@@ -37,7 +37,7 @@ Data source: ?
 
 ## GDP dataset
 
-Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/GDP.csv
 
 Data source: ?
 

@@ -18,9 +18,10 @@ examples:
     description: Intro to python, plotting
 data:
   - filename: GDP.csv
-    type: data
+    type: dataLink
     title: GDP dataset
     description: GDP dataset from FRED
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/GDP.csv
   - filename: stitch_reworked.png
     type: data
     title: Stitch Image
