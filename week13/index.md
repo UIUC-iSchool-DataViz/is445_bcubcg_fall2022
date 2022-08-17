@@ -41,7 +41,7 @@ data:
     type: dataLink
     title: Galaxy Particle Simulation files (77Mb)
     description: Downsampled output files from a particle simulation of a galaxy merger
-    link: https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/raw/master/week13/galaxyFiles.zip
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/galaxyFiles.zip
   - filename: IsolatedGalaxy.tar.gz
     type: dataLink
     title: Isolated Galaxy dataset (292 Mb)
