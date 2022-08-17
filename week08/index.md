@@ -29,7 +29,7 @@ data:
     type: dataLink
     title: The GDP dataset (online)
     description: GDP dataset from FRED (stored online for easy linking in Iodide)
-    link: https://uiuc-ischool-dataviz.github.io/is445AOG_fall2020/week01/data/GDP.csv
+    link:  https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/GDP.csv
   - filename: mobility.csv
     type: dataLink
     title: The Mobility dataset (online)

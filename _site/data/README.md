@@ -74,13 +74,19 @@ Links:
  * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/data_tohoku_norm_transpose.csv
  * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/location.txt
  
-Data Source: ?
+Data Source: ? (its in one of the notebooks)
 
 ## State Export Data
 
 Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/total_export.csv
 
 Data Source: https://www.ers.usda.gov/data-products/state-export-data/
+
+## Mobility Dataset
+
+Link:
+
+Data Source: A dataset of USA "mobility" which (I <b>think</b> comes from a <a href="https://www.census.gov/library/working-papers/2018/adrm/CES-WP-18-40R.html">a large census study from 1989-2015</a>) and is collected in several places <a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/mobility.csv">including right here</a>.  Here "mobility" is refering to how easy it is for a person to move up in economic status (<a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/hw-01.pdf">more info can be found here</a>) based on factors like parental income, location, race, etc.
 
 
 ## Illinois Employee Compensation (NOT USED)
