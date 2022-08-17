@@ -102,12 +102,17 @@ Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall20
 
 Data Source: ? (Idyll somewhere...)
 
-## Galaxy Simulation Dataset
+## Galaxy N-Body Simulation Dataset
 
 Link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/galaxyFiles.zip
 
 Data Source: Downsampled data from https://ui.adsabs.harvard.edu/abs/2011MNRAS.412.1341D/abstract and https://ui.adsabs.harvard.edu/abs/2012MNRAS.420.2221D/abstract
 
+## Isolated Galaxy Dataset
+
+Link: http://yt-project.org/data/IsolatedGalaxy.tar.gz
+
+Data Source: yt data hub
 
 ## Illinois Employee Compensation (NOT USED)
 
