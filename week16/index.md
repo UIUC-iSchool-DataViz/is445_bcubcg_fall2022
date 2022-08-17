@@ -21,9 +21,10 @@ examples:
     title: Examples from Spring 2019
 data:
   - filename: othello.txt
-    type: data
+    type: dataLink
     title: Text corpus from Othello
     description: Full text from the play Othello from project Guthenburg
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/othello.txt
   - filename: facebook_combined_sm000090_000010.txt
     type: dataLink
     title: Broad facebook data

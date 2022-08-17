@@ -116,9 +116,15 @@ Data Source: yt data hub
 
 ## Othello Text
 
-Link:
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/othello.txt
 
 Data Source: https://www.gutenberg.org/files/1531/1531-h/1531-h.htm
+
+## Facebook data
+
+Links:
+
+Data Source: SNAP facebook dataset - 
 
 
 ## Illinois Employee Compensation (NOT USED)
