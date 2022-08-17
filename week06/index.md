@@ -40,12 +40,12 @@ data:
     type: dataLink
     title: Earthquake sensor data (59Mb)
     description: Earthquake sensor data from the earthquake from the Tohoku earthquake in 2011
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/data_tohoku_norm_transpose.csv
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/data_tohoku_norm_transpose.csv
   - filename: location.txt
     type: dataLink
     title: Earthquake locations data (12Kb)
     description: Locations of earthquake sensors
-    link: https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/location.txt
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/location.txt
 library:
   - filename: states_utils.py
     type: library

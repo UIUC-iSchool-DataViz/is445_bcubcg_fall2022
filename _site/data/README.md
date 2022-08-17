@@ -70,7 +70,16 @@ Data Source: ?
 
 ## Earthquake dataset
 
-Link: 
+Links:
+ * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/data_tohoku_norm_transpose.csv
+ * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/location.txt
+ 
+Data Source: ?
+
+## State Export Data
+
+
+Data Source: https://www.ers.usda.gov/data-products/state-export-data/
 
 
 
