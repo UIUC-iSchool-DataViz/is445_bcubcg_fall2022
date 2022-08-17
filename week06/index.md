@@ -32,9 +32,10 @@ data:
     description: Data about world wide reports of UFO sitings
     link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv
   - filename: market_map_data.csv
-    type: data
+    type: dataLink
     title: Surgery Charges Dataset (37Mb)
     description: Surgery charges in different states
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/market_map_data.csv
   - filename: data_tohoku_norm_transpose.csv
     type: dataLink
     title: Earthquake sensor data (59Mb)

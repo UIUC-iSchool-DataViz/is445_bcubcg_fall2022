@@ -64,7 +64,13 @@ Data source: Brain scan of a colleague
 
 ## Surgery/Market Map Dataset
 
-Link:
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/market_map_data.csv
+
+Data Source: ?
+
+## Earthquake dataset
+
+Link: 
 
 
 
