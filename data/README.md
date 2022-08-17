@@ -35,6 +35,13 @@ Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall20
 
 Data source: ?
 
+## GDP dataset
+
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv
+
+Data source: ?
+
+
 ## Brainscan Dataset
 
 Link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/single_dicom.h5
