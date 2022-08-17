@@ -36,16 +36,6 @@ data:
     title: Surgery Charges Dataset (37Mb)
     description: Surgery charges in different states
     link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/market_map_data.csv
-  - filename: data_tohoku_norm_transpose.csv
-    type: dataLink
-    title: Earthquake sensor data (59Mb)
-    description: Earthquake sensor data from the earthquake from the Tohoku earthquake in 2011
-    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/data_tohoku_norm_transpose.csv
-  - filename: location.txt
-    type: dataLink
-    title: Earthquake locations data (12Kb)
-    description: Locations of earthquake sensors
-    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/location.txt
 library:
   - filename: states_utils.py
     type: library
