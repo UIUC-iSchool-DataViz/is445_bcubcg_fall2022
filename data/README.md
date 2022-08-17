@@ -78,9 +78,9 @@ Data Source: ?
 
 ## State Export Data
 
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/total_export.csv
 
 Data Source: https://www.ers.usda.gov/data-products/state-export-data/
-
 
 
 ## Illinois Employee Compensation (NOT USED)

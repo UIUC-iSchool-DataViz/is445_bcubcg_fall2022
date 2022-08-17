@@ -35,7 +35,7 @@ data:
     type: dataLink
     title: State export data (8Kb)
     description: Data about exports from each state
-    link: https://uiuc-ischool-dataviz.github.io/is445_spring2021/week06/data/total_export.csv
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/total_export.csv
   - filename: market_map_data.csv
     type: dataLink
     link: https://uiuc-ischool-dataviz.github.io/is445_spring2022/week07/data/market_map_data.csv
