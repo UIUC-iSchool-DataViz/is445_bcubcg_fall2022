@@ -91,14 +91,14 @@ Data Source: A dataset of USA "mobility" which (I <b>think</b> comes from a <a h
 ## Corgis Dataset
 
 Links:
- * (Corgis per country over time)
+ * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/corgs_per_country_over_time_columns_2020.csv (Corgis born per country over time)
 
 
 Data Source: This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
 
-## LakeHuron dataset
+## Lake Huron dataset
 
-Link:
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/LakeHuron.csv
 
 Data Source: ? (Idyll somewhere...)
 
