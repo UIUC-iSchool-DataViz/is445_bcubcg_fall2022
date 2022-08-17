@@ -41,6 +41,14 @@ Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall20
 
 Data source: ?
 
+## Stitch image
+
+Link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/stitch_reworked.png
+
+Data source: ? (I think a screenshot by Matt?)
+
+The processing of this image into 3-colors is in the prep notebook for the first week as an "aside".
+
 
 ## Brainscan Dataset
 
