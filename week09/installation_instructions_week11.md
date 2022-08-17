@@ -8,14 +8,7 @@ description: Install Jekyll & required pages for creating your own interactive w
 
 Follow the links for your system below.  **NOTE:** You will likely want to do this *outside* of your DataViz conda environment.
 
-## [Instructions for Macs](https://jekyllrb.com/docs/installation/macos/)
-
-
-## [Instructions for Windows](https://jekyllrb.com/docs/installation/windows/)
-
-## [Instructions for Ubuntu Linux](https://jekyllrb.com/docs/installation/ubuntu/)
-
-## [Instructions for Non-Ubuntu Linux](https://jekyllrb.com/docs/installation/other-linux/)
+## General notes
 
 If you already have Ruby installed (i.e. the "system" Ruby) -- *make sure you check the installation instructions for your relevant system anyway* -- it's possible you will want to install a non-system Ruby version.
 
@@ -32,12 +25,55 @@ Pay attention if there are "next steps" listed after any of the commands, and ma
 
 You need to run these two lines (echo and eval lines) in order to have the "brew" command in your path.
 
+And after the Mac installation you'll see the instructions (for the .zshrc shell its a little different):
+
 ```
 echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.bash_profile
 echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.bash_profile
 echo "chruby ruby-3.1.2" >> ~/.bash_profile # run 'chruby' to see actual version
 ```
 
+Make sure you run these as well and re-open a Terminal window so that the relevant packages will be in your path.
+
+
+### [Instructions for Macs](https://jekyllrb.com/docs/installation/macos/)
+
+### [Instructions for Windows](https://jekyllrb.com/docs/installation/windows/)
+
+### [Instructions for Ubuntu Linux](https://jekyllrb.com/docs/installation/ubuntu/)
+
+### [Instructions for Non-Ubuntu Linux](https://jekyllrb.com/docs/installation/other-linux/)
+
+
+## Get relevant webpage templete files (have video starting from here)
+
+git clone, make sure windows folks have git
+
+**Notes for Windows install:**
+ * You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.
+
+
+## Install webpage files
+
+remove any Gemfile.lock, run `bundle install`
+
+## Check that the webpage runs
+
+`bundle excece serve whatever` or with the `-l` option
+
+and then navigate to the appropriate place
+
+## Add all files to your github repo
+
+double check that there is a blank "" for your baseurl
+
+also, update the relevant _config.yml stuff to point to your links
+
+add to your github.io repo and push
+
+make sure that if there is other stuff in your repo you add this to the "ignore" list of things
+
+--------------
 
 DON'T NEED I THINK -- this has the ECHO stuff
 ```
@@ -50,7 +86,7 @@ add the following to ~/.bash_profile or ~/.zshrc:
   source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 ```
 
-get the webpage stuff
+get the webpage stuff from the github repo
 
 then do bundle install, remove Gemlock file before though
 
@@ -64,8 +100,6 @@ If you go this route, make sure you follow the final install instructions and ha
 
 If you try any of the `npm` commands and it gives you an error about not knowing what `npm` is it is likely because it doesn't know where it is (given the example posted in the image above you could expliclity call `npm` with: `/usr/local/bin/npm`).
 
-**Notes for Windows install:**
- * You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.
 
 
 #### Another way: with conda (NOT recommended)

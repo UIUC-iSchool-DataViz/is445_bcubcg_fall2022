@@ -121,13 +121,7 @@
 
 <p>Follow the links for your system below.  <strong>NOTE:</strong> You will likely want to do this <em>outside</em> of your DataViz conda environment.</p>
 
-<h2 id="instructions-for-macs"><a href="https://jekyllrb.com/docs/installation/macos/">Instructions for Macs</a></h2>
-
-<h2 id="instructions-for-windows"><a href="https://jekyllrb.com/docs/installation/windows/">Instructions for Windows</a></h2>
-
-<h2 id="instructions-for-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/ubuntu/">Instructions for Ubuntu Linux</a></h2>
-
-<h2 id="instructions-for-non-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/other-linux/">Instructions for Non-Ubuntu Linux</a></h2>
+<h2 id="general-notes">General notes</h2>
 
 <p>If you already have Ruby installed (i.e. the “system” Ruby) – <em>make sure you check the installation instructions for your relevant system anyway</em> – it’s possible you will want to install a non-system Ruby version.</p>
 
@@ -143,10 +137,53 @@
 
 <p>You need to run these two lines (echo and eval lines) in order to have the “brew” command in your path.</p>
 
+<p>And after the Mac installation you’ll see the instructions (for the .zshrc shell its a little different):</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" &gt;&gt; ~/.bash_profile
 echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" &gt;&gt; ~/.bash_profile
 echo "chruby ruby-3.1.2" &gt;&gt; ~/.bash_profile # run 'chruby' to see actual version
 </code></pre></div></div>
+
+<p>Make sure you run these as well and re-open a Terminal window so that the relevant packages will be in your path.</p>
+
+<h3 id="instructions-for-macs"><a href="https://jekyllrb.com/docs/installation/macos/">Instructions for Macs</a></h3>
+
+<h3 id="instructions-for-windows"><a href="https://jekyllrb.com/docs/installation/windows/">Instructions for Windows</a></h3>
+
+<h3 id="instructions-for-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/ubuntu/">Instructions for Ubuntu Linux</a></h3>
+
+<h3 id="instructions-for-non-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/other-linux/">Instructions for Non-Ubuntu Linux</a></h3>
+
+<h2 id="get-relevant-webpage-templete-files-have-video-starting-from-here">Get relevant webpage templete files (have video starting from here)</h2>
+
+<p>git clone, make sure windows folks have git</p>
+
+<p><strong>Notes for Windows install:</strong></p>
+<ul>
+  <li>You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.</li>
+</ul>
+
+<h2 id="install-webpage-files">Install webpage files</h2>
+
+<p>remove any Gemfile.lock, run <code class="language-plaintext highlighter-rouge">bundle install</code></p>
+
+<h2 id="check-that-the-webpage-runs">Check that the webpage runs</h2>
+
+<p><code class="language-plaintext highlighter-rouge">bundle excece serve whatever</code> or with the <code class="language-plaintext highlighter-rouge">-l</code> option</p>
+
+<p>and then navigate to the appropriate place</p>
+
+<h2 id="add-all-files-to-your-github-repo">Add all files to your github repo</h2>
+
+<p>double check that there is a blank “” for your baseurl</p>
+
+<p>also, update the relevant _config.yml stuff to point to your links</p>
+
+<p>add to your github.io repo and push</p>
+
+<p>make sure that if there is other stuff in your repo you add this to the “ignore” list of things</p>
+
+<hr />
 
 <p>DON’T NEED I THINK – this has the ECHO stuff</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==&gt; chruby
@@ -158,6 +195,12 @@ add the following to ~/.bash_profile or ~/.zshrc:
   source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 </code></pre></div></div>
 
+<p>get the webpage stuff from the github repo</p>
+
+<p>then do bundle install, remove Gemlock file before though</p>
+
+<hr />
+
 <p>There are a few ways to do this.  Probably the easiest is to download the correct version <a href="https://nodejs.org/en/download/">from the Node.js page</a>.</p>
 
 <p>If you go this route, make sure you follow the final install instructions and have the <code class="language-plaintext highlighter-rouge">npm</code> executable in your <code class="language-plaintext highlighter-rouge">PATH</code>.  On my Mac the prompt looks like:</p>
@@ -165,11 +208,6 @@ add the following to ~/.bash_profile or ~/.zshrc:
 <p><img src="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445AOG_fall2020/master/week10/images/nodejspat.png" /></p>
 
 <p>If you try any of the <code class="language-plaintext highlighter-rouge">npm</code> commands and it gives you an error about not knowing what <code class="language-plaintext highlighter-rouge">npm</code> is it is likely because it doesn’t know where it is (given the example posted in the image above you could expliclity call <code class="language-plaintext highlighter-rouge">npm</code> with: <code class="language-plaintext highlighter-rouge">/usr/local/bin/npm</code>).</p>
-
-<p><strong>Notes for Windows install:</strong></p>
-<ul>
-  <li>You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.</li>
-</ul>
 
 <h4 id="another-way-with-conda-not-recommended">Another way: with conda (NOT recommended)</h4>
 
