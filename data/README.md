@@ -114,6 +114,13 @@ Link: http://yt-project.org/data/IsolatedGalaxy.tar.gz
 
 Data Source: yt data hub
 
+## Othello Text
+
+Link:
+
+Data Source: https://www.gutenberg.org/files/1531/1531-h/1531-h.htm
+
+
 ## Illinois Employee Compensation (NOT USED)
 
 https://data.illinois.gov/dataset/432015_salary_reporting/resource/4173bb1c-006f-4fd5-8ec5-302ed7c52560
