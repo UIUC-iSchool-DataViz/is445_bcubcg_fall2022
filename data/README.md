@@ -130,6 +130,13 @@ Data Source: SNAP facebook dataset - https://snap.stanford.edu/data/egonets-Face
  * original full network: https://snap.stanford.edu/data/facebook_combined.txt.gz
  * see notebook in last day of course for ideas of how to transform the original data into this format
 
+## Kepler satellite Data
+
+Link:
+
+Data source: http://exoplanetarchive.ipac.caltech.edu
+ * downloaded: Mon Jun 22 10:10:17 2020
+
 
 ## Illinois Employee Compensation (NOT USED)
 
