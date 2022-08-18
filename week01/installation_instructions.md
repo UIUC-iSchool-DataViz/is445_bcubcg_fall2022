@@ -26,30 +26,46 @@ Next, follow these installation steps to install anaconda on your computer:
 
 Now we will make a "stand-alone" envirnoment to do our data-viz stuff in.  This is useful to make sure we install packages in a way that will not cause bad interactions.
 
+<!--
 Here is a ~5 minute movie of how this process looks on my Mac (it may take longer on your machine!) which covers the instructions in section 2.1 and 2.2 of the installation process (note: this uses Python 3.8, but you should try with Python 3.7 first):
+-->
 
 <!-- JPN: redo this movie -->
+<!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0RT_03U5dWI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 
 <!-- JPN: recreate this enviroment -->
 ### 2.1 Conda environment
  1. On a Mac search for the "Terminal" prompt/on Windows search for the "Anaconda Prompt" (NOT the navigator)
- 2. In the terminal window type: `conda create -n DataViz python=3.7 matplotlib=3.2.2 numpy jupyter pillow pandas scipy ipywidgets palettable bqplot=0.12.30 h5py requests traitlets geopandas contextily ipyvolume ffmpeg descartes basemap webcolors wordcloud nltk xlrd libpng openpyxl pdvega pip yt -c conda-forge`
-    * **NOTE #1:** if this fails or there are package conflicts you can try with Python 3.8 -- In the terminal window type: `conda create -n DataViz python=3.8 matplotlib=3.2.2 numpy jupyter pillow pandas scipy ipywidgets palettable bqplot=0.12.30 h5py requests traitlets geopandas contextily ipyvolume ffmpeg descartes basemap webcolors wordcloud nltk xlrd libpng openpyxl pdvega pip yt -c conda-forge`
-	* **NOTE #2:** you might see the following message `Solving environment: failed with initial frozen solve. Retrying with flexible solve.` or `Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.`  This does *not* mean your installation has failed -- as long as its still running let it be! (This can take a while -- average is ~30 minutes, but sometimes it can take over night.)
- 3. When prompted, enter y and press return to install stuff (this can take a while too!)
+ 2. In the terminal window type: `conda create -n DataViz python=3.7 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud -c conda-forge`
  
-**Note:** Right now we need a special version of `matplotlib` to work with `yt`, but this might change in the future.
+You will then see an output that looks a bit like this:
+ 
+![](images/warning_message_conda2.png)
+
+After the "Solving Environment" step completes it will ask you if you want to install hit "y" and "Enter" or just "Enter" to complete the process.
+
+**DO NOT WORRY** about the following warning messages you might see:
+ * `Solving environment: failed with initial frozen solve. Retrying with flexible solve.`
+ * `Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.`
+ 
+This does not mean your installation has failed – as long as its still running let it be! 
+
+## Note the installation process can take a while – average is ~30 minutes, but sometimes it can take OVER NIGHT.
+
+A successful installation is indicated by seeing the following:
+
+![](images/conda_end.png)
+ 
+ 
+ 
+#### Tips and Tricks
+
+If the install fails or there are package conflicts you can try with Python 3.8 or Python 3.9.  For example to re-install with Python 3.8 the command becomes: `conda create -n DataViz python=3.7 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud -c conda-forge`
 
 
-<!-- 
-### 2.2 Pip install remaining packages
- 1. Follow the prompt to "activate" this environment with: `conda activate DataViz`
- 
-#### OPTIONAL
- * Still in terminal window do: `pip install PyGEL3D`
-	* NOTE: as of writing, PyGEL3D is not supported on machines other than Mac OSX and/or Windows.  This is for some extra notebooks (we will touch on briefly, but you don't have to use for assignments).
- -->
+
 
 ## 3. Run & Test your environment
 
@@ -66,7 +82,7 @@ Here is a ~5 minute movie of how this process looks on my Mac (it may take longe
 
  1. [Download the test install script - test_imports_week01](https://uiuc-ischool-dataviz.github.io/is445_spring2022/week02/test_imports_week01.ipynb), open it with your jupyter notbeook and run it cell-by-cell
  
-A movie of this process is shown below (~3 minutes):
+A movie of this process is shown below from a slightly older installation process (but the overall steps will remain the same, even if some of the packages are different):
 
 <!-- JPN: redo this movie w/o Pygel -->
 
