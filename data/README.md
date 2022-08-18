@@ -126,7 +126,9 @@ Links:
  * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/facebook_combined_sm000030_000000.txt (One major node facebook data)
  * https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/facebook_combined_sm000090_000010.txt (Several small nodes facebook data)
 
-Data Source: SNAP facebook dataset - 
+Data Source: SNAP facebook dataset - https://snap.stanford.edu/data/egonets-Facebook.html
+ * original full network: https://snap.stanford.edu/data/facebook_combined.txt.gz
+ * see notebook in last day of course for ideas of how to transform the original data into this format
 
 
 ## Illinois Employee Compensation (NOT USED)
