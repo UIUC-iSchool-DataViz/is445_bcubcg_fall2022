@@ -132,7 +132,7 @@ Data Source: SNAP facebook dataset - https://snap.stanford.edu/data/egonets-Face
 
 ## Kepler satellite Data
 
-Link:
+Link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/planets_2020.06.22_10.10.17.csv
 
 Data source: http://exoplanetarchive.ipac.caltech.edu
  * downloaded: Mon Jun 22 10:10:17 2020

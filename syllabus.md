@@ -5,7 +5,7 @@ notitle: true
 ---
 
 # COVID-19 Statement
-In keeping with University and iSchool policy, all students are required to engage in appropriate behavior to protect the health and safety of our community.  If you are on campus, this includes wearing a facial covering properly, maintaining social distance (at least 6 feet from others at all times), disinfecting the immediate seating area, and using hand sanitizer.  Additionally, you must be up-to-date with COVID vaccine/testing requirements in order to enter campus buildings.
+In keeping with University and iSchool policy, all students are required to engage in appropriate behavior to protect the health and safety of our community.  
 
 If you feel ill or are unable to come to class or complete class assignments due to issues related to COVID-19, including but not limited to: testing positive yourself, feeling ill, caring for a family member with COVID-19, or having unexpected child-care obligations, should contact their instructor immediately and cc their advisor.
 
@@ -304,6 +304,10 @@ Students are required to attend each class, and if they are unable to do so
 must notify the instructor and TA in advance and request an excused absence.
 Participation in class -- in the form of comments, questions, and discussion --
 is expected.
+
+### Email/Slack Policies and Turn-around times
+
+We aim to respond to Slack messages in the main channel within 24 hours and email within 3 days.  Please note that personal Slack messages are treated as emails and turn around times will be within 3 days (though we will make every effort to respond sooner than that).  Please do not use Slack for any questions about grades, or other personal queries -- email is the appropriate venue for these questions.  Do not post working code or solutions of any kind on Slack publically.
 
 
 ## Emergency Response: Run, Hide, Fight
