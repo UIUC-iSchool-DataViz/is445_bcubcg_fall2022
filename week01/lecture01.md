@@ -113,7 +113,7 @@ finally, we have several assignments that can be turned in as a group to allow f
 <!-- .slide: class="vertical_center" -->
 ## Basics
 
-IN PERSON: 12:30-3:20PM Tuesdays; ONLINE: 4-5:55PM Thursdays
+IN PERSON: 12:30-3:20PM Tuesdays
 
 Jill P. Naiman - `jnaiman@illinois.edu`
  * Office Hours: Mon, Wed 10am-11am (online)
@@ -125,8 +125,6 @@ TA: Leon Hounnou - `hounnou2@illinois.edu`
  * Office Hours: Mon, Fri 4-6pm (online)
 
 IN PERSON: https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/
-
-IN ONLINE: https://uiuc-ischool-dataviz.github.io/is445_oauoag_fall2022/
 
 notes: 
 
@@ -149,7 +147,7 @@ Now, the website!
 
  * Canvas: https://canvas.illinois.edu/courses/21951 - where the grades and assignments will be posted
 
- * Course webpage: https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/ OR https://uiuc-ischool-dataviz.github.io/is445_oauoag_fall2022/ - where lecture slides, notebooks, data & general course info will live.
+ * Course webpage: https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/  - where lecture slides, notebooks, data & general course info will live.
 
  * Slack: https://is445fall2022.slack.com - the best place to ask questions in the `#general` channel
 
@@ -308,9 +306,6 @@ We have to do it!
 see:
 https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/week01/installation_instructions.html
 
-and 
-
-https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/week01/test_imports_week01.ipynb
 
 ---
 
@@ -529,10 +524,6 @@ See the course syllabus:
 
 https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/syllabus.html
 
-or 
-
-https://uiuc-ischool-dataviz.github.io/is445_oauoag_fall2022/syllabus.html
-
 notes:
 These are TOTally optional - more on that in a minute.
 
@@ -684,8 +675,8 @@ personal messages on slack will be treated as email and we'll get back to you wi
 
 <!-- JPN: check all these links -->
 
- * Course repo is at [UIUC-iSchool-DataViz/is445_bcubcg_fall2022/](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/) or [UIUC-iSchool-DataViz/is445_oauoag_fall2022/](https://github.com/UIUC-iSchool-DataViz/is445_oauoag_fall2022/)
- * Automatically built to [uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/) or [uiuc-ischool-dataviz.github.io/is445_oauoag_fall2022/](https://uiuc-ischool-dataviz.github.io/is445_oauoag_fall2022/) 
+ * Course repo is at [UIUC-iSchool-DataViz/is445_bcubcg_fall2022/](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/) 
+ * Automatically built to [uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/)  
  * Copy the notebooks to your directory before using them.
  * Supplemental materials can be found at [UIUC-iSchool-DataViz/support-files](https://github.com/UIUC-iSchool-DataViz/support-files)
 
