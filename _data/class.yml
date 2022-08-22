@@ -2,25 +2,25 @@ instructor:
   name: Jill Naiman
   email: jnaiman@illinois.edu
   office: Online
-  office_hours: TBD
+  office_hours: Mon, Wed 10am-11am
 tas:
   -
     name: Qiuyan Guo
     email: qqguo2@illinois.edu
     office: Online
-    office_hours: TBD
+    office_hours: Tues, Thurs, Fri 8:30am-10:30am
   -
     name: Leon Hounnou
     email: hounnou2@illinois.edu
     office: Online
-    office_hours: TBD
+    office_hours: Mon, Fri 4-6pm
 
 course:
   name: Data Visualization
   number: IS445
   semester: Fall 2022
   section: BCU-BCG
-  location: 126 Grad Sch of Lib & Info Science
+  location: 325 David Kinley Hall
   time: Tuesdays, 12:30-3:20PM
   credit_hours: 4
 urls:
