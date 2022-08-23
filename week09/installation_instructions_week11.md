@@ -38,6 +38,8 @@ Make sure you run these as well and re-open a Terminal window so that the releva
 
 ### [Instructions for Macs](https://jekyllrb.com/docs/installation/macos/)
 
+For Macs you may have to also install bundler: `gem install jekyll bundler` instead of just Jeykll (`gem install jekyll`), but first try to run the test webpage without this extra install and see if you get any errors.
+
 ### [Instructions for Windows](https://jekyllrb.com/docs/installation/windows/)
 
 ### [Instructions for Ubuntu Linux](https://jekyllrb.com/docs/installation/ubuntu/)
@@ -47,7 +49,7 @@ Make sure you run these as well and re-open a Terminal window so that the releva
 
 ## Get relevant webpage templete files (have video starting from here)
 
-git clone, make sure windows folks have git
+git clone, make sure windows folks have git ALSO, folks need to install bundler
 
 **Notes for Windows install:**
  * You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.
