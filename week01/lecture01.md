@@ -76,6 +76,23 @@ This includes if you feel anxious/just a cold... attendance... make best choices
 
 ---
 
+## IN PERSON: COVID-19 Policies
+
+Please see the statement about policies related to COVID-19 at the [top of the Syllabus](https://uiuc-ischool-dataviz.github.io/is445_spring2022/syllabus.html).
+
+### Masks in class (and buildings) are no longer required by the University, but recommended by the CDC for high transmissibility areas (which we are in) 
+
+### Other ways to access course materials
+
+### If you feel unwell, stay home!
+
+### Will move to online modalities if *I* get COVID
+
+notes:
+we do have plans in place for if I get covid... could be out for a while... recordings/online
+
+---
+
 ## IS400 Colloquium
 
 See for-credit [IS400 Colloquium](https://ischool.illinois.edu/degrees-programs/courses/is400) and your academic advisor for more info.
