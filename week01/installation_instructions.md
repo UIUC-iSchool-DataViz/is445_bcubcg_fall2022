@@ -80,7 +80,7 @@ If the install fails or there are package conflicts you can try with Python 3.8 
  
 ### 3.2. Test the installs (this is part of the first HW, do once)
 
- 1. [Download the test install script - test_imports_week01](https://uiuc-ischool-dataviz.github.io/is445_spring2022/week02/test_imports_week01.ipynb), open it with your jupyter notbeook and run it cell-by-cell
+ 1. [Download the test install script - test_imports_week01](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/week01/test_imports_week01.ipynb), open it with your jupyter notbeook and run it cell-by-cell
  
 A movie of this process is shown below from a slightly older installation process (but the overall steps will remain the same, even if some of the packages are different):
 
