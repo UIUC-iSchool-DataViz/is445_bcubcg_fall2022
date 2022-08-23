@@ -1,8 +1,8 @@
 ---
-title: Lecture 11 - Starboard, Publishing & more in Idyll
+title: Lecture 11 - Starboard, Publishing & more in Jekyll
 layout: lecture
 description: >-
- Publishing your viz, vega-lite in Idyll and a bit of d3.js
+ Publishing your viz, vega-lite with Altair in a Jekyll page
 date: 2021-11-01
 ---
 
