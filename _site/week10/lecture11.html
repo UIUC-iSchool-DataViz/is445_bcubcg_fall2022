@@ -521,29 +521,31 @@ there will be pros/cons to using these as well!  like cost, but also the cost of
 
 ## vega-lite with Jekyll
 
-<img src="images/vegalite_jekyll2.png">
+<img src="images/vegalite_jekyll3.png">
+
+Link to interactive version [here](https://jnaiman.github.io/online_cv_public/projects/1-vega-lite-project).
 
 notes:
-using 
+using the templete, we'll also be able to support including our vega-lite creations by saving them as json snippets and including them in `assets/json`
 
 ---
 
-## [Altair] : Python $\rightarrow$ vega-lite $\rightarrow$ Jekyll
+## [Altair](https://altair-viz.github.io/index.html) : Python $\rightarrow$ vega-lite $\rightarrow$ Jekyll
 
----
+We will use [Altair](https://altair-viz.github.io/index.html) to translate between any Python analysis and vega-lite json's (we did this in your Homework #1 as a test):
 
-A JavaScript library for web-based data visualization
+<img src="images/altair1.png" height="600px">
 
- * Declarative, not imperative (this is better for web coding)
- * Dynamic and interactive
- * Smooth transitions
- 
 notes:
-we may/may not get to d3.js for this semester, but check out some other examples from previous sections
+
+we'll be using altair in Python to translate between any python analysis we do and our interative vega-lite plot, as stored in a json file that we can then include in our webpage
+
+we actually already used a tiny bit of altair to generate a plot in your test homework#1!  this is what was use to generate the figure we see on the default online_cv webpage
+
 
 ---
 
-## D3.js
+## Summary
 
 <img src="images/words.png" width="700"/>
 
