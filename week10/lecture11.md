@@ -381,12 +381,38 @@ there are also some "built in" filters which can help control how content looks,
  * objects like `{{page.title}}` are used to print content
  * and to create logic with their tags like `if page.show_sidebar`
  * also "built in" filters to control how tags/content is viewed
+ * used to build into "layouts" for repeated pages (like blog posts, or weekly content!)
 
 </div>
 
 <div class="right">
 
-<img src="images/liquid_examples.png" alt="source: Diptendra Bagchi">
+<img src="images/layouts.png" alt="source: Diptendra Bagchi">
+
+</div>
+
+notes:
+there are also some "built in" filters which can help control how content looks, for example shown is that a string variable would be capitalized
+
+---
+
+## Liquid (for use in Jekyll)
+
+<div class="left">
+
+[Liquid](https://shopify.github.io/liquid/) used to load [dynamic content](https://www.omniconvert.com/what-is/dynamic-content/) on webpages 
+
+ * Also written in Ruby
+ * objects like `{{page.title}}` are used to print content
+ * and to create logic with their tags like `if page.show_sidebar`
+ * also "built in" filters to control how tags/content is viewed
+ * used to build into "layouts" for repeated pages (like blog posts, or weekly content!)
+
+</div>
+
+<div class="right">
+
+<img src="images/layouts.png" alt="source: Diptendra Bagchi">
 
 </div>
 
@@ -400,7 +426,7 @@ we'll be using a templete for our work with Jekyll for this class, so you won't 
 
 ---
 
-## Markdown
+## Markdown in Jekyll
 
 Our Jekyll template uses Markdown for text, just like Starboard:
 
@@ -408,6 +434,19 @@ Our Jekyll template uses Markdown for text, just like Starboard:
  * You can _italicize_ with `_underscores_`
  * Try out making bullet lists with `*` on each line
  * Links are fun: `[link text](http://example.com/)`
+
+---
+
+## Jekyll Templates
+
+A non-exhaustive list can be found [by searching on GitHub](https://github.com/topics/jekyll-theme) or other sites.
+
+We'll be [using a specific template for this class](https://github.com/jnaiman/online_cv_public) (you can use others if you are already comfortable with Jekyll, but we will prioritize support for students using the template).
+
+notes:
+while there are many templates, we'll be using a specific one for this class that supports interactive visualizations with vega-lite
+
+if you already know Jekyll you CAN use your own, but we will not be providing support for it
 
 ---
 
@@ -422,10 +461,36 @@ Cons:
  * open source means less guarantee of long-term support in the future (though, popularity helps with that)
  * Doesn't support interactive visualization "out of the box"
 
+---
+
+## Other webpage development options
+
+
+ * [Wix](https://en.wikipedia.org/wiki/Wix.com)
+ * [WordPress](https://en.wikipedia.org/wiki/WordPress)
+ * [BigCommerce](https://www.bigcommerce.com/)
+ * [Shopify](https://en.wikipedia.org/wiki/Shopify)
+ * [Squarespace](https://en.wikipedia.org/wiki/Squarespace)
+
+
+<img src="images/otherwebdev.png" width="800" alt="source: Diptendra Bagchi"/>
+
+
+notes:
+there are other options out there which will help you build webpages as well, here are just a few
+
+they will have a variety of costs and support different features, some with data viz support, others with less
+
+there will be pros/cons to using these as well!  like cost, but also the cost of learning, or re-learning if they stop supporting the kind of web development you want to do
 
 ---
 
-## [vega-lite] with Jekyll
+## vega-lite with Jekyll
+
+<img src="images/vegalite_jekyll2.png">
+
+notes:
+using 
 
 ---
 
