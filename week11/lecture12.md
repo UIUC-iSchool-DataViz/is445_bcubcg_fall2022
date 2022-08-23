@@ -2,27 +2,20 @@
 title: Lecture 12 - Publishing & Validation
 layout: lecture
 description: >-
- More about publishing and validation, and more of d3.js in Idyll
+ More about publishing and validation, and Jekyll+vega-lite+Altair
 date: 2022-04-11
 ---
 
-## Last Week
+## Last Week/This Week
 
-<img src="../week10/images/this_week3.png">
-
-notes:
-so far, we've been covering a bit of javascript and vega-lite as some new viz engines and using them in Idyll
-
----
-
-## This Week
-
-<img src="images/this_week3.png">
+<img src="../week10/images/week10.png">
 
 notes:
+so far, we've been covering a bit of javascript and vega-lite and started thinking about it in Jekyll webpages
+
 this week we'll discuss more general methods of publishing, and we'll talk about how to validate how "well" our visualizations are doing.
 
-While we'll just touch on vega-lite in Idyll for plotting and then start looking at d3.js either this week or next week
+While we'll just touch on vega-lite in Jekyll for plotting and then start looking at Altair either this week or next week
 
 ---
 
@@ -174,11 +167,11 @@ Your stunning visualizations will do no one any good if they reside only on your
 
  * Raw HTML, CSS, SVG, and JavaScript
  * Content Management Systems
- * Idyll
+ * Jekyll/others
  * GitHub Pages
  * Social Media
  
-notes: we'll be mostly playing with idyll and github pages, but we'll also make a bit of content that you can share on social media (your webpages certainly can be shared)
+notes: we'll be mostly playing with Jekyll and github pages, but we'll also make a bit of content that you can share on social media (your webpages certainly can be shared)
 
 ---
 
@@ -224,18 +217,16 @@ Cons:
 
 ---
 
-## Idyll
+## Jekyll
 
 Pros:
- * Visualization-ready, compatible with Vega-Lite, D3.js, and Flourish
- * Modern features and design
+ * Popular -- well documented
+ * Uses Markdown in (most) templates, minimizes coding
 
 Cons:
  * Less common syntax (Markdown)
- * Not well-documented (but getting better each day!)
- * open source means less guarantee of long-term support in the future
-
-<img src="images/idyll.png" width="200"/>
+ * open source means less guarantee of long-term support in the future (though, popularity helps with that)
+ * Doesn't support interactive visualization "out of the box"
 
 ---
 
@@ -372,4 +363,4 @@ go to page!!
 
 ## Coding
 
-Onto some Javascript in Idyll!
+Onto some vega-lite in Jekyll!
