@@ -513,14 +513,16 @@ we actually already used a tiny bit of altair to generate a plot in your test ho
 
 ## Summary
 
-<img src="images/words.png" width="700"/>
+<img src="images/words2.png" width="700"/>
 
 notes:
-D3 is meant to be well-integrated into the existing infrastructure of the internet. The worldwide web is a real patchwork of different languages with different syntaxes meant to do different things. Don't let it overwhelm you. They tend to be pretty simple to start, and only get more complicated when you need them to.
+So we just covered a lot of new terms. The worldwide web is a real patchwork of different languages with different syntaxes meant to do different things. Don't let it overwhelm you. They tend to be pretty simple to start, and only get more complicated when you need them to.
+
+and again, we'll be using templates and mostly markdown -- all of this more complex stuff is happening on the "backend"
 
 ---
 
-## D3.js
+## Summary
 
 <img src="images/html.png" width="700"/>
 
@@ -533,56 +535,53 @@ It's essentially a skeleton for other functionality to hang off of.
 
 You may see the term DOM or Document Object Model. This is just another name for this skeleton/framework.
 
+this is what all of our templates will be modifying for us
+
 ---
 
-## D3.js
+## Summary
 
 <img src="images/css.png" width="700"/>
 
 notes:
+you might have heard of something like CSS to modify the styles of HTML pages
+
 CSS or cascading style sheets are how you define how websites are formatted. They do color, indentation, drop shadows, etc. Each CSS call is attached to an HTML tag.
 
 CSS can be called in-line, or from an external file dedicated exclusively to CSS code.
 
----
+again, our templates and yaml options will take care of all of this for us
 
-## D3.js
-
-<img src="images/svg.png" width="700"/>
-
-notes:
-SVG or Scalable Vector Graphics is an XML-based implementation of vector shape drawing that's natively understood by website compilers. It's an easy way to include dynamically rendered, animated, or interactive imagery in a webpage.
 
 ---
 
-## D3.js
+## Summary
 
-<img src="images/javascript.png" width="700"/>
+<img src="images/javascript2.png" width="700"/>
 
 notes:
 JavaScript is a dynamic programming language that runs natively on webpages that we've been using the past few weeks in Starboard. If you want to run programming logic in a webpage, you use javascript. If you see interactivity or animated effects on a website, you can generally expect they were written in javascript. 
 
+now we will just use altair+vega-lite and our Jekyll templete to make this happen "under the hood" for us!
+
 ---
 
-## Idyll
+## Summary
 
-Most of this is hidden from you when writing in Idyll! But it helps to understand the underlying mechanisms.
+Most of this is hidden from you when writing in Jekyll! But it helps to understand the underlying mechanisms.
 
-We'll start with vega-lite in Idyll.
+We'll start with a "pure" Jekyll page.
 
-If we have time, we'll get into D3.js and Idyll (examples are posted).
+Then we'll figure out how to include vega-lite plots, then we'll get into Altair and Jekyll (examples are posted).
 
 You can use any of these tools in the final project!
 
 
 notes:
-what are the limits to data size in Idyll and the web browser?
+what are the limits to data size in vega-lite and the web browser?
 
 ---
 
-## Onto Idyll!
+## Onto Jekyll web pages!
 
-Idyll is a reactive markup language for visualization and narrative documents.
-
-[idyll-lang.org](idyll-lang.org)
 
