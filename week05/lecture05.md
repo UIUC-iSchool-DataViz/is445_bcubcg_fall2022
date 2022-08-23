@@ -130,7 +130,7 @@ This week we'll be looking at a new visualization engine.
 
 Next few weeks:
  * `vega-lite` - declaritive
- * `Idyll` - declaritive
+ * `Altiar` - declaritive (built on `vega-lite`)
  
 note:
 full disclosure -- bqplot has a matplotlib-like, imperative, programming interface

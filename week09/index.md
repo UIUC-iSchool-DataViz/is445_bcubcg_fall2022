@@ -37,14 +37,14 @@ data:
     link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/mobility.csv
 ---
 
-# Viz Audience; More Starboard, Javascript & Vega-lite (and maybe Idyll)
+# Viz Audience; More Starboard, Javascript & Vega-lite (and maybe Jekyll)
 
 
-## Installation instructions: Idyll
+## Installation instructions: Jekyll
 
-We'll be using Idyll to do some web-dev and we need to install another package manager, npm, to install Idyll and other Idyll-related packages. 
+We'll be using Jekyll to do some web-dev and we need to install some other software to do this (like Ruby). 
 
-#### [Please follow these installation instructions to install the necessary packages](installation_instructions_week10).
+#### [Please follow these installation instructions to install the necessary packages](installation_instructions_week11).
 
 
 ## Optional reading list
@@ -53,5 +53,5 @@ We'll be using Idyll to do some web-dev and we need to install another package m
  2. <a href="https://serialmentor.com/dataviz/telling-a-story.html">FDV, Ch. 29: Telling a story and making a point</a> 
  3. <a href="https://alpha.iodide.io/">Iodide Docs</a> 
  4. <a href="https://vega.github.io/vega-lite/docs/">vega-lite docs</a> - in particular: <a href="https://vega.github.io/vega-lite/docs/transform.html">Vega-lite transformations</a> & <a href="https://vega.github.io/vega-lite/docs/selection.html">Vega-lite selections</a> 
- 5. <a href="https://idyll-lang.org/docs"> Idyll Docs</a>
+ 5. <a href="https://jekyllrb.com/showcase/"> Jekyll Examples</a>
 

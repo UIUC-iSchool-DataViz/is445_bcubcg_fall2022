@@ -2,7 +2,7 @@
 title: Lecture 10 - Viz audience, Final Project Info
 layout: lecture
 description: >-
- Considerations of audience, review about final projects, more with vega lite & Starboard, Idyll
+ Considerations of audience, review about final projects, more with vega lite & Starboard, Jekyll
 date: 2022-03-29
 ---
 
@@ -21,7 +21,7 @@ this week we will discuss how one has to consider the audience of their visualiz
 
 we'll start linking stuff together in vegalite
 
-if we have time after doing a few more things with javascript & vega-lite, we'll start in on doing a few things with Idyll
+if we have time after doing a few more things with javascript & vega-lite, we'll start in on doing a few things with Jekyll
 
 ---
 
@@ -31,10 +31,10 @@ if we have time after doing a few more things with javascript & vega-lite, we'll
  1. Review about final projects
  1. More `vega-lite` - transformations and calculations
  1. More programming in Starboard
- 1. Intro to Idyll (if time)
+ 1. Intro to Jekyll (if time)
 
 note:
-we will probably not get to Idyll until next week or week after -- thanks for all of your installation efforts!
+we will probably not get to Jekyll until next week or week after -- thanks for all of your installation efforts!
 
 ---
 
@@ -594,18 +594,17 @@ You will also provide feedback for 3 other students/groups (more on this later).
 
 ## Final Project: Part 3 (cont)
 
-You may submit one or more of the following items: Idyll webpage repository, narrative Jupyter notebook.
+You will submit a link to a github pages site or other webpage constructed in Javascript+HTML that you/your group has constructed.
 
 This component will include a "for others" visualization that is deeply
-narrative with appropriate interactive (or static) content and, ideally, sharable on a
+narrative with appropriate interactive (or static) content which is sharable on a
 website.
 
 Some possible ways to approach this:
 
- * Infographic
- * Idyll
- * Jupyter notebook (hosted on mybinder or Starboard)
- * Raw HTML
+ * Jekyll+Altair (see template)
+ * Raw HTML + Javascript
+ * We will *not* be accepting jupyter notebooks/mybinder links this semester
 
 
 
