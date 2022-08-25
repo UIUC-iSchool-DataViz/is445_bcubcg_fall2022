@@ -62,8 +62,9 @@ A successful installation is indicated by seeing the following:
  
 #### Tips and Tricks
 
-If the install fails or there are package conflicts you can try with Python 3.8 or Python 3.9.  For example to re-install with Python 3.8 the command becomes: `conda create -n DataViz python=3.8 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud -c conda-forge`
+If the install fails or there are package conflicts you can try with Python 3.8 or Python 3.9.  For example to re-install with Python 3.8 the command becomes: `conda create -n DataViz python=3.8 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud wget -c conda-forge`
 
+**Windows users:** If you have an issue with the `wget` command, you can install without it like: `conda create -n DataViz python=3.7 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud -c conda-forge`
 
 
 
