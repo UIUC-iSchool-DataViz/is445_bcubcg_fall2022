@@ -8,24 +8,17 @@
 <body>
 
 
-<link href="js/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="js/require.min.v2.3.4.js"  data-main='./js/' ></script>
-<script>
-    require.config({
-      map: {
-        '*': {
-          'ipyvolume': 'ipyvolume_v0.6.0-alpha.8',
-        }
-      }})
-</script>
 
-<script src="js/embed-amd_v0.20.1.js"></script>
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
 <script type="application/vnd.jupyter.widget-state+json">
 {
   "version_major": 2,
   "version_minor": 0,
   "state": {
-    "bc78a37d8499444da4255fabf21944a3": {
+    "824d8fc17273409ba68f0cc8de0eac34": {
       "model_name": "VBoxModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -40,13 +33,13 @@
         "_view_name": "VBoxView",
         "box_style": "",
         "children": [
-          "IPY_MODEL_93bb47371fc14607aea65ff70abfa5cc",
-          "IPY_MODEL_805b0676b6db44e199571c03f4ae6842"
+          "IPY_MODEL_e4fa9588d9a1481696e7ddbc27caa77c",
+          "IPY_MODEL_7f11ed05504f44438c422061945d3b37"
         ],
-        "layout": "IPY_MODEL_7ac090746b6c48838ea38628f081bcc5"
+        "layout": "IPY_MODEL_2d9c6d4d17c442a2be97375bd62c027f"
       }
     },
-    "93bb47371fc14607aea65ff70abfa5cc": {
+    "e4fa9588d9a1481696e7ddbc27caa77c": {
       "model_name": "VBoxModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -61,13 +54,13 @@
         "_view_name": "VBoxView",
         "box_style": "",
         "children": [
-          "IPY_MODEL_9a30e7575ed54d3d8b274cdc1c661314",
-          "IPY_MODEL_584091311bed4f23b66c651242612e38"
+          "IPY_MODEL_a903c026ddd44ad984b5a7f0c8e21152",
+          "IPY_MODEL_c9c7157941d7422597a73ca03451ee48"
         ],
-        "layout": "IPY_MODEL_4acc248132d34c0b8b00d5e33912d7a6"
+        "layout": "IPY_MODEL_bfeac208034942e69748d4e061ea9574"
       }
     },
-    "9a30e7575ed54d3d8b274cdc1c661314": {
+    "a903c026ddd44ad984b5a7f0c8e21152": {
       "model_name": "FigureModel",
       "model_module": "ipyvolume",
       "model_module_version": "~0.6.0-alpha.8",
@@ -83,7 +76,7 @@
         "ambient_coefficient": 0.5,
         "animation": 200.0,
         "animation_exponent": 1.0,
-        "camera": "IPY_MODEL_7c8596b2c7d9425f96925aa735de550e",
+        "camera": "IPY_MODEL_e304b993c88a4be8a959d9519b7b08c7",
         "camera_center": [
           0.0,
           0.0,
@@ -98,7 +91,7 @@
         "displayscale": 1.0,
         "eye_separation": 6.4,
         "height": 500,
-        "layout": "IPY_MODEL_40720903635947acbc714811f2bdb99b",
+        "layout": "IPY_MODEL_6db061de287447dcab2e70db05a97e84",
         "matrix_projection": [
           0.0,
           0.0,
@@ -141,14 +134,14 @@
         "pixel_ratio": null,
         "render_continuous": false,
         "scales": {
-          "x": "IPY_MODEL_647c99a54c5f46bbac00f3d7908f3993",
-          "y": "IPY_MODEL_ee633a9889734ac097118ddbdc228040",
-          "z": "IPY_MODEL_caa25f464659448a83553ba274e0253b"
+          "x": "IPY_MODEL_e48c9944d6c749d5871980ae698676cc",
+          "y": "IPY_MODEL_d8793267a1e643e0b7d27d990886e42d",
+          "z": "IPY_MODEL_a9561880a43b4abf9d571cbc6aac90b9"
         },
         "scatters": [
-          "IPY_MODEL_c86c1acb41384861b9afe89d78a3cf21"
+          "IPY_MODEL_52acd73bdc5d43fcbec274261690c367"
         ],
-        "scene": "IPY_MODEL_46f8a5bb81c945e38476cf2a87ea310f",
+        "scene": "IPY_MODEL_ff2acf143a4046c2ba66b523b2bc8dbc",
         "selection_mode": "replace",
         "selector": "lasso",
         "show": "Volume",
@@ -178,7 +171,7 @@
         "zlabel": "z"
       }
     },
-    "7c8596b2c7d9425f96925aa735de550e": {
+    "e304b993c88a4be8a959d9519b7b08c7": {
       "model_name": "PerspectiveCameraModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -336,7 +329,7 @@
         "zoom": 1.0
       }
     },
-    "40720903635947acbc714811f2bdb99b": {
+    "6db061de287447dcab2e70db05a97e84": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -388,7 +381,7 @@
         "width": null
       }
     },
-    "647c99a54c5f46bbac00f3d7908f3993": {
+    "e48c9944d6c749d5871980ae698676cc": {
       "model_name": "LinearScaleModel",
       "model_module": "bqplot",
       "model_module_version": "^0.5.31",
@@ -409,7 +402,7 @@
         "stabilized": false
       }
     },
-    "ee633a9889734ac097118ddbdc228040": {
+    "d8793267a1e643e0b7d27d990886e42d": {
       "model_name": "LinearScaleModel",
       "model_module": "bqplot",
       "model_module_version": "^0.5.31",
@@ -430,7 +423,7 @@
         "stabilized": false
       }
     },
-    "caa25f464659448a83553ba274e0253b": {
+    "a9561880a43b4abf9d571cbc6aac90b9": {
       "model_name": "LinearScaleModel",
       "model_module": "bqplot",
       "model_module_version": "^0.5.31",
@@ -451,7 +444,7 @@
         "stabilized": false
       }
     },
-    "c86c1acb41384861b9afe89d78a3cf21": {
+    "52acd73bdc5d43fcbec274261690c367": {
       "model_name": "ScatterModel",
       "model_module": "ipyvolume",
       "model_module_version": "~0.6.0-alpha.8",
@@ -488,8 +481,8 @@
           0.0,
           1.0
         ],
-        "line_material": "IPY_MODEL_c10cc792b6304d9d9f2f0ca47bc1c164",
-        "material": "IPY_MODEL_9c33f8ac070e4e40a9c1575661d02456",
+        "line_material": "IPY_MODEL_aaf8e797cc1f428086de32a72c1fd9e2",
+        "material": "IPY_MODEL_c94f9422f44b4dddbcce91d7573ba7ea",
         "selected": null,
         "sequence_index": 0,
         "shader_snippets": {
@@ -2765,7 +2758,7 @@
         }
       ]
     },
-    "c10cc792b6304d9d9f2f0ca47bc1c164": {
+    "aaf8e797cc1f428086de32a72c1fd9e2": {
       "model_name": "ShaderMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2825,7 +2818,7 @@
         "wireframeLinewidth": 1.0
       }
     },
-    "9c33f8ac070e4e40a9c1575661d02456": {
+    "c94f9422f44b4dddbcce91d7573ba7ea": {
       "model_name": "ShaderMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2885,7 +2878,7 @@
         "wireframeLinewidth": 1.0
       }
     },
-    "46f8a5bb81c945e38476cf2a87ea310f": {
+    "ff2acf143a4046c2ba66b523b2bc8dbc": {
       "model_name": "SceneModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -3005,7 +2998,7 @@
         "visible": true
       }
     },
-    "584091311bed4f23b66c651242612e38": {
+    "c9c7157941d7422597a73ca03451ee48": {
       "model_name": "HBoxModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3020,13 +3013,13 @@
         "_view_name": "HBoxView",
         "box_style": "",
         "children": [
-          "IPY_MODEL_582a4f38da6542db9f03580efc0fac9d",
-          "IPY_MODEL_974d9c6187d04fc1be84d3a5550ac085"
+          "IPY_MODEL_69fec8d252174007bdeace42d09ae88a",
+          "IPY_MODEL_2ac91480d2474712a4f08f37aa460042"
         ],
-        "layout": "IPY_MODEL_1672eb783cce47eba7477294becd3ff2"
+        "layout": "IPY_MODEL_c6ef2759483c40e5bd0f9d6fef89dcaf"
       }
     },
-    "582a4f38da6542db9f03580efc0fac9d": {
+    "69fec8d252174007bdeace42d09ae88a": {
       "model_name": "PlayModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3045,16 +3038,16 @@
         "description_tooltip": null,
         "disabled": false,
         "interval": 200,
-        "layout": "IPY_MODEL_26a3f69f8ae64b7b8d343e6768e577a9",
+        "layout": "IPY_MODEL_4db3a7ee96b34619b0d9de50eea006e7",
         "max": 49,
         "min": 0,
         "show_repeat": true,
         "step": 1,
-        "style": "IPY_MODEL_e7359b329c714b129ce70f2d7fffc595",
+        "style": "IPY_MODEL_fb3ff5d66ec9474cb55a908b5f16c772",
         "value": 0
       }
     },
-    "26a3f69f8ae64b7b8d343e6768e577a9": {
+    "4db3a7ee96b34619b0d9de50eea006e7": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -3106,7 +3099,7 @@
         "width": null
       }
     },
-    "e7359b329c714b129ce70f2d7fffc595": {
+    "fb3ff5d66ec9474cb55a908b5f16c772": {
       "model_name": "DescriptionStyleModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3121,7 +3114,7 @@
         "description_width": ""
       }
     },
-    "974d9c6187d04fc1be84d3a5550ac085": {
+    "2ac91480d2474712a4f08f37aa460042": {
       "model_name": "FloatSliderModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3138,18 +3131,18 @@
         "description": "",
         "description_tooltip": null,
         "disabled": false,
-        "layout": "IPY_MODEL_5a9054bc8f0345ad917281f9e8e37ffe",
+        "layout": "IPY_MODEL_9d071f7e88ad42c0a79273542c499940",
         "max": 49.0,
         "min": 0.0,
         "orientation": "horizontal",
         "readout": true,
         "readout_format": ".2f",
         "step": 1.0,
-        "style": "IPY_MODEL_bf1bd3d1526d470498da6a8b06a7f659",
+        "style": "IPY_MODEL_b95f7051d414429faa7e07f0c0d1ca6e",
         "value": 0.0
       }
     },
-    "5a9054bc8f0345ad917281f9e8e37ffe": {
+    "9d071f7e88ad42c0a79273542c499940": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -3201,7 +3194,7 @@
         "width": null
       }
     },
-    "bf1bd3d1526d470498da6a8b06a7f659": {
+    "b95f7051d414429faa7e07f0c0d1ca6e": {
       "model_name": "SliderStyleModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3217,7 +3210,7 @@
         "handle_color": null
       }
     },
-    "1672eb783cce47eba7477294becd3ff2": {
+    "c6ef2759483c40e5bd0f9d6fef89dcaf": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -3269,7 +3262,7 @@
         "width": null
       }
     },
-    "4acc248132d34c0b8b00d5e33912d7a6": {
+    "bfeac208034942e69748d4e061ea9574": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -3321,7 +3314,7 @@
         "width": null
       }
     },
-    "805b0676b6db44e199571c03f4ae6842": {
+    "7f11ed05504f44438c422061945d3b37": {
       "model_name": "FloatSliderModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3338,18 +3331,18 @@
         "description": "Size of Particles",
         "description_tooltip": null,
         "disabled": false,
-        "layout": "IPY_MODEL_7c57d0b2d0f147c69f39d845f7e1e1ed",
+        "layout": "IPY_MODEL_b075e417e9dd456c9ced6df2a6c68510",
         "max": 30.0,
         "min": 0.0,
         "orientation": "horizontal",
         "readout": true,
         "readout_format": ".2f",
         "step": 0.1,
-        "style": "IPY_MODEL_5203cfea37c94e16903a8a5bf498e074",
+        "style": "IPY_MODEL_852787a47041490387b6f35ed3d54a1a",
         "value": 0.0
       }
     },
-    "7c57d0b2d0f147c69f39d845f7e1e1ed": {
+    "b075e417e9dd456c9ced6df2a6c68510": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -3401,7 +3394,7 @@
         "width": null
       }
     },
-    "5203cfea37c94e16903a8a5bf498e074": {
+    "852787a47041490387b6f35ed3d54a1a": {
       "model_name": "SliderStyleModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3417,7 +3410,7 @@
         "handle_color": null
       }
     },
-    "7ac090746b6c48838ea38628f081bcc5": {
+    "2d9c6d4d17c442a2be97375bd62c027f": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -3469,7 +3462,7 @@
         "width": null
       }
     },
-    "1a3b604d4bd0474fb78d0dba1a546e82": {
+    "c8c5c8749e764c279a17ab79157b74c4": {
       "model_name": "LinkModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3482,16 +3475,16 @@
         "_view_module_version": "1.5.0",
         "_view_name": null,
         "source": [
-          "IPY_MODEL_c86c1acb41384861b9afe89d78a3cf21",
+          "IPY_MODEL_52acd73bdc5d43fcbec274261690c367",
           "size"
         ],
         "target": [
-          "IPY_MODEL_805b0676b6db44e199571c03f4ae6842",
+          "IPY_MODEL_7f11ed05504f44438c422061945d3b37",
           "value"
         ]
       }
     },
-    "ab3c1f893ff648af9ce09710c12b5003": {
+    "dd0c8d9056674a52880158bbd42906a6": {
       "model_name": "LinkModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3504,16 +3497,16 @@
         "_view_module_version": "1.5.0",
         "_view_name": null,
         "source": [
-          "IPY_MODEL_582a4f38da6542db9f03580efc0fac9d",
+          "IPY_MODEL_69fec8d252174007bdeace42d09ae88a",
           "value"
         ],
         "target": [
-          "IPY_MODEL_974d9c6187d04fc1be84d3a5550ac085",
+          "IPY_MODEL_2ac91480d2474712a4f08f37aa460042",
           "value"
         ]
       }
     },
-    "b77ad010394b457fa4ac181ce58f37fe": {
+    "2bcfc1c869b4416f919dc4b37c5946d5": {
       "model_name": "LinkModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -3526,11 +3519,11 @@
         "_view_module_version": "1.5.0",
         "_view_name": null,
         "source": [
-          "IPY_MODEL_974d9c6187d04fc1be84d3a5550ac085",
+          "IPY_MODEL_2ac91480d2474712a4f08f37aa460042",
           "value"
         ],
         "target": [
-          "IPY_MODEL_c86c1acb41384861b9afe89d78a3cf21",
+          "IPY_MODEL_52acd73bdc5d43fcbec274261690c367",
           "sequence_index"
         ]
       }
@@ -3539,10 +3532,9 @@
 }
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "bc78a37d8499444da4255fabf21944a3"}
+{"version_major": 2, "version_minor": 0, "model_id": "824d8fc17273409ba68f0cc8de0eac34"}
 </script>
 
-        
 
 </body>
 </html>

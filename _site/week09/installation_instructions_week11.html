@@ -117,17 +117,21 @@
                 <div class="section">
                     <div class="content">
                         <h1>Jekyll & Page Installation Instructions</h1>
-                        <h1 id="installation-instructions-ruby-ruby-gems--jekyll">Installation instructions: Ruby, Ruby Gems &amp; Jekyll</h1>
+                        <h1 id="installation-instructions-ruby-ruby-gems-jekyll--our-online-resume-template">Installation instructions: Ruby, Ruby Gems, Jekyll &amp; Our Online Resume Template</h1>
+
+<h2 id="1-install-jekyll-ruby--bundler">1. Install Jekyll, Ruby &amp; bundler</h2>
 
 <p>Follow the links for your system below.  <strong>NOTE:</strong> You will likely want to do this <em>outside</em> of your DataViz conda environment.</p>
 
-<h2 id="general-notes">General notes</h2>
+<h3 id="general-notes">General notes</h3>
 
 <p>If you already have Ruby installed (i.e. the “system” Ruby) – <em>make sure you check the installation instructions for your relevant system anyway</em> – it’s possible you will want to install a non-system Ruby version.</p>
 
 <p>If you already have Jekyll installed – make sure it’s the most recent version.</p>
 
-<p>Pay attention if there are “next steps” listed after any of the commands, and make sure you do them.  For example, on a Mac after brew installs you’ll see:</p>
+<p>Pay attention if there are “next steps” listed after any of the commands, and make sure you do them.</p>
+
+<h4 id="for-example-on-a-mac-after-brew-installs-youll-see">For example, <strong>on a Mac</strong> after brew installs you’ll see:</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==&gt; Next steps:
 - Run these two commands in your terminal to add Homebrew to your PATH:
@@ -150,58 +154,54 @@ echo "chruby ruby-3.1.2" &gt;&gt; ~/.bash_profile # run 'chruby' to see actual v
 
 <p>For Macs you may have to also install bundler: <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code> instead of just Jeykll (<code class="language-plaintext highlighter-rouge">gem install jekyll</code>), but first try to run the test webpage without this extra install and see if you get any errors.</p>
 
+<p>See above notes about making sure to run a few things in your Terminal window after your install.</p>
+
 <h3 id="instructions-for-windows"><a href="https://jekyllrb.com/docs/installation/windows/">Instructions for Windows</a></h3>
+
+<p>Note here that you also have to install bundler.</p>
 
 <h3 id="instructions-for-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/ubuntu/">Instructions for Ubuntu Linux</a></h3>
 
 <h3 id="instructions-for-non-ubuntu-linux"><a href="https://jekyllrb.com/docs/installation/other-linux/">Instructions for Non-Ubuntu Linux</a></h3>
 
-<h2 id="get-relevant-webpage-templete-files-have-video-starting-from-here">Get relevant webpage templete files (have video starting from here)</h2>
-
-<p>git clone, make sure windows folks have git ALSO, folks need to install bundler</p>
+<h2 id="2-get-online-resume-template">2. Get Online Resume Template</h2>
 
 <p><strong>Notes for Windows install:</strong></p>
 <ul>
   <li>You need to have git installed - <a href="https://git-scm.com/">download link here</a>.  You will have to restart your computer.</li>
 </ul>
 
-<h2 id="install-webpage-files">Install webpage files</h2>
+<p>For Mac, you should have git already installed (but you can install it <a href="https://git-scm.com/download/mac">here</a> just in case).</p>
 
-<p>remove any Gemfile.lock, run <code class="language-plaintext highlighter-rouge">bundle install</code></p>
+<p><strong>Step 1:</strong> Clone this repository using <code class="language-plaintext highlighter-rouge">git clone https://github.com/jnaiman/online_cv_public.git</code> in a Terminal or Anaconda Prompt</p>
 
-<h2 id="check-that-the-webpage-runs">Check that the webpage runs</h2>
+<p><img src="images/gitclone.png" width="900px" alt="clone online cv with git clone command" /></p>
 
-<p><code class="language-plaintext highlighter-rouge">bundle excece serve whatever</code> or with the <code class="language-plaintext highlighter-rouge">-l</code> option</p>
+<p>You can find this repository URL by navigating to the <a href="https://github.com/jnaiman/online_cv_public">online template GitHub repositor</a> and copying the URL under the green “Code” button/dropdown.</p>
 
-<p>and then navigate to the appropriate place</p>
+<p><strong>Step 2:</strong> change to this directory with <code class="language-plaintext highlighter-rouge">cd online_cv_public</code> in the Terminal/Anaconda Prompt</p>
 
-<h2 id="add-all-files-to-your-github-repo">Add all files to your github repo</h2>
+<p><img src="images/cdonlinecv.png" width="600px" alt="cd into online cv directory" /></p>
 
-<p>double check that there is a blank “” for your baseurl</p>
+<p><strong>Step 3:</strong> build the Jekyll page with <code class="language-plaintext highlighter-rouge">bundle install</code> in the Terminal/Anaconda Prompt</p>
 
-<p>also, update the relevant _config.yml stuff to point to your links</p>
+<p><img src="images/bundleinstall.png" width="700px" alt="install jekyll page with bundle install" /></p>
 
-<p>add to your github.io repo and push</p>
+<p>You should see this at the end of the bundle command.</p>
 
-<p>make sure that if there is other stuff in your repo you add this to the “ignore” list of things</p>
+<p><strong>Step 4:</strong> Serve the site locally with <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></p>
 
-<hr />
+<p><img src="images/servesitelocal.png" width="900px" alt="cd into online cv directory" /></p>
 
-<p>DON’T NEED I THINK – this has the ECHO stuff</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==&gt; chruby
-Add the following to the ~/.bash_profile or ~/.zshrc file:
-  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+<p><strong>Step 5:</strong> Navigate to the URL listed in a Chrome or Firefox browser – in the above image this is <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4008/online_cv_public/</code>.  You should see teh following page pop up:</p>
 
-To enable auto-switching of Rubies specified by .ruby-version files,
-add the following to ~/.bash_profile or ~/.zshrc:
-  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-</code></pre></div></div>
+<p><img src="images/websitepopup.png" alt="picture of running local webpage" /></p>
 
-<p>get the webpage stuff from the github repo</p>
+<p><strong>Step 6:</strong> Take a screenshot of a side-by-side of your running Terminal/Anaconda Prompt and the served webpage like so:</p>
 
-<p>then do bundle install, remove Gemlock file before though</p>
+<p><img src="images/submissionscreenshot.png" alt="submission" /></p>
 
-<hr />
+<p>This screenshot serves as your submission for this portion of the homework assignment.</p>
 
 
 
