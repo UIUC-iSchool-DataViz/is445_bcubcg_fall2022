@@ -178,7 +178,9 @@ Here is a ~5 minute movie of how this process looks on my Mac (it may take longe
 
 <h4 id="tips-and-tricks">Tips and Tricks</h4>
 
-<p>If the install fails or there are package conflicts you can try with Python 3.8 or Python 3.9.  For example to re-install with Python 3.8 the command becomes: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.8 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud -c conda-forge</code></p>
+<p>If the install fails or there are package conflicts you can try with Python 3.8 or Python 3.9.  For example to re-install with Python 3.8 the command becomes: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.8 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud wget -c conda-forge</code></p>
+
+<p><strong>Windows users:</strong> If you have an issue with the <code class="language-plaintext highlighter-rouge">wget</code> command, you can install without it like: <code class="language-plaintext highlighter-rouge">conda create -n DataViz python=3.7 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud -c conda-forge</code></p>
 
 <h2 id="3-run--test-your-environment">3. Run &amp; Test your environment</h2>
 
