@@ -40,6 +40,10 @@ Here is a ~5 minute movie of how this process looks on my Mac (it may take longe
  1. On a Mac search for the "Terminal" prompt/on Windows search for the "Anaconda Prompt" (NOT the navigator)
  2. In the terminal window type: `conda create -n DataViz python=3.7 seaborn plotly pygraphviz pandas matplotlib=3.2.2 bqplot=0.12.30 numpy regex networkx openssl altair yt geopandas gdal rasterio shapely pyproj rtree fiona pillow palettable h5py contextily webcolors openpyxl ipyvolume ipyleaflet vega_datasets nltk wordcloud wget -c conda-forge`
  
+#### DO NOT TRY TO INSTALL THESE PACKAGES ONE AT A TIME
+
+This can lead to package conflicts!
+ 
 You will then see an output that looks a bit like this:
  
 ![](images/warning_message_conda2.png)
