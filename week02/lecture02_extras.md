@@ -9,15 +9,6 @@ description: >-
  More examples of drawing images in 2D; binary representations 
 date: 2020-02-01
 ---
-<!-- .slide: class="titleslide" -->
-
-# Data Visualization
-<div style="height: 6.0em;"></div>
-
-## Jill P. Naiman
-## Extras for Lecture 2
-
----
 
 <br>
 <br>
