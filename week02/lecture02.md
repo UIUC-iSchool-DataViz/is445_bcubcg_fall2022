@@ -89,7 +89,8 @@ these last two count for ~25% of this hw grade so I'll carefully ignore you if y
 
 ## Homework grading
 
- * All HWs will be graded out of 100%, all HWs are worth the same
+ * All HWs will be graded out of 100%, all HWs are worth the same, however,
+ * Some weeks assignments are broken into multiple parts (that all add up to 100%)
  * We *will* drop a HW score
 
 ---
