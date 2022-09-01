@@ -6,6 +6,12 @@ description: >-
 date: 2022-02-07
 ---
 
+## Annoucement
+
+<img src="images/career_fair.png">
+
+---
+
 ## Today's Main Topics
 
  * Colors - what are they really?
