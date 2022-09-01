@@ -48,7 +48,10 @@ See above notes about making sure to run a few things in your Terminal window af
 
 ### [Instructions for Windows](https://jekyllrb.com/docs/installation/windows/)
 
-Note here that you also have to install bundler.
+
+#### Tips & Tricks for Windows
+ 1. Make sure you follow *all* the steps, all the way until the end of the page -- you also have to do things like install bundler.
+
 
 ### [Instructions for Ubuntu Linux](https://jekyllrb.com/docs/installation/ubuntu/)
 
