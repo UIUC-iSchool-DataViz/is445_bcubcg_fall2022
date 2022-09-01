@@ -307,7 +307,7 @@ is expected.
 
 ### Email/Slack Policies and Turn-around times
 
-We aim to respond to Slack messages in the main channel within 24 hours and email within 3 days.  Please note that personal Slack messages are treated as emails and turn around times will be within 3 days (though we will make every effort to respond sooner than that).  Please do not use Slack for any questions about grades, or other personal queries -- email is the appropriate venue for these questions.  Do not post working code or solutions of any kind on Slack publically.
+We aim to respond to Slack messages in the main channel within 24 business hours and email within 3 business days.  Please note that personal Slack messages are treated as emails and turn around times will be within 3 days (though we will make every effort to respond sooner than that).  Please do not use Slack for any questions about grades, or other personal queries -- email is the appropriate venue for these questions.  Do not post working code or solutions of any kind on Slack publically.
 
 
 ## Emergency Response: Run, Hide, Fight
