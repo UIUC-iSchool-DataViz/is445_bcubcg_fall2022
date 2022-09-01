@@ -16,7 +16,7 @@ date: 2022-08-31
 
 ## COVID-19 Policies
 
-Please see the statement about policies related to COVID-19 at the [top of the Syllabus](https://uiuc-ischool-dataviz.github.io/is445_spring2022/syllabus.html).
+Please see the statement about policies related to COVID-19 at the [top of the Syllabus](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/syllabus.html).
 
 ### Masks in class (and buildings) are now *highly recommended* by the Chancellor
 
@@ -67,7 +67,7 @@ think is interesting, etc.
 
 _These are meant to be easy points:_ No more than 2-3 sentences are needed in your description.
 
-Please see [TurnItIn](https://uiuc-ischool-dataviz.github.io/is445_spring2022/week03/lecture02_assignment_submission_help.html#/) slides for more info
+Please see [TurnItIn](https://uiuc-ischool-dataviz.github.io/is445_bcubcg_fall2022/week02/lecture02_assignment_submission_help.html#/) slides for more info
 
 notes:
 our first one is assigned today, due next week 
