@@ -8,9 +8,9 @@ examples:
     type: ipynb
     title: Prep Notebook, Week 3
     description: Prep notebook for this week
-  - filename: inClass_week04.ipynb
+  - filename: inClass_week03.ipynb
     type: ipynb
-    title: In class notebook, Week 4
+    title: In class notebook, Week 3
     description: Prep notebook for this week
   - filename: fall2019_prep_notebook_furtherExamples_01.ipynb
     type: ipynb
@@ -64,22 +64,6 @@ choose colors and transforms to better suit our data.
 We also did some basics of Pandas last week and we'll continue this week.
 
 Note there are a variety of notebooks from previous iterations of this course listed under the *Materials* subsection of today's lecture.  The "furtherExamples" notebooks are just there as reference, we will not be going through them by hand.
-
-<!-- ## Downloads
-
-### Data:
-
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv" download>Building Inventory CSV file - building_inventory.csv</a>
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt" download>Michigan Depth Map (86Mb) - michigan_lld.flt</a>
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/single_dicom.h5" download>Brain Scan (72Mb) - single_dicom.h5</a>
- -->
-
-<!-- ### Python external libraries
-
-Make sure you save these in the same directory as your jupyter notebook is running in!
-
- * <a href="palette_colors.py" download>Palette Colors (palette_colors.py) - save to notebook folder or modify your path if you know how to do that</a>
- -->
 
 
 ## References

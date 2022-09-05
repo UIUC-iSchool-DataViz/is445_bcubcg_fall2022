@@ -17,7 +17,7 @@ Additionally, please be aware that there are mental health resources available t
 
 ## Impact on assignments
 
-Finally, due to the current messiness of the COVID learning environment, we are allowing up to three late homeworks.  If you need to “use” one of your late homeworks email the instructor and/or the TA.  You do not need to provide any explanation for why you’d like to use one of your late homeworks.  You will then have until the end of the week -- the Sunday after the homework was due, midnight -- to turn in this assignment.  
+Finally, due to the current messiness of the COVID learning environment, we are allowing up to three late homeworks.  If you need to “use” one of your late homeworks email the instructor and/or the TA.  You do not need to provide any explanation for why you’d like to use one of your late homeworks.  You will then have until the end of the week -- the Friday after the homework was due, midnight -- to turn in this assignment.  
 
 Late policies for homeworks not on extension include: 10% off for 1 day late, 20% off for 2 days late, 30% off for 3 days late.  All homeworks not on extension will be given a zero if turned in after 3 days past the due date.
 
