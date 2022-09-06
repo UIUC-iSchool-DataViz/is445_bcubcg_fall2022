@@ -18,7 +18,7 @@ examples:
     type: iodide
     title: Jekyll Tour Notes
     description: Prep Starboard Notebook
-    link: https://starboard.gg/nb/nrWqgSu
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week10/pdfs/jekyll%20tour%20notes.pdf
   - filename: prep-repo
     type: iodide
     title: Prep online_cv file, Week 12
