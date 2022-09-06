@@ -14,6 +14,11 @@ examples:
     title: Prep Starboard Notebook, Week 12
     description: Prep Starboard Notebook
     link: https://starboard.gg/nb/nrWqgSu
+  - filename: jekyll tour notes.pdf
+    type: iodide
+    title: Jekyll Tour Notes
+    description: Prep Starboard Notebook
+    link: https://starboard.gg/nb/nrWqgSu
   - filename: prep-repo
     type: iodide
     title: Prep online_cv file, Week 12
