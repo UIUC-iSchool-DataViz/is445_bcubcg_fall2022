@@ -19,7 +19,7 @@ gem "minima", "~> 2.0"
 
 gem "github-pages", group: :jekyll_plugins
 
-gem 'webrick'
+gem "webrick", "~> 1.7"
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
