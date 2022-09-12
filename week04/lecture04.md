@@ -3,7 +3,21 @@ title: Lecture 4 - Widgets & Traitlets for Interactivity
 layout: lecture
 description: >-
  We talk about the basics of using Traitlets and data binding in visualization.
-date: 2022-02-14
+date: 2022-09-13
+---
+
+## Reminder: Modality Change Next week
+
+No "live" class.
+
+Recordings from last semester (+ some updated recordings).
+
+In class notebook is already "filled out".
+
+No prof. office hours next week.
+
+*Will* be available on Slack!
+
 ---
 
 ## Today's Main Topics
@@ -279,6 +293,21 @@ notes:
 
 ---
 
+## Reminder about the Reminder: Modality Change Next week
+
+No "live" class.
+
+Recordings from last semester (+ some updated recordings).
+
+In class notebook is already "filled out".
+
+No prof. office hours next week.
+
+*Will* be available on Slack!
+
+---
+
 ## To Python!
 
 That all was a bit abstract, let's go through it again with Python.
+
