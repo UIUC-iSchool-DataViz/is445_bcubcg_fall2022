@@ -3,7 +3,7 @@ title: Lecture 5 - Grammar of Graphics & bqplot
 layout: lecture
 description: >-
  We introduce the basics of bqplot & how it relates to grammar of graphics
-date: 2021-09-27
+date: 2022-09-21
 ---
 
 ## Today's Main Topics
@@ -21,7 +21,7 @@ bqplot!
 
 ## Where we are: Last week
 
-<img src="../week05/images/data_viz_diagram_week4.png">
+<img src="../week04/images/data_viz_diagram_week4.png">
 
 notes:
 last week we started linking together some visual encodings and programming concepts to build interactivity

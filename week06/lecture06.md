@@ -3,7 +3,7 @@ title: Lecture 6 - Dashboards & Maps
 layout: lecture
 description: >-
  Linking data a bit about maps (if we have time)
-date: 2020-03-01
+date: 2022-09-27
 ---
 
 ## Announcement: 
@@ -19,7 +19,7 @@ notes:
 
 <img src="images/dataviz_map_lastweek_take2.png">
 
-notes: last week  we started playing with dashboarding using some randomly generated data in bqplot
+notes: last week in the recording we started playing with dashboarding using some randomly generated data in bqplot
 
 we also started working with the Grammer of Graphics and used bqplot declaritively to start "painting" scales and axis on our canvas
 
@@ -27,11 +27,104 @@ we also talked about different viz engines and you got to look at this in the HW
 
 ---
 
+## Where we are: Last week
+
+![](../week05/images/logreas_AFrame_2.gif)
+
+ * "_Declarative_ programming languages ... are rather like logics in that programs declare statements that are known to be true and relationships between these and other statements."
+ * "_Imperative_ programming languages ... state what shall be done in given conditions. They start with an initial state and an explicit set of instructions that describe the process that will unfold."
+
+[Reference](http://cfpm.org/~bruce/logreas/logreas_7.html)
+
+notes:
+as a quick remidner, here are the definitions of declaritive vs. imperative
+
+they are a little nebolous, but for reference we've been using mostly imperative programming for viz
+
+you can think of imperative as a step-by-step reciepe and its usually what you'll run across in programming in Python
+
+---
+
+## Where we are: Last week
+
+### bqplot
+
+Our first engine, `bqplot`, is a Jupyter-based interactive plotting system.
+
+It presents two principal interfaces:
+
+1. `pyplot`-like interface, for making the transition from matplotlib easier
+```#python
+from bqplot import pyplot as bplt
+bplt.figure(title='A Figure')
+bplt.scatter(x_data, y_data)
+bplt.show()
+```
+1. An object-oriented API for constructing interactive visualizations
+```#python
+scatter_chart = Scatter(x=x_data, y=y_data, scales={'x': x_sc, 'y': y_sc})
+fig = Figure(marks=[scatter_chart], title='A Figure', axes=[x_ax, y_ax])
+display(fig)
+```
+
+notes:
+as covered last week (and the week before) bqplot is a new interface we are going to be using to make interactive plots
+
+there *is* a matplotlib-like interface, but we will be using bqplot declaritively to get us ready to use vega-lite later on in the course
+
+---
+
+## Where we are: Last week
+
+### bqplot introduction
+
+Our first example will be a simple lineplot.
+```#python
+import bqplot
+import numpy as np
+
+# 1. data
+x = np.arange(100)
+y = np.random.random(100) + 5
+# 2. scales
+x_sc = bqplot.LinearScale()
+y_sc = bqplot.LinearScale()
+# 3. marks
+lines = bqplot.Lines(x = x, y = y, scales = {'x': x_sc, 'y': y_sc})
+# 4. sometimes interactive elements are defined around here
+# 5. axis
+ax_x = bqplot.Axis(scale = x_sc, label = 'X value')
+ax_y = bqplot.Axis(scale = y_sc, label = 'Y value', orientation = 'vertical')
+
+# finally: figure
+fig = bqplot.Figure(marks = [lines], axes = [ax_x, ax_y])
+fig
+```
+
+notes:
+last week we covered this basic outline of how to make a plot in bqplot
+
+first starting with defining the data (there can be data cleaning here as well)
+
+then moving onto the scales -- are they linear or log? what about any color scales?
+
+then we define the "marks" -- do you want a line plot or a bar chart? or a scatter plot?
+
+around step #4 is where interactivity will be included with something along the lines of a .observe function
+
+then we define axis -- like x/y axis but also color axis (colorbars)
+
+finally, we put everything together as a figure and display that figure
+
+---
+
 ## Where we are: Today
 
 <img src="images/dataviz_map_thisweek.png">
 
-notes: Today we'll continue building up dashboards
+notes: 
+
+Today we'll continue with bqplot and work on building up dashboards
 
 if we have time we'll also start talking about map projections this week (but we might only get to it next week)
 
@@ -315,17 +408,17 @@ and we've done masking before with the filtering of images
 
 ## Recall: HW 6 this week
 
-Build a dashboard for the buildings data.
+Build a dashboard for the license data.
  * Left component:
    * Grid heat map
-   * Columns are County
-   * Rows are the governmental department (Agency Name) 
-   * Values are mean of total square footage for that set of criteria
+   * Columns are License Type
+   * Rows are the License Status 
+   * Values are mean of the days between Effective Date and Expiration Date
  * Right component:
    * is a barplot/histogram
    * x is the year
-   * y is total square footage acquired that year
- * These two should be linked so that you can select cells and that will update the square footage plot.
+   * y is median number of days between Effective Date and Expiration Date that year
+ * These two should be linked so that you can select cells and that will update the right plot.
 	
 notes:
 Hint for those in class -- check out pivot tables with pandas, it might get you close to where you want to be with filtering your data!
