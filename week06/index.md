@@ -4,17 +4,17 @@ visible: true
 icon: undraw_metrics_gtu7.svg
 notitle: true
 examples:
-  - filename: inClass_week07.ipynb
+  - filename: inClass_week06.ipynb
     type: ipynb
-    title: In Class Notebook, Week 7
+    title: In Class Notebook, Week 6
     description: In class notebook
-  - filename: prep_notebook_week07_part1.ipynb
+  - filename: prep_notebook_week06_part1.ipynb
     type: ipynb
-    title: Prep Notebook, Week 7, Part 1
+    title: Prep Notebook, Week 6, Part 1
     description: Prep notebook for this week, Part 1
-  - filename: prep_notebook_week07_part2.ipynb
+  - filename: prep_notebook_week06_part2.ipynb
     type: ipynb
-    title: Prep Notebook, Week 7, Part 2
+    title: Prep Notebook, Week 6, Part 2
     description: Prep notebook for this week, Part 2
   - filename: spring2019_prep_notebook_week06_part1.ipynb
     type: ipynb
@@ -51,24 +51,6 @@ library:
 
 We will start thinking about maps & map projection, both in `bqplot` and `matplotlib`.  We'll start this week with building dashboards of mappable data.
 
-<!-- ## Downloads
-
-### Data:
-
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/ufo-scrubbed-geocoded-time-standardized-00.csv" download>The UFO Sitings Dataset (13Mb) - ufo-scrubbed-geocoded-time-standardized-00.csv</a>
- * <a href='total_export.csv' download>State export data (8Kb) - total_export.csv</a>
- * <a href="market_map_data.csv" download>Backup: Surgery Charges Dataset (37Mb) - market_map_data.csv</a>
-
-#### This might not be used until next week:
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/data_tohoku_norm_transpose.csv" download>Earthquake sensor data (59Mb) - data_tohoku_norm_transpose.csv</a>
- * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week08/data/location.txt" download>Earthquake locations data (12Kb) - location.txt</a>
-
-
-### Resources:
-
- * <a href='states_utils.py' download>State export utilities (Python library) - states_utils.py</a>
- * <a href='us_state_abbrev.py' download>US State abbreviations (Python library) - us_state_abbrev.py</a>
--->
 
 ## Optional reading list
 
