@@ -6,15 +6,28 @@ notitle: true
 examples:
   - filename: In Class Jekyll Files
     type: iodide
-    title: In class Jekyll materials, Week 13
+    title: In class Jekyll materials, Week 11
     description: Updating storage of Idyll files in class
     link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week13/inClass
   - filename: Prep Jekyll Files
     type: iodide
-    title: Prep Jekyll materials, Week 13
+    title: Prep Jekyll materials, Week 11
     description: We'll be building toward a webpage like <a href="https://jnaiman.github.io/online_cv_public/">this</a> today using <a href="https://jekyllrb.com/">Jekyll</a>+<a href="https://altair-viz.github.io/index.html">Altair</a>. 
-    link: https://github.com/jnaiman/online_cv_public
+    link: https://github.com/jnaiman/online_cv_public/blob/main/_example_projects/3_vega_plots_four_ways.md
+  - filename: inClass_week11.ipynb
+    type: ipynb
+    title: In Class Notebook, Week 11
+    description: In class notebook
+  - filename: prep_notebook_week11.ipynb
+    type: ipynb
+    title: Prep Notebook, Week 11
+    description: Prep notebook for this week
 data:
+  - filename: mobility.csv
+    type: dataLink
+    title: The Mobility dataset (online)
+    description: A dataset of USA "mobility" which (I <b>think</b> comes from a <a href="https://www.census.gov/library/working-papers/2018/adrm/CES-WP-18-40R.html">a large census study from 1989-2015</a>) and is collected in several places <a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/mobility.csv">including right here</a>.  Here "mobility" is refering to how easy it is for a person to move up in economic status (<a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/hw-01.pdf">more info can be found here</a>) based on factors like parental income, location, race, etc.
+    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/mobility.csv
   - filename: corgs_per_country_over_time_columns_2020.csv
     type: dataLink
     title: Corgis per country over time 
