@@ -4,13 +4,13 @@ visible: true
 icon: undraw_Around_the_world_re_n353.svg
 notitle: true
 examples:
-  - filename: inClass_week08.ipynb
+  - filename: inClass_week07.ipynb
     type: ipynb
     title: In class notebook
     description: Placeholder for in class coding
-  - filename: prep_notebook_week08_part1.ipynb
+  - filename: prep_notebook_week07.ipynb
     type: ipynb
-    title: Prep Notebook, Week 8
+    title: Prep Notebook, Week 7
     description: Prep notebook for this week, Part 1
   - filename: spring2019_prep_notebook_week07_part1.ipynb
     type: ipynb
