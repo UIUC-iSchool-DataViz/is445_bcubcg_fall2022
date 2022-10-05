@@ -8,7 +8,7 @@ examples:
     type: iodide
     title: In class Jekyll resources, Week 13
     description: Updating storage of Jekyll files in class
-    link: https://github.com/UIUC-iSchool-DataViz/is445_spring2022/tree/master/week13/inClass
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week13/inClass
   - filename: Prep repo
     type: iodide
     title: Prep Jekyll, Week 13
@@ -16,15 +16,11 @@ examples:
     link: https://github.com/jnaiman/online_cv_public
   - filename: inClass_week13.ipynb
     type: ipynb
-    title: In class jupyter notebook
+    title: In class jupyter notebook, Week 13
     description: Placeholder for in class coding
   - filename: prep_notebook_week13_part1.ipynb
     type: ipynb
-    title: Prep Notebook, Week 13, Part 1
-    description: Prep notebook for this week
-  - filename: prep_notebook_week13_part2.ipynb
-    type: ipynb
-    title: Prep Notebook, Week 13, Part 2
+    title: Prep Notebook, Week 13
     description: Prep notebook for this week
 data:
   - filename: corgs_per_country_over_time_columns_2020.csv
@@ -37,21 +33,6 @@ data:
     title: Subset of full Corgi database 
     description: This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
     link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/corgiData_countries_subset_2020.json
-  - filename: galaxyFiles.zip
-    type: dataLink
-    title: Galaxy Particle Simulation files (77Mb)
-    description: Downsampled output files from a particle simulation of a galaxy merger
-    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/galaxyFiles.zip
-  - filename: IsolatedGalaxy.tar.gz
-    type: dataLink
-    title: Isolated Galaxy dataset (292 Mb)
-    description: A single snapshot in time of a grid simulation of an isolated galaxy 
-    link: http://yt-project.org/data/IsolatedGalaxy.tar.gz
-library:
-  - filename: solverlibs.py
-    type: library
-    title: Solver library (solverlibs.py)
-    description: Python library, save to notebook folder or modify your path if you know how to do that
 ---
 
 # A few more Jekyll+Altair things, Starting SciViz
@@ -59,14 +40,6 @@ library:
 A few more things in Jekyll+Altair.
 
 
-
-<!-- #### Galaxy data (if time)
-
- 1. Download and unzip [this set of files here (galaxyFiles.zip, 77M)](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/raw/master/week13/galaxyFiles.zip)
- 1. Make note of where this unzips -- this is where `solverlibs.py` gets unpacked.
- 
-We'll be using the <a href="http://yt-project.org/data/IsolatedGalaxy.tar.gz" download>Isolated Galaxy dataset (292 Mb)</a> dataset for sci viz next week.
--->
 
 ## Optional reading list
 
