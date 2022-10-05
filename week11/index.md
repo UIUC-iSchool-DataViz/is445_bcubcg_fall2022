@@ -48,7 +48,6 @@ Full corgi dataset available [here](corg/corgiData_countries_full_2020.json).
 ## Optional reading list
 
  1. <a href="https://jekyllrb.com/tutorials/home/">Jekyll Tutorials (hit "Next" to see them at bottom)</a> 
- 1. <a href="https://altair-viz.github.io/gallery/index.html">Altair docs</a>
- 1. <a href="https://books.google.com/books?hl=en&lr=&id=jUw7DwAAQBAJ&oi=fnd&pg=PA91&dq=scientific+visualization+misinformation&ots=Cv0QmoCdM2&sig=7xycURu8Um_C9VtHqf-aWg4qaEo#v=onepage&q=scientific%20visualization%20misinformation&f=false">Chapter 5: Dimensions of Visual Misinformation in the Emerging Media Landscape in the book "Misinformation and Mass Audiences"</a>
-
+ 1. <a href="https://altair-viz.github.io/gallery/index.html">Altair docs</a> - in particular <a href="https://altair-viz.github.io/user_guide/encoding.html#encoding-data-types">Encoding Data Types</a>, <a href="https://altair-viz.github.io/user_guide/internals.html#converting-vega-lite-to-altair">Vegalite-Altair conversions</a>, <a href="https://altair-viz.github.io/user_guide/transform/bin.html#bin-transforms">Binning</a>, <a href="https://altair-viz.github.io/user_guide/transform/filter.html">Filter transforms</a> and <a href="https://altair-viz.github.io/gallery/interactive_cross_highlight.html#interactive-chart-with-cross-highlight">interactive examples</a>
+ 
  
