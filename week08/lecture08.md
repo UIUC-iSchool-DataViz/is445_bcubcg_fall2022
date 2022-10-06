@@ -6,6 +6,18 @@ description: >-
 date: 2022-03-21
 ---
 
+# Final materials/recordings up
+
+notes:
+also, the optional readings in the syllabus have been updated to reflect topics covered in weeks 11-13-ish
+
+recordings aren't 100% correct times, things are split over a few weeks
+
+also, final project is posted -- eventually you will sign up for groups again (for that and Homework 10) but we'll get to that when we get closer to it!
+
+
+---
+
 ## Last Week
 
 <img src="images/last_week2.png">
