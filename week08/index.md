@@ -4,16 +4,16 @@ visible: true
 icon: undraw_forming_ideas_0pav.svg
 notitle: true
 examples:
-  - filename: inClass_week10_spring2022
+  - filename: inClass_week08_fall2022
     type: iodide
-    title: In Class Notebook, Week 10
+    title: In Class Notebook, Week 8
     description: In Class Starboard Notebook
     link: https://starboard.gg/nb/np0qPIf
-  - filename: prep_notebook_week10_spring2022
+  - filename: prep_notebook_week08_fall2022
     type: iodide
-    title: Prep Starboard Notebook, Week 10
-    description: Prep Starboard Notebook, Fall 2021
-    link: https://starboard.gg/nb/nin15Rn
+    title: Prep Starboard Notebook, Week 8
+    description: Prep Starboard Notebook, Fall 2022
+    link: https://starboard.gg/nb/nw1HAOm
   - filename: prep_notebook_week09_fall2021
     type: iodidePast
     title: Prep Starboard Notebook, Week 9
