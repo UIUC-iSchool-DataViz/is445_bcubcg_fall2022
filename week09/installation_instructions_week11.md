@@ -46,6 +46,11 @@ For Macs you may have to also install bundler: `gem install jekyll bundler` inst
 
 See above notes about making sure to run a few things in your Terminal window after your install.
 
+#### Tips & Tricks for Macs
+
+1. If you see `ld: symbol(s) not found for architecture arm64` or something similar.
+ * Try installing ruby with `ruby-install ruby -- --enable-shared`
+
 ### [Instructions for Windows](https://jekyllrb.com/docs/installation/windows/)
 
 
