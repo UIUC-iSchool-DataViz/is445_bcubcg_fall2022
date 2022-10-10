@@ -3,7 +3,7 @@ title: Lecture 8 - Choosing viz & Online viz platforms
 layout: lecture
 description: >-
  Choosing what viz type to use, and an introduction to Vega/Vega-lite and Starboard 
-date: 2022-03-21
+date: 2022-10-11
 ---
 
 # Final materials/recordings up
@@ -158,6 +158,8 @@ to compare values from multiple sources, you could use collected columns
 notes:
 Or to show they're part of a whole, use a stacked column chart
 
+I personally find these a bit hard to decifer, but other viz folks like them a lot -- might be a personal choice type thing.
+
 ---
 
 ## Comparison
@@ -166,6 +168,8 @@ Or to show they're part of a whole, use a stacked column chart
 
 notes:
 or to show a time-series, use connected lines that stack on top of each other to show area across the whole canvass. This shows you trends and specific vertical values.
+
+same issues with this here as far as stacking, but again, people like it!
 
 ---
 
@@ -590,6 +594,8 @@ https://vega.github.io/editor/
 
 notes:
 we'll start by making a quick plot in the vega-lite editor
+
+**open the vega-editor and spend some time with examples!!!**
 
 ---
 
