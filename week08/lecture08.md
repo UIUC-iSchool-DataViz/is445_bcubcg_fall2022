@@ -670,10 +670,49 @@ The syntax you will need to be the most familiar with:
 
 [A quick intro to Starboard](https://starboard.gg/)
 
-To the internet!
 
 notes:
 **DO**
  * starboard.gg -- the intro notebook
  * also at starboard.gg - the Data Viz in JS and Pandas & Matplotlib intro notebooks -- say we will go over this together, but if you want a quick peak
  * note that now the inclass and prep notebooks will be online versions hosted by starboard!
+ 
+**come back here for more after!!**
+
+---
+
+## [Starboard](https://starboard.gg/) Tips & Tricks
+
+<img src="images/addcell.png">
+
+
+notes:
+Starboard is a newer system and so there are some things that are a bit fiddly and we should be aware of.
+
+One is that the "add cell" button is on the right and is a little hard to see.
+
+Also, to add text, you have to click on the little button on the left to modify text or code blocks.
+
+---
+
+## [Starboard](https://starboard.gg/) Tips & Tricks
+
+<img src="images/celltype.png">
+
+
+notes:
+You can the type of the cell into things like markdown/JS/Python, etc on the left dropdown as well
+
+---
+
+## [Starboard](https://starboard.gg/) Tips & Tricks
+
+<img src="images/dontforgettosave.png">
+
+Autosave is **NOT** a feature of Starboard notebooks!
+
+
+notes:
+one, potentially super annoying thing is that Starboard does not auto-save your work -- make sure you click that save button frequently!!
+
+
