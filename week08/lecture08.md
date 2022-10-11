@@ -715,4 +715,8 @@ Autosave is **NOT** a feature of Starboard notebooks!
 notes:
 one, potentially super annoying thing is that Starboard does not auto-save your work -- make sure you click that save button frequently!!
 
+also also, if you didn't sign up for an account yet, and you do that like, NOW we won't ding you for being late on the assignment ;)
+
+For the jekyll part -- **take the temperature of the class**
+
 
