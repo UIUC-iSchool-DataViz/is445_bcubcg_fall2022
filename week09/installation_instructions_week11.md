@@ -37,7 +37,7 @@ echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.bash_profil
 echo "chruby ruby-3.1.2" >> ~/.bash_profile # run 'chruby' to see actual version
 ```
 
-Make sure you run these as well and re-open a Terminal window so that the relevant packages will be in your path.
+Make sure you run these as well and re-open a Terminal window so that the relevant packages will be in your path *or* you can do `source ~/.bash_profile` (bash)/`source ~/.zshrc`(zsh).
 
 
 ### [Instructions for Macs](https://jekyllrb.com/docs/installation/macos/)
