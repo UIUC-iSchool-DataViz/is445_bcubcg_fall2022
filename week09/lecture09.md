@@ -6,6 +6,14 @@ description: >-
 date: 2022-10-18
 ---
 
+## Many thanks to folks that filled out the survey!
+
+notes:
+ * speed --> a bit fast to too fast to a bit slow
+ * homeworks --> they are meant to challenge you, *but* we expect many folks to reach out in Slack/OH!
+
+---
+
 ## Last Week
 
 <img src="images/week08.png">
@@ -614,6 +622,7 @@ Some possible ways to approach this:
 
  * Jekyll+Altair (see template)
  * Raw HTML + Javascript
+ * Starboard notebook
  * We will *not* be accepting jupyter notebooks/mybinder links this semester
 
 
