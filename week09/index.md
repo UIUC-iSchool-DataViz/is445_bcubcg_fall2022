@@ -13,7 +13,7 @@ examples:
     type: iodide
     title: Prep Starboard Notebook, Week 9
     description: Prep Starboard Notebook
-    link: https://starboard.gg/nb/n9nb6N8
+    link: https://starboard.gg/nb/nG3SEUx
   - filename: prep_notebook_week11
     type: iodidePast
     title: Previous class notebook
