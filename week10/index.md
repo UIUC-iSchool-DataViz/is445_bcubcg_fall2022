@@ -14,6 +14,11 @@ examples:
     title: Prep Starboard Notebook, Week 12
     description: Prep Starboard Notebook
     link: https://starboard.gg/nb/nrWqgSu
+  - filename: jekyll tour notes.pdf
+    type: iodide
+    title: Jekyll Tour Notes
+    description: Prep Starboard Notebook
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week10/pdfs/jekyll%20tour%20notes.pdf
   - filename: prep-repo
     type: iodide
     title: Prep online_cv file, Week 12
@@ -35,16 +40,6 @@ data:
     title: The Mobility dataset (online)
     description: A dataset of USA "mobility" which (I <b>think</b> comes from a <a href="https://www.census.gov/library/working-papers/2018/adrm/CES-WP-18-40R.html">a large census study from 1989-2015</a>) and is collected in several places <a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/mobility.csv">including right here</a>.  Here "mobility" is refering to how easy it is for a person to move up in economic status (<a href="http://www.stat.cmu.edu/~cshalizi/uADA/15/hw/01/hw-01.pdf">more info can be found here</a>) based on factors like parental income, location, race, etc.
     link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/mobility.csv
-  - filename: corgs_per_country_over_time_columns_2020.csv
-    type: dataLink
-    title: Corgis per country over time 
-    description: This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
-    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/corgs_per_country_over_time_columns_2020.csv
-  - filename: corgiData_countries_subset_2020.json
-    type: dataLink
-    title: Subset of full Corgi database 
-    description: This dataset is from the <a href="http://cardiped.net/">Cardigan Archives</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/grabCorgData_subpages.py">scraped using Beautiful Soup in Python</a> and <a href="https://github.com/UIUC-iSchool-DataViz/spring2020/blob/master/week12/corg/calc_corgData.ipynb">further processed in Python</a> into this form.
-    link: https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/corgiData_countries_subset_2020.json
 ---
 
 # Finish up with Starboard, Intro to Jekyll
