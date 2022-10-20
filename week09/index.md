@@ -4,7 +4,7 @@ visible: true
 icon: undraw_programmer_imem.svg
 notitle: true
 examples:
-  - filename: inClass_week09_fall2022
+  - filename: inClass_week09_inperson_fall2022
     type: iodide
     title: In Class Notebook, Week 9
     description: In Class Starboard Notebook
