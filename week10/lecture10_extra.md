@@ -1,9 +1,9 @@
 ---
-title: Lecture 11 extras - more with Vega-lite
+title: Lecture 10 extras - more with Vega-lite
 layout: lecture
 description: >-
  More with vega-lite
-date: 2021-11-01
+date: 2022-10-25
 include_vega: true
 setup_script: setup_script.js
 ---
