@@ -4,14 +4,14 @@ visible: true
 icon: undraw_Books_l33t.svg
 notitle: true
 examples:
-  - filename: inClass_week12_spring2022
+  - filename: inClass_week10_inperson_fall2022
     type: iodide
-    title: In Class Notebook, Week 12
+    title: In Class Starboard Notebook, Week 10
     description: In Class Starboard Notebook
     link: https://starboard.gg/nb/nZa79A6
-  - filename: prep_notebook_week12_spring2022
+  - filename: prep_notebook_week10_week10_fall2022
     type: iodide
-    title: Prep Starboard Notebook, Week 12
+    title: Prep Starboard Notebook, Week 10
     description: Prep Starboard Notebook
     link: https://starboard.gg/nb/nrWqgSu
   - filename: jekyll tour notes.pdf
@@ -21,14 +21,14 @@ examples:
     link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week10/pdfs/jekyll%20tour%20notes.pdf
   - filename: prep-repo
     type: iodide
-    title: Prep online_cv file, Week 12
+    title: Prep online_cv file, Week 10
     description: We'll be building toward a webpage like <a href="https://jnaiman.github.io/online_cv_public/">this</a> today using <a href="https://jekyllrb.com/">Jekyll</a>+<a href="https://altair-viz.github.io/index.html">Altair</a>. 
     link: https://github.com/jnaiman/online_cv_public
   - filename: In Class Jekyll page
     type: iodide
-    title: In class Jekyll resources, Week 12
+    title: In class Jekyll resources, Week 10
     description: Updating storage of Jekyll files in class
-    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week12/inClass
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week10/inClass
   - filename: prep_notebook_week11
     type: iodidePast
     title: Previous class notebook
