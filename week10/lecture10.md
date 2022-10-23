@@ -23,6 +23,19 @@ finally getting into jekyll probably at the end of class
 
 ---
 
+## Note about grades on Canvas
+
+notes:
+please be aware that HW grades are not fully accurate!
+
+dropping doesn't 100% work correctly there (boo canvas)
+
+---
+
+## Homework #10 Groups
+
+---
+
 
 <br/>
 <br/>
