@@ -9,11 +9,11 @@ examples:
     title: In Class Starboard Notebook, Week 10
     description: In Class Starboard Notebook
     link: https://starboard.gg/nb/nDgjr30
-  - filename: prep_notebook_week10_week10_fall2022
+  - filename: prep_notebook_week10_fall2022
     type: iodide
     title: Prep Starboard Notebook, Week 10
     description: Prep Starboard Notebook
-    link: https://starboard.gg/nb/nrWqgSu
+    link: https://starboard.gg/nb/nuXwr0l
   - filename: jekyll tour notes.pdf
     type: iodide
     title: Jekyll Tour Notes
