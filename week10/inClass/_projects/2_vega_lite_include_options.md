@@ -24,6 +24,8 @@ Starting from the [vega-editor](https://vega.github.io/editor) we can copy speci
 
 We can even include interactive examples *making sure to include the full raw data link*:
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/unemploy.json" style="width: 100%"></vegachart>
+
 
 <!-- these are written in a combo of html and liquid --> 
 
