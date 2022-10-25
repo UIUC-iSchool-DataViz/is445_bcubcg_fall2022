@@ -22,6 +22,8 @@ Starting from the [vega-editor](https://vega.github.io/editor) we can copy speci
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/barley.json" style="width: 100%"></vegachart>
 
+We can even include interactive examples *making sure to include the full raw data link*:
+
 
 <!-- these are written in a combo of html and liquid --> 
 
