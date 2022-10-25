@@ -1,7 +1,7 @@
 ---
 name: Vega-lite Plot, Different ways
 tools: [HTML, vega-lite]
-image: assets/pngs/cars.png
+image: assets/pngs/barley.png
 description: Different ways to include vega-lite plots.
 custom_js:
   - vega.min
