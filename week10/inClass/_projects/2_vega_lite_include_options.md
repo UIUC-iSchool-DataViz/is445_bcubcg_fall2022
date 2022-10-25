@@ -26,6 +26,11 @@ We can even include interactive examples *making sure to include the full raw da
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/unemploy.json" style="width: 100%"></vegachart>
 
+We can also move specifications from [Starboard](https://starboard.gg/nb/nDgjr30) into the vega-editor as well:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/fromstarboard.json" style="width: 100%"></vegachart>
+
+
 
 <!-- these are written in a combo of html and liquid --> 
 
