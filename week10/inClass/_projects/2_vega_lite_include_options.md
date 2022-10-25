@@ -17,10 +17,10 @@ custom_js:
 We can use a vegachart HTML tag like so:
 
 ```
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/barley.json" style="width: 100%"></vegachart>
 ```
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/barley.json" style="width: 100%"></vegachart>
 
 
 <!-- these are written in a combo of html and liquid --> 
