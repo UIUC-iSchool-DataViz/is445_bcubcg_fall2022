@@ -14,7 +14,7 @@ custom_js:
 # 1. From vega-editor
 
 
-We can use a vegachart HTML tag like so:
+Starting from the [vega-editor](https://vega.github.io/editor) we can copy specifications 
 
 ```
 <vegachart schema-url="{{ site.baseurl }}/assets/json/barley.json" style="width: 100%"></vegachart>
