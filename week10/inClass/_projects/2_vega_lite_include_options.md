@@ -14,7 +14,7 @@ custom_js:
 # 1. From vega-editor
 
 
-Starting from the [vega-editor](https://vega.github.io/editor) we can copy specifications 
+Starting from the [vega-editor](https://vega.github.io/editor) we can copy specifications *BUT we HAVE TO make sure we put in the full (and raw!) data link*  
 
 ```
 <vegachart schema-url="{{ site.baseurl }}/assets/json/barley.json" style="width: 100%"></vegachart>
