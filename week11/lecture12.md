@@ -1,12 +1,21 @@
 ---
-title: Lecture 12 - Publishing & Validation
+title: Lecture 11 - Publishing & Validation
 layout: lecture
 description: >-
  More about publishing and validation, and Jekyll+vega-lite+Altair
-date: 2022-04-11
+date: 2022-11-01
 ---
 
-Be aware: prep "projects" will be stored in `_example_projects/` folder!
+## Be aware: prep "projects" will be stored in `_example_projects/` folder!
+
+---
+
+## Push Homework \#10 date back a bit?
+
+note:
+this won't change the due date of the Final Project Part 1, so this would be like a Tues/Wed due date
+
+NO extensions for Final Project, Part 1
 
 ---
 
@@ -20,13 +29,6 @@ so far, we've been covering a bit of javascript and vega-lite and started thinki
 this week we'll discuss more general methods of publishing, and we'll talk about how to validate how "well" our visualizations are doing.
 
 While we'll just touch on vega-lite in Jekyll for plotting and then start looking at Altair either this week or next week
-
----
-
-## Let's start with a tour of Jekyll!
-
-notes:
-this is found under the "Jekyll Tour Notes" -- its just a PDF document of this tour
 
 ---
 
