@@ -6,6 +6,10 @@ description: >-
 date: 2022-04-11
 ---
 
+Be aware: prep "projects" will be stored in `_example_projects/` folder!
+
+---
+
 ## Last Week/This Week
 
 <img src="../week10/images/week10.png">
