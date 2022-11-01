@@ -1,7 +1,7 @@
 ---
 name: Take2 - Vega-lite plots in Jekyll, Multiple Ways
 tools: [Python, HTML, vega-lite, Jekyll]
-image: assets/pngs/cars.png
+image: assets/pngs/vegaMultipleWays.png
 description: Ways to get vega-lite plots in our webpages, day 2.
 custom_js:
   - vega.min
