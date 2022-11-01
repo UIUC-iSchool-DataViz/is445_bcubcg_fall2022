@@ -27,6 +27,10 @@ How this works is that in the vega-editor I can generate a specification as show
 
 ![Screenshot of vega-editor]({{site.baseurl}}/assets/pngs/examplevegaeditor.png)
 
+As a reference, here is how I can include an image hosted elsewhere (right-click on image and do Copy Image Link):
+
+![Copy of image hosted on vega-lite](https://vega.github.io/images/vg.png)
+
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
