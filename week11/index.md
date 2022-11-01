@@ -8,7 +8,7 @@ examples:
     type: iodide
     title: In class Jekyll materials, Week 11
     description: Updating storage of Idyll files in class
-    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week13/inClass
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week11/inClass
   - filename: Prep Jekyll Files
     type: iodide
     title: Prep Jekyll materials, Week 11
