@@ -38,6 +38,10 @@ Here is an example of a plot copied from [a Starboard notebook](https://starboar
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/chart1.json" style="width: 100%"></vegachart>
 
+I can start building up a dashboard in Altair using several `from_dict` calls and `hconcat` in Altair:
+
+
+
 
 <!-- these are written in a combo of html and liquid --> 
 
