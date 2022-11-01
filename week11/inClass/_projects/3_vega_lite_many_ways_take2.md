@@ -40,6 +40,7 @@ Here is an example of a plot copied from [a Starboard notebook](https://starboar
 
 I can start building up a dashboard in Altair using several `from_dict` calls and `hconcat` in Altair:
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/sidebyside.json" style="width: 100%"></vegachart>
 
 
 
