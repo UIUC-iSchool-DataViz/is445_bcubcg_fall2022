@@ -49,6 +49,9 @@ I now have added a brush selector to the `rect` mark on the left using Altair an
 ## Using Altair in Python to make the full chart
 
 
+Quick scatter plot of the Mobility dataset:
+
+
 
 
 <!-- these are written in a combo of html and liquid --> 
