@@ -1,7 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Drag out a rectangular brush to highlight points.",
-  "data": {"url": "data/cars.json"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/cars.json"
+  },
   "params": [
     {
       "name": "brush",
