@@ -19,6 +19,8 @@ custom_js:
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/interactivefromvegaeditor.json" style="width: 100%"></vegachart>
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/interactivefromvegaeditor.json" style="width: 100%"></vegachart>
+
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
