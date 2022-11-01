@@ -51,6 +51,7 @@ I now have added a brush selector to the `rect` mark on the left using Altair an
 
 Quick scatter plot of the Mobility dataset:
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/mobility_scatter.json" style="width: 100%"></vegachart>
 
 
 
