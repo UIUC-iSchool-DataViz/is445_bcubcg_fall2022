@@ -46,6 +46,8 @@ I now have added a brush selector to the `rect` mark on the left using Altair an
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/dashboard_mobility.json" style="width: 100%"></vegachart>
 
+## Using Altair in Python to make the full chart
+
 
 
 
