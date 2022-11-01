@@ -25,7 +25,7 @@ The following plots below are coming directly from modifying the [vega-lite edit
 
 How this works is that in the vega-editor I can generate a specification as shown in the screenshot below:
 
-![Screenshot of vega-editor]("{{site.baseurl}}"assets/pngs/examplevegaeditor.png)
+![Screenshot of vega-editor]({{site.baseurl}}assets/pngs/examplevegaeditor.png)
 
 <!-- these are written in a combo of html and liquid --> 
 
