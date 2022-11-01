@@ -23,7 +23,9 @@ The following plots below are coming directly from modifying the [vega-lite edit
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/interactive2vegaeditor.json" style="width: 100%"></vegachart>
 
-How this works is that in the vega-editor I can generate a specification: 
+How this works is that in the vega-editor I can generate a specification as shown in the screenshot below:
+
+
 
 <!-- these are written in a combo of html and liquid --> 
 
