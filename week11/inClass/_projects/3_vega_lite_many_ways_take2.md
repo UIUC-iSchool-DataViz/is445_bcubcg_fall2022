@@ -31,6 +31,10 @@ As a reference, here is how I can include an image hosted elsewhere (right-click
 
 ![Copy of image hosted on vega-lite](https://vega.github.io/images/vg.png)
 
+
+## Copy specifications directly from online sources (i.e. Starboard) through Altair
+
+
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
