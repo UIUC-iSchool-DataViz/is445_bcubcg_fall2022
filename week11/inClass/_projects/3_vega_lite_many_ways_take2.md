@@ -44,7 +44,7 @@ I can start building up a dashboard in Altair using several `from_dict` calls an
 
 I now have added a brush selector to the `rect` mark on the left using Altair and also a `transform_filter` to the right also in Altair:
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/sidebyside.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/dashboard_mobility.json" style="width: 100%"></vegachart>
 
 
 
