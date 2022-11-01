@@ -42,6 +42,11 @@ I can start building up a dashboard in Altair using several `from_dict` calls an
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/sidebyside.json" style="width: 100%"></vegachart>
 
+I now have added a brush selector to the `rect` mark on the left using Altair and also a `transform_filter` to the right also in Altair:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/sidebyside.json" style="width: 100%"></vegachart>
+
+
 
 
 <!-- these are written in a combo of html and liquid --> 
