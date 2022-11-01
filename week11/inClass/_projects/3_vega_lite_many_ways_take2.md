@@ -34,6 +34,8 @@ As a reference, here is how I can include an image hosted elsewhere (right-click
 
 ## Copy specifications directly from online sources (i.e. Starboard) through Altair
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/chart1.json" style="width: 100%"></vegachart>
+
 
 <!-- these are written in a combo of html and liquid --> 
 
