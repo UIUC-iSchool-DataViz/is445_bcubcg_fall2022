@@ -32,7 +32,13 @@ As a reference, here is how I can include an image hosted elsewhere (right-click
 ![Copy of image hosted on vega-lite](https://vega.github.io/images/vg.png)
 
 
-## Copy s
+## Copy specifications directly from online sources (i.e. Starboard) through Altair
+
+Here is an example of a plot copied from [a Starboard notebook](https://starboard.gg/nb/nDgjr30).  It uses the Altair `from_dict` function.
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/chart1.json" style="width: 100%"></vegachart>
+
+I can start building up a dashboard in Altair
 
 
 <!-- these are written in a combo of html and liquid --> 
