@@ -55,6 +55,7 @@ Quick scatter plot of the Mobility dataset:
 
 And the full dasbhoard using the Mobility dataset URL:
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/dashboard_alt_with_url.json" style="width: 100%"></vegachart>
 
 
 
