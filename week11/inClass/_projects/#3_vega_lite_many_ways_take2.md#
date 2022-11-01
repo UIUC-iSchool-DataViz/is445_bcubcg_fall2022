@@ -38,7 +38,21 @@ Here is an example of a plot copied from [a Starboard notebook](https://starboar
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/chart1.json" style="width: 100%"></vegachart>
 
-I can start building up a dashboard in Altair
+I can start building up a dashboard in Altair using several `from_dict` calls and `hconcat` in Altair:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/sidebyside.json" style="width: 100%"></vegachart>
+
+I now have added a brush selector to the `rect` mark on the left using Altair and also a `transform_filter` to the right also in Altair:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/dashboard_mobility.json" style="width: 100%"></vegachart>
+
+## Using Altair in Python to make the full chart
+
+
+Quick scatter plot of the Mobility dataset:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/dashboard_mobility.json" style="width: 100%"></vegachart>
+
 
 
 <!-- these are written in a combo of html and liquid --> 
