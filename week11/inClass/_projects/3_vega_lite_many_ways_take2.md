@@ -53,6 +53,10 @@ Quick scatter plot of the Mobility dataset:
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/mobility_scatter.json" style="width: 100%"></vegachart>
 
+And the full dasbhoard using the Mobility dataset URL:
+
+
+
 
 
 <!-- these are written in a combo of html and liquid --> 
