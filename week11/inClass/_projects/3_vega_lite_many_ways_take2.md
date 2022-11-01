@@ -15,6 +15,8 @@ custom_js:
 
 ## Directly From the Vega Editor
 
+The following plots below are coming directly from modifying the [vega-lite editor](https://vega.github.io/editor).
+
 <vegachart schema-url="{{ site.baseurl }}/assets/json/fromvegaeditor.json" style="width: 100%"></vegachart>
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/interactivefromvegaeditor.json" style="width: 100%"></vegachart>
