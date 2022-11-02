@@ -21,6 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 githuburlbase: "UIUC-iSchool-DataViz"
 baseurl: "/is445_bcubcg_fall2022" # the subpath of your site, e.g. /blog
 url: "https://uiuc-ischool-dataviz.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+repository: "UIUC-iSchool-DataViz.github.io/is445_bcubcg_fall2022"
 github_username:  jnaiman
 branch: master
 port: 4001
