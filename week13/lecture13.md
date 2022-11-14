@@ -23,18 +23,17 @@ so far, we've been covering a bit of javascript and vega-lite as some new viz en
 
 notes:
 
-today we'll discuss a bit about how rendering 3D objects to make them look "photo realistic" works, which will give us an intro to scientific viz which we'll discuss a bit next week
+today we'll discuss a bit about how rendering 3D objects to make them look "photo realistic" works, which will give us an intro to scientific viz which we'll get a talk about later today and discuss a bit next week on our own
 
 ---
 
 ## Today
 
- 1. Finish up Jekyll stuff
  1. 3D Computer Graphics
    * 3D Graphics Tools
    * Visual Effects tools
  1. Intro to Scientific Visualization
- 1. Extra Altair+Jekyll (if time)
+ 1. Jekyll+Altair stuff + talk by NASA SVS
  
 notes: so today we're going to talk a bit about some "high-end" graphics tools  and about how rendering works, this will become more important a bit next week and in the sci viz week.  While we won't end up doing a lot of this ourselves -- we are focusing on data visualization -- the concepts will still show up from time to time to its worth covering.
 
@@ -203,18 +202,6 @@ so if you copy large swaths of pages and turn it in, even with quotes, this won'
 in this case, you'd get a 0% since this isn't a submission of your work
 
 
----
-
-<br>
-<br>
-<br>
-
-# TOPIC 1: More with Altair+Jekyll
-
-**Back to Altair + Jekyll!**
-
-notes:
-go back to altair and jekyll
 
 ---
 
@@ -222,7 +209,7 @@ go back to altair and jekyll
 <br>
 <br>
 
-# TOPIC 2: 3D Computer graphics
+# TOPIC 1: 3D Computer graphics
 
 notes:
 
@@ -911,10 +898,22 @@ notes: here is a quick comparision chart to show key differences between a packa
 
 [Astroblend](www.astroblend.com)
 
-### More from the NASA SVS Group next week!
+### More from the NASA SVS Group this week!
 
 notes:
 several of us at the NCSA worked on ytini so that Houdini could use some of the features of yt natively!
 
 This is also true of Dr. Naiman's work on Astroblend.
 
+---
+
+<br>
+<br>
+<br>
+
+# TOPIC 2: More with Altair+Jekyll
+
+**Back to Altair + Jekyll!**
+
+notes:
+go back to altair and jekyll
