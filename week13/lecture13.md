@@ -1,17 +1,17 @@
 ---
-title: Lecture 13 - 3D graphics, Intro to SciViz
+title: Lecture 12 - 3D graphics, Intro to SciViz
 layout: lecture
 description: >-
  How your computer and the internet process 3D graphics.  What is scientific visualization? 
-date: 2022-04-18
+date: 2022-11-15
 ---
 
 ## Last Week
 
-<img src="../week13/images/this_week3.png">
+<img src="../week10/images/week10.png">
 
 notes:
-so far, we've been covering a bit of javascript and vega-lite as some new viz engines and using them in Idyll
+so far, we've been covering a bit of javascript and vega-lite as some new viz engines and using them in our Jekyll webpages
 
 (and have come across some issues!)
 
@@ -19,7 +19,7 @@ so far, we've been covering a bit of javascript and vega-lite as some new viz en
 
 ## Last Week
 
-<img src="images/this_week3.png">
+<img src="images/week12.png">
 
 notes:
 
@@ -27,39 +27,181 @@ today we'll discuss a bit about how rendering 3D objects to make them look "phot
 
 ---
 
-## How to publish Idyll websites
-
-Using your github.io page!
-
-notes:
-**go through this in detail!**
-
-* mention it can take a while to build
-* you can also do this with the GUI interface
-
----
-
-## Another option: Jeykll
-
-See slides from the awesome [Diptendra Bagchi](https://www.linkedin.com/in/diptendra-bagchi) that live right [here](Jekyll_diptendra.pdf) (and on the class Moodle).
-
-notes:
-**go through these slides in a little bit of detail, go over this webpage**
-
----
-
 ## Today
 
+ 1. Finish up Jekyll stuff
  1. 3D Computer Graphics
    * 3D Graphics Tools
    * Visual Effects tools
  1. Intro to Scientific Visualization
+ 1. Extra Altair+Jekyll (if time)
  
 notes: so today we're going to talk a bit about some "high-end" graphics tools  and about how rendering works, this will become more important a bit next week and in the sci viz week.  While we won't end up doing a lot of this ourselves -- we are focusing on data visualization -- the concepts will still show up from time to time to its worth covering.
 
 We'll have a talk from someone in the Advanced Visualization Lab in Week 15 and she'll touch on this a bit more as well
 
-**make sure you have your audio settings correct!**
+First though, we'll finish up some stuff with Altair+Jekyll and then circle back to this stuff
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+notes:
+so just a reminder that TurnItIn is turned on for the extra credit assignment and there a few things you should be aware of!
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+<img src="images/wiki1.png">
+
+notes:
+
+so for example, let's say I like this phrase right here the I found online how would include this in any write-up?
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+<img src="images/wiki1.png">
+
+... one really interesting visualization is a partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes, this is an excellent example of...
+
+notes:
+so we know that we don't want to just copy this without a reference into our extra credit assignment...
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+<img src="images/wiki1.png">
+
+... one really interesting visualization is a <mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>, this is an excellent example of...
+
+
+notes:
+
+... this will then be flagged by TurnItIn
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+... one really interesting visualization is a <mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>, this is an excellent example of...
+
+ **Issue:** This makes it sound like this sentence is one you wrote on your own.
+
+
+notes:
+
+... this will then be flagged by TurnItIn
+
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+... one really interesting visualization is a <mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>, this is an excellent example of...
+
+...
+[3] https://en.wikipedia.org/wiki/Data_and_information_visualization
+...
+
+
+notes:
+
+so one thing we might want to do is add in a reference somewhere at the bottom of our write up...
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+... one really interesting visualization is a <mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>, this is an excellent example of...
+
+...
+[3] https://en.wikipedia.org/wiki/Data_and_information_visualization
+...
+
+**Issue:** No way to tell what *part* of your write-up is coming from reference [3]
+
+notes:
+
+unfortunately, this is still plagurism.  Why? Because there is no way to tell where this specific sentence comes from -- even though there is a reference at the bottom, it could be the whole write-up as far as we knwo!
+
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+... one really interesting visualization is a "<mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>", this is an excellent example of...
+
+...
+[3] https://en.wikipedia.org/wiki/Data_and_information_visualization
+...
+
+**Issue:** Still don't know which reference this sentence comes from.
+
+notes:
+
+Similar with this -- here we have quotes around the exact sentence BUT we still don't know WHICH reference this sentence comes from
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+... one really interesting visualization is a "<mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>" [3], this is an excellent example of...
+
+...
+[3] https://en.wikipedia.org/wiki/Data_and_information_visualization
+...
+
+**Issue:** None!  Outstanding!
+
+notes:
+
+The final piece we are missing is the reference number at the end so this shows us WHAT you are quoting AND where that exact quotation comes from.
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+## BOTH OF THESE WILL HAVE THE SAME TurnItIn SCORE
+
+### Wrong
+... one really interesting visualization is a <mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>, this is an excellent example of...
+
+
+### Correct
+... one really interesting visualization is a "<mark>partial map of the Internet early 2005 represented as a graph, each line represents two IP addresses, and some delay between those two nodes</mark>" [3], this is an excellent example of...
+
+...
+[3] https://en.wikipedia.org/wiki/Data_and_information_visualization
+...
+
+
+notes:
+
+one thing to be super aware of is that the TurnItIn scores for these will be the same! so you really need to check the reports -- there is no "safe" score
+
+---
+
+## Notes about Extra Credit -- TurnItIn
+
+"<mark>To communicate information clearly and efficiently, data visualization uses statistical graphics, plots, information graphics and other tools. Numerical data may be encoded using dots, lines, or bars, to visually communicate a quantitative message.[10] Effective visualization helps users analyze and reason about data and evidence.[11] It makes complex data more accessible, understandable, and usable, but can also be reductive.[12] Users may have particular analytical tasks, such as making comparisons or understanding causality, and the design principle of the graphic (i.e., showing comparisons or showing causality) follows the task. Tables are generally used where users will look up a specific measurement, while charts of various types are used to show patterns or relationships in the data for one or more variables.</mark>" [3]
+
+...
+[3] https://en.wikipedia.org/wiki/Data_and_information_visualization
+...
+
+**Issue:** Not technically plagiarism, but also not *your* submission!
+
+"Rule of thumb" is $\le$ 10\% should be quotes.
+
+notes:
+so if you copy large swaths of pages and turn it in, even with quotes, this won't get you a good grade -- this isn't plagurism, but it's also NOT an assignment of your work!
+
+in this case, you'd get a 0% since this isn't a submission of your work
+
 
 ---
 
@@ -67,7 +209,25 @@ We'll have a talk from someone in the Advanced Visualization Lab in Week 15 and 
 <br>
 <br>
 
-# TOPIC 1: 3D Computer graphics
+# TOPIC 1: More with Altair+Jekyll
+
+**Back to Altair + Jekyll!**
+
+notes:
+go back to altair and jekyll
+
+---
+
+<br>
+<br>
+<br>
+
+# TOPIC 2: 3D Computer graphics
+
+notes:
+
+**make sure you have your audio settings correct!**
+
 
 ---
 
