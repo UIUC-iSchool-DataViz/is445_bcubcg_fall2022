@@ -63,7 +63,7 @@ Remake dashboard, all in Altair:
 
 ## 5. Making plot fully in Altair with local data
 
-
+We did a couple of things, namely, we used a local version of the mobility dataset, and then we *subsetted* that data set so that it was the smallest version of the data to pass with our specification.
 
 <!-- these are written in a combo of html and liquid --> 
 
