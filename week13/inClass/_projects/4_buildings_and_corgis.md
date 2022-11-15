@@ -27,7 +27,7 @@ Altair, etc)
 
 Using layers for multiple lines:
 
-
+<vegachart schema-url="{{ site.baseurl }}/assets/json/buildings_sqft.json" style="width: 100%"></vegachart>
 
 
 <!-- these are written in a combo of html and liquid --> 
