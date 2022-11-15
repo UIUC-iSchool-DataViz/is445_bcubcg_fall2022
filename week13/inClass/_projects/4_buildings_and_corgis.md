@@ -23,6 +23,11 @@ Altair, etc)
 <vegachart schema-url="{{ site.baseurl }}/assets/json/fromvegaeditor.json" style="width: 100%"></vegachart>
 ```
 
+## First, some plots with the buildings dataset
+
+Using layers for multiple lines:
+
+
 
 
 <!-- these are written in a combo of html and liquid --> 
