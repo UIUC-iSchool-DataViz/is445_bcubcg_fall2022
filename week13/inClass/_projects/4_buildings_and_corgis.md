@@ -29,6 +29,11 @@ Using layers for multiple lines:
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/buildings_sqft.json" style="width: 100%"></vegachart>
 
+And with some lines selection:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/lines_selection.json" style="width: 100%"></vegachart>
+
+
 
 <!-- these are written in a combo of html and liquid --> 
 
