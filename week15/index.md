@@ -8,28 +8,28 @@ examples:
     type: ipynb
     title: In class notebook
     description: Placeholder for in class coding
-  - filename: prep_notebook_week13_sciviz.ipynb
+  - filename: prep_notebook_week15_sciviz.ipynb
     type: ipynb
-    title: Prep Notebook, SciViz (yt), Week 13
+    title: Prep Notebook, SciViz (yt), Week 15
     description: Prep notebook for this week
-  - filename: prep_notebook_week13_sciviz_ipyvolume.ipynb
+  - filename: prep_notebook_week15_sciviz_ipyvolume.ipynb
     type: ipynb
     title: Extra SciViz Notebook (ipyvolume)
     description: Extra prep notebook for folks that can install ipyvolume
   - filename: Prep repo
     type: iodide
-    title: Prep Jekyll, Week 13
+    title: Prep Jekyll, Week 15
     description: Prep Jekyll file and components
     link: https://github.com/jnaiman/online_cv_public
-  - filename: prep_notebook_week13_altair.ipynb
+  - filename: prep_notebook_week15_altair.ipynb
     type: ipynb
-    title: Prep Notebook, Altair, Week 13
+    title: Prep Notebook, Altair, Week 15
     description: Prep notebook for this week
   - filename: In Class Jekyll
     type: iodide
-    title: In class Jekyll, Week 13
+    title: In class Jekyll, Week 15
     description: Updating storage of Jekyll files in class
-    link: https://github.com/UIUC-iSchool-DataViz/is445_oauoag_fall2022/tree/master/week13/inClass
+    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/tree/master/week15/inClass
   - filename: spring2019_prep_notebook_week13.ipynb
     type: ipynb
     title: Examples from Spring 2019
