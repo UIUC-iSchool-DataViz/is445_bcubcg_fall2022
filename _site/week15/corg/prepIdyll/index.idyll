@@ -1,0 +1,720 @@
+[meta title:"My Idyll Post" description:"Short description of your project" /]
+
+[Header
+  fullWidth:true
+  title:"My Idyll Post"
+  subtitle:"Welcome to Idyll. Open index.idyll to start writing"
+  author:"Your Name Here"
+  authorLink:"https://idyll-lang.org"
+  date:`(new Date()).toDateString()`
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+
+## Introduction
+
+This is an Idyll post. It is generated via
+the file `index.idyll`. To compile this post using
+idyll, run the command `idyll` inside of this directory.
+
+
+Idyll posts are designed to support interaction and
+data-driven graphics.
+
+[var name:"state" value:0 /]
+[CustomD3Component className:"d3-component" state:state /]
+[button onClick:`state++`]
+  Click Me.
+[/button]
+
+Configuration can be done via the `idyll` field in `package.json`.
+
+## Markup
+
+Idyll is based on Markdown.
+
+You can use familiar syntax
+to create **bold** (`**bold**` ) and *italic* (``*italic*` ) styles,
+
+* lists
+* of
+* items,
+
+```
+* lists
+* of
+* items,
+```
+
+1. and numbered
+2. lists
+3. of items,
+
+
+```
+1. and numbered
+2. lists
+3. of items,
+```
+
+in addition to [hyperlinks](https://idyll-lang.org) and images:
+
+![quill](static/images/quill.svg)
+
+```
+![quill](static/images/quill.svg)
+```
+
+## Components
+
+Components can be embedded using a bracket syntax:
+
+```
+[Range /]
+```
+
+and can contain nested content:
+
+```
+[Equation]e = mc^{2}[/Equation]
+```
+
+Components accept properties:
+
+```
+[Range value:x min:0 max:1 /]
+```
+
+that can be bound to variables to achieve interactivity (more in next section).
+
+
+A variety of components are included by default. See [all the available components](https://idyll-lang.org/docs/components/). You can also use any html tag, for example: `[div] A div! [/div]`.
+
+To create your own, add it to the `components/` folder. There are examples of how to use Idyll with React and D3 based components already included.
+
+
+
+## Interactivity
+
+Here is how you can instantiate a variable and bind it to a component:
+
+[var name:"exampleVar" value:5 /]
+
+[Range min:0 max:10 value:exampleVar /]
+[Display value:exampleVar /]
+
+```
+[var name:"exampleVar" value:5 /]
+
+[Range min:0 max:10 value:exampleVar /]
+[Display value:exampleVar /]
+```
+
+## Learn More
+
+To learn more see the documentation at [https://idyll-lang.org/docs/](https://idyll-lang.org/docs/),
+join our [chatroom](https://gitter.im/idyll-lang/Lobby), or see the project on [GitHub](https://github.com/idyll-lang/idyll).
+
+[hr /]
+
+# Technical Details
+
+## Installation
+
+- Make sure you have `idyll` installed (`npm i -g idyll`).
+- Clone this repo and run `npm install`.
+
+## Developing a post locally
+
+Run `idyll`.
+
+## Building a post for production
+
+Run `idyll build`. The output will appear in the top-level `build` folder. To change the output location, change the `output` option in `package.json`.
+
+## Deploying
+
+Make sure your post has been built, then deploy the docs folder via any static hosting service.
+
+## Dependencies
+
+You can install custom dependencies by running `npm install <package-name> --save`. Note that any collaborators will also need download the package locally by running `npm install` after pulling the changes.
+
+## Added: test vega-lite
+
+[data name:"lakeHuron" source:"LakeHuron.csv" /]
+
+[Table data:lakeHuron /]
+
+
+```
+[IdyllVegaLite data:lakeHuron spec:`{
+  mark: "line",
+  encoding: {
+    x: {
+      field: "time",
+      type: "temporal",
+      axis: {title: "Year", format:"%Y"}
+    },
+    y: {
+      field: "value",
+      type: "quantitative",
+      axis: {title: "Water level"},
+      scale: { domain: [575, 582] }
+    }
+  }
+}` /]
+```
+
+
+[data name:"corg" source:"corgs_per_country_over_time_columns_2020.csv" /]
+
+[Table data:corg /]
+
+```
+[IdyllVegaLite data:corg spec:`{
+  mark: "line",
+  encoding: {
+    x: {
+      field: "Years",
+      type: "temporal",
+      axis: {title: "Year", format:"%Y"}
+    },
+    y: {
+      field: "value",
+      type: "quantitative"}
+      // axis: {title: "Water level"},
+      // scale: { domain: [575, 582] }
+    }
+  }
+}` /]
+```
+
+```
+[IdyllVegaLite data:corg spec:`{
+  mark: "line",
+  encoding: {
+    x: {
+      field: "Years",
+      type: "temporal",
+      axis: {title: "Year", format:"%Y"}
+    },
+    y: {
+      field: "United States",
+      type: "quantitative"
+    }
+  }
+}` /]
+```
+
+[div style:`{backgroundColor: 'green', padding: '20px'}`]Some text[/div]
+
+## d3.js components
+
+Vega-lite not work :(
+
+But!  We can use d3.js to make some interactive visualizations.
+
+To make our own component:
+1. copied `custom-d3-component.js` to `histogram-d3-component.js`
+2. changed the names to extend the class in `histogram`
+3. comment out updateProps function
+4. started putting in an example histogram using d3.js
+
+Example was from [this d3.js histogram](https://bl.ocks.org/vikkya/75bda04cd0c00e49cbda6cfee8d97aba).
+
+[HistogramCustomD3Component className:"d3-component" /]
+
+Adding in Country as a selection:
+
+// [var name:"state" value:0 /]
+
+// [CustomD3Component className:"d3-component" state:state /]
+
+// [button onClick:`state++`]
+
+//  Click Me.
+
+// [/button]
+
+Using the [Idyll Select built in](https://idyll-lang.org/docs/component/select).
+
+[var name:"myCountry" value:"United States" /]
+
+[HistogramCountryCustomD3Component className:"d3-component" country:myCountry /]
+
+[Select value:myCountry options:`["United States", "United Kingdom", "South Africa"]`  /]
+
+
+
+
+Also adding in a y-axis slider:
+
+[var name:"myCountry2" value:"United States" /] // update the country
+[var name:"mySlider" value:650 /] // update the y-axis
+
+[HistogramCountrySliderCustomD3Component className:"d3-component" country:myCountry2 yheight:mySlider /]
+
+Select country:
+[Select value:myCountry2 options:`["United States", "United Kingdom", "South Africa"]`  /]
+
+Select y-axis height:
+[Range value:mySlider min:0 max:1000 step:1 /]
+[Display value:mySlider /]
+
+
+## Attempting Vega-Lite
+
+To get vega-lite to work, we need to update Idyll with:
+
+```
+sudo npm update -g idyll
+```
+
+Then, you want to remove all installed packages:
+
+```
+rm -r node_modules
+```
+
+And remove all reference to these packages in the `packages.json` file.
+
+### Now let's actually make some plots with vega-lite!
+
+Let's grab the data:
+
+[data name:"corgs" source:"corgiData_countries_subset_2020.json"  /]
+
+[Table data:`corgs.slice(0, 10)` /]
+
+// Here I'm just taking a slice of the first 10 entries -- there is that JS slice thing!
+
+Let's start with some simple scatter plots of our data.
+
+We can run the simple code below and make a simple scatter plot of countries and years born:
+
+```
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  mark: "circle",
+  encoding: {
+    x: {field: "countries", type: "nominal"}, 
+    y: {field: "year", type: "temporal"},
+  }
+}` /]
+```
+
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  mark: "circle",
+  encoding: {
+    x: {field: "countries", type: "nominal"}, // (1) we can change the coloring by denoting what type of variable we are plotting */
+    // x: {field: "countries", type: "nominal", axis:{labels:false}}, // (2) */
+    y: {field: "year", type: "temporal"},
+  }
+}` /]
+
+So this is a good start!  Let's add some other data into the mix by using colors.  We can select what we color by with a "color by" variable like so:
+
+```
+[var name:"colorBy" value:`{}` /]
+```
+
+[var name:"colorBy" value:`{}` /]
+
+Once we've included this new variable in our webpage, we can re-do our scatter plot like so:
+
+```
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  mark: "circle",
+  encoding: {
+    x: {field: "countries", type: "nominal"}, 
+    y: {field: "year", type: "temporal"},
+    color: colorBy
+  }
+}` /]
+
+Color by:
+ [button onClick:`colorBy = {}` ]None[/button]
+ [button onClick:`colorBy = {field: 'sex', type: 'nominal'}` ]Sex of Corgi[/button]
+```
+
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  mark: "circle",
+  encoding: {
+    x: {field: "countries", type: "nominal"}, 
+    y: {field: "year", type: "temporal"},
+    color: colorBy
+  }
+}` /]
+
+Color by:
+ [button onClick:`colorBy = {}` ]None[/button]
+ [button onClick:`colorBy = {field: 'sex', type: 'nominal'}` ]Sex of Corgi[/button]
+ 
+ 
+// ----------------------------- PROBABLY WILL JUST GET TO HERE ---------------------------
+
+
+
+
+
+
+
+// HERE - CHANGE COLOR SCHEME - https://vega.github.io/vega-lite/docs/scale.html#scheme 
+
+// [button onClick:`colorBy2 = {field: 'countries', type: 'nominal', scale:{"scheme":"category20"}}` ]Country[/button]
+
+
+// ALSO: make sure they recall scales and whatnot! 
+
+// check out: https://vega.github.io/vega/docs/schemes/#reference 
+
+
+### Binning and aggregating data - histograms 
+
+Beyond scatter plots, we can do histograms in which we aggregate parts of our data set:
+
+```
+[var name:"colorBy3" value:`{}` /]
+
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  mark: "bar",
+  encoding: {
+    x: {field: "year", type: "temporal"},
+    y: {aggregate:"count", type: "quantitative", title:"Number of Corgis Born"}
+  }
+}` /]
+```
+
+So here we are counting up all the entries in a particular year and plotting this as a histogram (note: this is a subset of our data, so smaller numbers):
+
+[var name:"colorBy3" value:`{}` /]
+// add this later!!
+
+
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  mark: "bar",
+  encoding: {
+    x: {field: "year", type: "temporal"},
+    y: {aggregate:"count", type: "quantitative", title:"Number of Corgis Born"}, // , // (2) */
+    color: colorBy3 // */
+  }
+}` /]
+
+// Color by:
+
+[button onClick:`colorBy3 = {}` ]None[/button]
+
+[button onClick:`colorBy3 = {field: 'sex', type: 'nominal'}` ]Sex of Corgi Born[/button]
+
+// [button onClick:`colorBy3 = {field: 'dam', type: 'nominal'}` ]Dam[/button]
+
+// [button onClick:`colorBy3 = {field: 'FamilyName', type: 'nominal'}` ]Family Name[/button] 
+
+We can do some light manipulations of our data with "transforms" and "filters".  There are more 
+complicated examples of filtering our data [on the Vega-lite website docs](https://vega.github.io/vega-lite/docs/filter.html).
+
+Here, lets just look at data between the years 1960 and 2000. We can do this by adding some filtering code 
+to our vega-lite plot (note: this is done differently than with `datum`):
+
+```
+transform:[{filter:{"timeUnit":"year", field:"year", "lte":2000}},
+	  {filter:{"timeUnit":"year", field:"year", "gte":1960}}],
+```
+
+// reference: https://github.com/idyll-lang/examples/blob/master/csv/index.idl
+
+// And: https://vega.github.io/vega-lite/docs/filter.html
+
+// lets first start by plotting only a little range in years */
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 200,
+  transform:[{filter:{"timeUnit":"year", field:"year", "lte":2000}},
+             {filter:{"timeUnit":"year", field:"year", "gte":1960}}],
+  mark: "bar",
+  encoding: {
+    x: {
+       field: "year",
+       type: "temporal"//,
+       //timeUnit:"year"
+    },
+    y: {
+       aggregate:"count",
+       type: "quantitative",
+       axis:{title:"Number of Corgis Born"}
+    } // , 
+     // color: colorBy3 
+  }
+}` /]
+
+Neat!  Of course, the goal is to make these interactive plots. So let's get to it!
+
+// Color by:
+
+//  [button onClick:`colorBy3 = {}` ]None[/button]
+
+// [button onClick:`colorBy3 = {field: 'sex', type: 'nominal'}` ]Sex of Corgi Born[/button]
+
+
+// We can, much like with ipywidgets, make little interactive sliders
+
+// lets make a little slider to play with our year plot
+
+// We can actually make this range a variable! 
+
+### Interactive plotting with Vega-lite
+
+Just like we did with ipywidgets in our Jupyter notebooks, we can include sliders and toggles to 
+make our plots interactive.  We in fact did this above when we made the ability to change colors 
+based on different aspects of our datasets.
+
+Let's add two new variables to our webpage to control the range over which we are plotting our data:
+
+```
+[var name:"yearStart" value:1960 /]
+[var name:"yearEnd" value:2000 /]
+```
+
+[var name:"yearStart" value:1960 /]
+[var name:"yearEnd" value:1970 /]
+
+Now our "transform" operation will look a little different:
+
+```
+  transform:[{filter:{"timeUnit":"year", field:"year", "lte":yearEnd}},
+             {filter:{"timeUnit":"year", field:"year", "gte":yearStart}}],
+```
+
+Finally, let's combine all of these concepts (colors, sliders, binning) into one MEGA-histogram with all kinds of 
+interactions:
+
+[var name:"colorBy3" value:`{}` /] 
+
+[IdyllVegaLite data:corgs spec:`{
+  width: 400,
+  height: 400,
+  transform:[{filter:{"timeUnit":"year", field:"year", "lte":yearEnd}},
+             {filter:{"timeUnit":"year", field:"year", "gte":yearStart}}],
+  mark: "bar",
+  encoding: {
+    x: {
+       field: "year",
+       type: "temporal"
+    },
+    y: {
+       aggregate:"count",
+       type: "quantitative",
+       axis:{title:"Number of Corgis Born"}
+    }, 
+    color: colorBy3
+  }
+}` /]
+
+Color by:
+ [button onClick:`colorBy3 = {}` ]None[/button]
+ [button onClick:`colorBy3 = {field: 'sex', type: 'nominal'}` ]Sex of Corgi Born[/button]
+ [button onClick:`colorBy3 = {field: 'countries', type: 'nominal', scale:{"scheme":"category20"}}` ]Country[/button]
+
+[section] // format the sliders into their own section */
+Lowest Year: 1925 [Range min:1925 max:yearEnd value:yearStart /] 2020
+
+Highest Year: 1925 [Range min:yearStart max:2020 value:yearEnd /] 2020
+[/section]
+
+We can also print out in text the values of our sliders - the current
+maxiumum year of our plot is [dynamic min:1925 max:yearEnd step:1 value:yearStart /].
+You'll note you can also drag around this value and it will update the plot.
+
+//  ** Other cool viz goes here ** */
+
+
+
+
+
+
+
+
+# Extra stuff
+
+A bunch of stuff that we may or may not get to.
+
+### Fancier scrolling overlay
+
+We can do even more complex stepping following tutorials like the [stacking scrollers tutorial](https://idyll.pub/post/stack-scroll-0c3da7fb8e45f3ecb720bcf8/).  Here, we can actually change an element on our page in line with the scrolling of the user's mouse.
+
+// we store a set of images in a variable that is a JS array
+
+// NOTE: the ` --> this is specific to Idyll style
+
+[var name:"imageLoc" 
+  value:`["https://i.pinimg.com/originals/d5/fa/0b/d5fa0b05e00505717d21c532b043f586.jpg","https://66.media.tumblr.com/ce3a52328ebb8c89e1a5cd7649468216/tumblr_inline_pmof1giIRI1ud0rrx_540.jpg", "https://i.imgur.com/3d1etBA.jpg"]` /]
+
+
+[var name:"myScroller" value:0 /]
+
+[Scroller currentStep:myScroller]
+	[Graphic]
+		[Float position:"right"] // build up: float right!
+		    // here we are "slicing" our array using the JS "slice" routine to grab array names
+			[img src:`imageLoc.slice(myScroller, myScroller+1)` style:`{height:300}` /] // making all the same height
+		[/Float]
+	[/Graphic]
+	
+   [Step style:`{width:"50%"}`] // in style we can also specify how large to make our scroller text
+	   This is a derpy corgi.
+   [/Step]
+   
+   [Step style:`{width:"50%"}`]
+	   This is a derpy corgi #2.
+   [/Step]
+
+   [Step style:`{width:"50%"}`]
+	   This our final derpy dog.
+   [/Step]
+
+[/Scroller]
+
+
+## Flow Control & Conditionals
+
+Idyll also allows for some of the flow control and conditional components that we've used before in Python and Javascript.  
+
+### For-loops
+
+For example, we can use [for-loops](https://idyll-lang.org/docs/components/default/loop) to iterate over things, like displaying images using an image array like we used for scrolling:
+
+```
+[var name:"imgs2" 
+  value:`["https://i.pinimg.com/474x/a3/be/9b/a3be9b5985700813f70799ee0a71afc0--pembroke-welsh-corgi-animal-funnies.jpg", "https://i0.wp.com/threecorgis.com/wp-content/uploads/2014/09/three_corgis618-1-1.jpg?resize=500%2C667", "https://i.pinimg.com/originals/1c/c2/53/1cc253ede0ea7df2dd879b7cac9a88bf.jpg"]` /]
+
+
+[Loop value:imgs2]
+    [img src:"_iterator" style:`{height:300}` /] 
+[/Loop]
+```
+
+[var name:"imgs2" 
+  value:`["https://i.pinimg.com/474x/a3/be/9b/a3be9b5985700813f70799ee0a71afc0--pembroke-welsh-corgi-animal-funnies.jpg", "https://i0.wp.com/threecorgis.com/wp-content/uploads/2014/09/three_corgis618-1-1.jpg?resize=500%2C667", "https://i.pinimg.com/originals/1c/c2/53/1cc253ede0ea7df2dd879b7cac9a88bf.jpg"]` /]
+
+
+[Loop value:imgs2]
+    [img src:"_iterator" style:`{height:300}` /] // making all the same height
+[/Loop]
+
+### Conditionals
+
+We can also use [conditionals](https://idyll-lang.org/docs/components/default/conditional) like if-then statements in Python and Javascript:
+
+```
+[var name:"HowMany" value:5 /]
+
+[Conditional if:`HowMany <= 3`]
+  [Loop value:`imgs2.slice(0, HowMany)`]
+    [img src:"_iterator" style:`{height:300}` /] // making all the same height
+  [/Loop]
+[/Conditional]
+
+[Conditional if:`HowMany > 3`]
+  I can't show you [Display value:`HowMany.toFixed(0)` /] images - we don't have that many images in our list!
+[/Conditional]
+```
+
+[var name:"HowMany" value:5 /]
+
+[Conditional if:`HowMany <= 3`]
+  [Loop value:`imgs2.slice(0, HowMany)`]
+    [img src:"_iterator" style:`{height:300}` /] // making all the same height
+  [/Loop]
+[/Conditional]
+
+// NOTE: we can use formatting to print out numbers
+
+[Conditional if:`HowMany > 3`]
+  I can't show you [Display value:`HowMany.toFixed(0)` /] images - we don't have that many images in our list!
+[/Conditional]
+
+Check out other [Javascript numbers methods](https://www.w3schools.com/js/js_number_methods.asp) to see more options for how to print out numbers.
+
+
+## User Input
+
+We can take user input in a variety of ways with the [Input Idyll built-in components](https://idyll-lang.org/docs/components).  We'll look at a few.
+
+
+### Checkboxes
+
+We can combine [Idyll checkboxes](https://idyll-lang.org/docs/components/default/boolean) with [conditionals](https://idyll-lang.org/docs/components/default/conditional) to ask things like: Hey there, would you like to see some more corgis? 
+
+[var name:"moreCorg" value:false /]
+
+[Boolean value:moreCorg /] I [Display value:`moreCorg ? "would like to see" : "would not like to see"  `/] more corgis.
+
+
+[var name:"imgs3" 
+  value:`["https://external-preview.redd.it/-17yZH_Rhsl68DHe8A-GWRbZOu_irAeGGEkGKCM82_o.jpg?auto=webp&s=23d90b3c33816ea9d4314d79db5ecdbfab4c01b9", "https://i.ytimg.com/vi/kfCI5O3AUTk/maxresdefault.jpg", "https://i.imgur.com/m0CZRQy.jpg"]` /]
+
+[Conditional if:`moreCorg`]
+  [Loop value:imgs3]
+    [img src:"_iterator" style:`{height:300}` /] // making all the same height
+  [/Loop]
+[/Conditional]
+
+### Range Slider
+
+Like with the [ipywidgets integer slider](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html#IntSlider) we can connect a slider to what appears on the page.
+
+
+[var name:"imgs4" 
+  value:`["https://external-preview.redd.it/-17yZH_Rhsl68DHe8A-GWRbZOu_irAeGGEkGKCM82_o.jpg?auto=webp&s=23d90b3c33816ea9d4314d79db5ecdbfab4c01b9", "https://i.ytimg.com/vi/kfCI5O3AUTk/maxresdefault.jpg", "https://i.imgur.com/m0CZRQy.jpg", "https://i1.wp.com/threecorgis.com/wp-content/uploads/2014/09/three-corgis-4189.jpg?resize=500%2C667", "https://i.imgur.com/aWpxP5O.jpg", "https://pbs.twimg.com/media/CMF2lpLUMAAYA49.jpg", "https://barkpost.com/wp-content/uploads/2015/01/corgiarya1.jpg"]` /]
+
+[var name:"corgRange" value:5 /]
+
+I would like to see [Range value:corgRange min:0 max:7 /] [Display value:`corgRange.toFixed(0)` /] corgis.
+
+[Loop value:`imgs4.slice(0, corgRange)`]
+  [img src:"_iterator" style:`{height:300}` /] // making all the same height
+[/Loop]
+
+### Radio Buttons
+
+In the final user input option that we'll talk about today, we can use the [Radio](https://idyll-lang.org/docs/components/default/radio) button option with [conditionals](https://idyll-lang.org/docs/components/default/conditional) to set up some questions (& answers) for our user:
+
+What is the name of corgi-dachshund mixes?
+
+// We'll chose the right name from a list of three options
+
+// first, set the "default" guess
+[var name:"radioVal" value:"Dashi " /]
+
+// We want to show the user if they got the right answer when they make their choice & click "submit"
+[var name:"showAnswer" value:false /]
+
+// Radio button with options, make sure we don't show anything unless its requested!
+[Radio value:radioVal options:`["Dashi ", "Dorgi ", "Corghund "]` onClick:`showAnswer = false` /]
+
+// ONLY show answers when the user decides for usre
+[Button onClick:`showAnswer = true`]
+  Submit
+[/Button]
+
+// Display a message telling the user if they are correct or not
+[Conditional if:`showAnswer && radioVal === "Dorgi "`]
+  You answered [Display value:`radioVal`/]. This is correct!
+[/Conditional]
+[Conditional if:`showAnswer && radioVal != "Dorgi "`]
+  You answered [Display value:`radioVal`/] which is not correct.  Please review the material at the top of the page.
+[/Conditional]
+

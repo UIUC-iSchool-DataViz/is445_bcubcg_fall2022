@@ -4,36 +4,49 @@ visible: true
 icon: undraw_medical_research_qg4d.svg
 notitle: true
 examples:
-  - filename: inClass_week15.ipynb
+  - filename: inClass_week13.ipynb
     type: ipynb
     title: In class notebook
     description: Placeholder for in class coding
-  - filename: prep_notebook_week15.ipynb
+  - filename: prep_notebook_week13_sciviz.ipynb
     type: ipynb
-    title: Prep Notebook, Week 15
+    title: Prep Notebook, SciViz (yt), Week 13
     description: Prep notebook for this week
+  - filename: prep_notebook_week13_sciviz_ipyvolume.ipynb
+    type: ipynb
+    title: Extra SciViz Notebook (ipyvolume)
+    description: Extra prep notebook for folks that can install ipyvolume
+  - filename: Prep repo
+    type: iodide
+    title: Prep Jekyll, Week 13
+    description: Prep Jekyll file and components
+    link: https://github.com/jnaiman/online_cv_public
+  - filename: prep_notebook_week13_altair.ipynb
+    type: ipynb
+    title: Prep Notebook, Altair, Week 13
+    description: Prep notebook for this week
+  - filename: In Class Jekyll
+    type: iodide
+    title: In class Jekyll, Week 13
+    description: Updating storage of Jekyll files in class
+    link: https://github.com/UIUC-iSchool-DataViz/is445_oauoag_fall2022/tree/master/week13/inClass
   - filename: spring2019_prep_notebook_week13.ipynb
     type: ipynb
     title: Examples from Spring 2019
 data:
+  - filename: IsolatedGalaxy.tar.gz
+    type: dataLink
+    title: Isolated Galaxy (292 Mb)
+    description: A single snapshot in time of a grid simulation of an isolated galaxy 
+    link: http://yt-project.org/data/IsolatedGalaxy.tar.gz
   - filename: single_dicom.h5
     type: dataLink
     title: Brain Scan (72Mb)
     description: MRI scan of a brain
     link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/single_dicom.h5
-  - filename: galaxyFiles.zip
-    type: dataLink
-    title: Galaxy Particle Simulation files (77Mb)
-    description: Downsampled output files from a particle simulation of a galaxy merger
-    link: https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/raw/main/data/galaxyFiles.zip
-  - filename: IsolatedGalaxy.tar.gz
-    type: dataLink
-    title: Isolated Galaxy dataset (292 Mb)
-    description: A single snapshot in time of a grid simulation of an isolated galaxy 
-    link: http://yt-project.org/data/IsolatedGalaxy.tar.gz
 ---
 
-# Scientific Viz & Guest lecture from NASA SVS
+# Scientific Viz & Guest lecture from the Advanced Visualization Lab 
 
 We talked a little bit about publishing, networks, and scientific viz.
 

@@ -1,64 +1,38 @@
 ---
-title: Lecture 14 - Scientific Visualization, notes on final project
+title: Lecture 13 - Scientific Visualization, notes on final project
 layout: lecture
 description: >-
  More about scientific visualization
-date: 2022-04-25
+date: 2022-11-29
 ---
 
 ## Last time
 
-<img src='../week13/images/this_week3.png'>
+<img src='../week13/images/week12.png'>
 
 notes: 
 
-Just as a reminder of all of the things we've covered up an until this point! Last time we covered a little bit about scientific visualization...
+Just as a reminder of all of the things we've covered up an until this point! Last time we covered a little bit about scientific visualization...  We also got a bit of a guest lecture from AJ of NASA SVS!
 
 ---
 
-## Last time
+## This time
 
-<img src='images/this_week_img.png'>
+<img src='images/week15_inperson.png'>
 
 notes: 
 
-This week we'll cover a little more, starting with a lecture from Kalina Boriewicz from the advanced visualization lab and then we'll do a bit of it ourselves using yt.  We probably won't get to everything that is in the prep notebooks, but they are there for your reference if interested!
-
----
-
-## Announcements and Reminders
-
-Class will be online only on May 2nd (format TBD) 
-
-I'll post an announcement on Canvas on Sunday at the latest about how that class session will go.
-
-Office hours next week will also likely be canceled, but feel free to ping on Slack for questions or if you need to meet. 
-
----
-
-## Extra credit: Network Viz
-
-notes:
-keep in mind that we have an extra credit assignment, worth 1 homework grade, in *go to module*
-
-also recall that the maximum you can get on the homework is 100% of that category, so if you have a perfect HW score, you can't do better than that!
-
----
-
-## Part 2 -- add a day to due date?
-
-notes:
-EC for folks that get it in ontime
+This week we'll cover a little more, starting with a quick lecture-reminder about about sciviz and then we'll do a bit of it ourselves using yt.  We probably won't get to everything that is in the prep notebooks, but they are there for your reference if interested!
 
 ---
 
 ## Notes on Final, Part 3
 
 Due dates:
- 1. First draft of Part 3 -- due May 6, will get feedback course participants (moved up)
- 1. Post your link in the Canvas forum to get feedback from classmates -- May 6
- 1. Provide feedback for 3 randomly assigned classmates -- due May 12 (moved back)
- 1. Final chance to resubmit your Part 3 -- May 13 (moved back)
+ 1. First draft of Part 3 -- due December 2, will get feedback course participants
+ 1. Post your link in the Canvas forum to get feedback from classmates -- December 3
+ 1. Provide feedback for 3 randomly *assigned* classmates -- due December 9
+ 1. Final chance to resubmit your Part 3 -- December 14
  
 **Please be aware these are hard deadlines -- no extensions available**
  
@@ -70,6 +44,19 @@ because we have to get grades in by a certain time, these due dates are hard one
 your "first" part 3 submission CAN be a work in progress -- you can outline what you want to do, but the more you have done, the better we can give you feedback and the more there is for your other feedback-giving classmates to work with
 
 be aware that the due dates have shifted a little bit -- the first draft of your final part 3 has moved up, but the final submission has moved back -- this is so that you'll have plenty of time to get feedback and give feedback to others.
+
+also be please be aware that your feedback group/person will be assigned! this will be posted as an annoucement as we get closer to the posting due date
+
+---
+
+<br>
+<br>
+<br>
+
+# Scientific Visualization
+
+note:
+just a reminder of some concepts from last time
 
 ---
 
