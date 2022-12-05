@@ -3,20 +3,28 @@ title: Lecture 15 - WordClouds, networks, and final project
 layout: lecture
 description: >-
  How to analyze text data, viz of networks, and where to go from here.
-date: 2021-12-06
+date: 2022-12-06
 ---
 
 <br>
 <br>
 <br>
+<br>
 
-# You made it!
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; You made it!!
+
+<br>
+
+<img src="https://media.tenor.com/oLhWqHtUwvsAAAAM/happy-new-year.gif">
+
+notes:
+hurray!!
 
 ---
 
 ## This course
 
-<img src="images/data_viz_diagram_week_16.png" width="95%">
+<img src="images/week_thelast.png" width="95%">
 
 notes:
 Look at all the stuff we covered!
@@ -26,11 +34,12 @@ Today we'll cover our last topics -- networks and word clouds
 We'll really focus on word clouds in the coding and if we have time we'll get into networks, but 
 we'll focus on networks in the lecture portion
 
-If we have time, we'll circle back to sciviz topics
 
 ---
 
 ## Extra credit: Network Viz
+
+Make sure you see the notes on TurnItIn in previous lectures!
 
 notes:
 keep in mind that we have an extra credit assignment, worth 1 homework grade, that is in this week's page
@@ -42,12 +51,12 @@ also recall that the maximum you can get on the homework is 100% of that categor
 ## Notes on Final, Part 3
 
 Due dates:
- 1. First draft of Part 3 -- due Dec 8th, will get feedback course participants
- 1. Post your link in the Moodle forum to get feedback from classmates
- 1. Provide feedback for 3 randomly assigned classmates -- due Dec 12th
- 1. Final chance to resubmit your Part 3 -- due Dec 14th (placeholder submission link)
+ 1. First draft of Part 3 -- due December 2, will get feedback course participants
+ 1. Post your link in the Canvas forum to get feedback from classmates -- December 3
+ 1. Provide feedback for 3 randomly *assigned* classmates -- due December 9
+ 1. Final chance to resubmit your Part 3 -- December 14
  
-**Please be aware these are hard deadlines**
+**Please be aware these are hard deadlines -- no extensions available**
  
 notes:
 go to pages!!
@@ -96,7 +105,13 @@ these are notes
 ## Javascript
 
  * [Beginning Javascript course](https://www.codecademy.com/learn/introduction-to-javascript)
- * See what's in dev on the [Idyll gitter lobby](https://gitter.im/idyll-lang/Lobby) - including updates to vega-lite!
+
+---
+
+## Jekyll
+
+ * [Different Jekyll Themes](https://jekyllthemes.io/), also specifically there are many [on GitHub](https://github.com/topics/jekyll-theme) (which are generally free!)
+ * [Jekyll Tutorials](https://jekyllrb.com/tutorials/home/) (but there are only a few there now), and there are many [on places like YouTube](https://www.youtube.com/results?search_query=jekyll+tutorial+github+pages) that have videos associated.
 
 ---
 
@@ -110,6 +125,9 @@ these are notes
 ---
 
 ## Also, don't forget to fill out your ICES forms!
+
+notes:
+these are so important! we take these super seriously and use them to make the course better, so please do take time to fill them out!
 
 ---
 
@@ -135,34 +153,7 @@ There are two primary types of visualization for data that has inherent linkages
 
 This figure here is actually showing the same networked dataset.
 
----
-
-## Node-link Diagrams
-
- 1. Trees
- 1. Force-Directed Graphs
-
-<img src="images/circlesTree.png" width="400"/>
-
-notes:
-These are the primary ways that you would draw a linked node diagram.
-
-You might have different sizes of symbols, different shapes, or different link or symbol colors to encode other information.
-
----
-
-## Node-link Diagrams
-
- 1. Trees
- 1. Force-Directed Graphs
-
-<img src="images/hairball.png" width="600"/>
-
-From: <a href="https://github.com/jcatw/snap-facebook">this GitHub</a>
-
-notes: in the python lecture we'll be working with a subset of this facebook dataset - showing linkages between individuals as their facebook friendships
-
-this is a node-link diagram of this full facebook dataset showing groups of connected individuals, and how the groups are connected to eachother.
+We'll talk about these two primary ways of displaying networks in order.
 
 ---
 
@@ -178,7 +169,14 @@ this is a node-link diagram of this full facebook dataset showing groups of conn
 <img src="images/coldWarLong.jpg" width="800"/>
 
 notes:
-This is a diagram of some selected military alliances during the Cold War.
+
+First: node-link diagrams.
+
+This is a node-link diagram of some selected military alliances during the Cold War.
+
+Here, the nodes are the named countries and the links are the lines between them.
+
+**read list**
 
 ---
 
@@ -186,7 +184,7 @@ This is a diagram of some selected military alliances during the Cold War.
 
  1. Nodes
    * might have 0-to-many edges linked to them
- 1. Edges
+ 1. Edges (sometimes called "links")
    * associated specifically with 2 nodes
    * can have a direction
    * can have a weight
@@ -200,28 +198,57 @@ here is shown an example of how the BRCA genes associated with some forms of bre
 
 ---
 
-## Tree Diagrams
+## Node-link Diagrams
 
- * Topological
- * Ordered
-   * Left-to-Right
-   * Inside-Out
-   * Top-to-bottom
- * Always one incoming edge (low density)
- * Discrete, not Continuous
+ 1. Trees
+ 1. Force-Directed Graphs (displayed below)
+ 
+<img src="images/geneticNetwork.png" width="800"/>
 
-<img src="images/trees.png" width="800"/>
 
 notes:
-trees have a topology or hierarchy. These are especially good for a *deep* hierarchy.
 
-The physical space between nodes isn't meaningful like it would be in a scatter plot. Rather the number of "hops" along edges is important.
 
-The left hand plot has a top-down ordering, while the right-hand plot is ordered radially such that the most connected object is at the center.
+There are a few ways to draw node-link diagrams.
+
+These are the primary ways that you would draw a linked node diagram -- trees and force-directed graphs.
+
+This gene map is an example of a "force directed graph" type.
 
 ---
 
-## Force-Directed Graphs
+## Node-link Diagrams
+
+ 1. Trees
+ 1. Force-Directed Graphs (displayed below)
+
+<img src="images/circlesTree.png" width="400"/>
+
+notes:
+
+Here is an example of another force-directed graph, but in general, both trees and force-directed graphs can have several attributes.
+
+You might have different sizes of symbols, different shapes, or different link or symbol colors to encode other information.
+
+---
+
+## Node-link Diagrams
+
+ 1. Trees
+ 1. Force-Directed Graphs (displayed below)
+
+<img src="images/hairball.png" width="600"/>
+
+From: <a href="https://github.com/jcatw/snap-facebook">this GitHub</a>
+
+notes: in the python lecture we'll be working with a subset of this facebook dataset - showing linkages between individuals as their facebook friendships
+
+this is a node-link, force-directed graph diagram of this full facebook dataset showing groups of connected individuals, and how the groups are connected to eachother.
+
+
+---
+
+## Node-link Diagrams: Force-Directed Graphs
 
  * Nodes push away from each other as if their edges are springs.
  * Nodes push away from each other by local repulsion force.
@@ -240,7 +267,7 @@ Note that this means these plots are in a sense "non-deterministic" in that you 
 
 ---
 
-## Force-Directed Graphs
+## Node-link Diagrams: Force-Directed Graphs
 
  * Path Distance
  * Joint or Disjoint
@@ -253,7 +280,7 @@ These are useful for identifying clusters, finding all possible paths, finding t
 
 ---
 
-## Force-Directed Graphs
+## Node-link Diagrams: Force-Directed Graphs
 
  1. Drawbacks:
    * Non-deterministic (different every time)
@@ -266,6 +293,28 @@ this is a social network graph that looks fine at high resolution, but on this s
 
 ---
 
+## Node-link Diagrams: Tree Diagrams
+
+ * Topological
+ * Ordered
+   * Left-to-Right
+   * Inside-Out
+   * Top-to-bottom
+ * Always one incoming edge (low density)
+ * Discrete, not Continuous
+
+<img src="images/trees.png" width="800"/>
+
+notes:
+trees have a topology or hierarchy. These are especially good for a *deep* hierarchy.
+
+The physical space between nodes isn't meaningful like it would be in a scatter plot. Rather the number of "hops" along edges is important.
+
+The left hand plot has a top-down ordering, while the right-hand plot is ordered radially such that the most connected object is at the center.
+
+
+---
+
 ## Matrix Views
 
  1. Adjacency Matrix
@@ -275,6 +324,9 @@ this is a social network graph that looks fine at high resolution, but on this s
 <img src="images/coldWarMatrix.png" width="400"/></td>
 
 notes:
+
+Matrix views are the other main way to visualize network data in contrast to node-link diagrams.
+
 Matrix views remove occlusion and hairball issues completely. They are preferred for extremely dense data.
 
 However they do not show topology, and they might be less intuitive to identify clustering.
@@ -325,7 +377,7 @@ Notice this is directional - Attackers and Defenders don't have same effect on d
 
 ---
 
-## Hierarchical Data
+## Special networks: Hierarchical Data
 
  1. Trees
  1. Containment
@@ -334,7 +386,12 @@ Notice this is directional - Attackers and Defenders don't have same effect on d
 <img src="images/d3treemap.png" width="500"/>
 
 notes:
-Another way to look at networked data - treemaps
+
+Sometimes in addition to being a network dataset, there is a natural hierarcy to the data.  
+
+A great way to show this data is with trees.  
+
+Another way to look at this kind of networked data - treemaps
 
 containment better at shallow, broad trees than node-link tree diagrams
 
@@ -344,7 +401,7 @@ This visualization is file size of the D3 visualization library.
 
 ---
 
-## Hierarchical Data
+## Special networks: Hierarchical Data
 
  1. Trees
  1. Containment
@@ -354,6 +411,9 @@ This visualization is file size of the D3 visualization library.
 <img src="images/circlePacking.png" width="400"/>
 
 notes:
+
+another way is to use nested structures like circles.
+
 This is also known as circle-packing.
 
 ---
