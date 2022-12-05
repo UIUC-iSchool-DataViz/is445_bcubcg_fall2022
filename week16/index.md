@@ -4,17 +4,17 @@ visible: true
 icon: undraw_nakamoto_2iv6.svg
 notitle: true
 examples:
-  - filename: inClass_week15.ipynb
+  - filename: inClass_week16.ipynb
     type: ipynb
     title: In class notebook
     description: Placeholder for in class coding
   - filename: prep_notebook_wordcloud_part1.ipynb
     type: ipynb
-    title: Prep Notebook, Week 15, Part 1
+    title: Prep Notebook, Week 16, Part 1
     description: Prep notebook for this week, Part 1 - WordClouds
   - filename: prep_notebook_networks_part2.ipynb
     type: ipynb
-    title: Prep Notebook, Week 15, Part 2
+    title: Prep Notebook, Week 16, Part 2
     description: Prep notebook for this week, Part 2 - Network data
   - filename: spring2019_prep_notebook.ipynb
     type: ipynb
